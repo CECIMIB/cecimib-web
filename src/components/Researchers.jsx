@@ -6,7 +6,7 @@ const researchers = [
     name: "Ivan David Lozada-Martinez",
     role: "CEO & Founder",
     photo: `${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.jpeg`,
-    bio: "Ivan David Lozada-Martinez, MD - Diploma in Epidemiology. MSc in Gerontology. PhD (Candidate) in Biomedical Research Methodology and Public Health. CEO & Founder Center for Scientific Consulting & Meta-Research in Biomedical Sciences (CECIMIB SAS).",
+    bio: "Physician - Diploma in Epidemiology. MSc in Gerontology. PhD (Candidate) in Biomedical Research Methodology and Public Health. CEO & Founder Center for Scientific Consulting & Meta-Research in Biomedical Sciences (CECIMIB SAS).",
     links: {
       linkedin: "https://www.linkedin.com/in/ivan-david-lozada-martinez/?originalSubdomain=co",
       orcid: "https://orcid.org/0000-0002-1960-7334",
@@ -18,7 +18,7 @@ const researchers = [
     name: "David A. Hernandez-Paez",
     role: "Research Assistant",
     photo: `${import.meta.env.BASE_URL}researchers/david-hernandez-paez.jpeg`,
-    bio: "Interested in medical research, meta-research, and data analysis.",
+    bio: "Medical student interested in medical research, meta-research, and data analysis.",
     links: {
       linkedin: "https://www.linkedin.com/in/david-a-hernandez-paez-463a24273/",
       orcid: "https://orcid.org/0000-0002-6742-3185",
