@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        <div className="logo">
+        <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src={`${import.meta.env.BASE_URL}assets/logo.svg`} alt="CECIMIB Logo" />
         </div>
 
@@ -71,6 +71,10 @@ const Navbar = () => {
           align-items: center;
         }
 
+        .logo {
+          cursor: pointer;
+        }
+
         .logo img {
           height: 40px; /* Adjust based on logo aspect ratio */
           width: auto;
@@ -89,8 +93,17 @@ const Navbar = () => {
           font-size: 0.95rem;
         }
 
+        /* Fix specifity issue for the primary button in navbar */
+        .nav-links a.btn-primary {
+          color: white;
+        }
+
         .nav-links a:hover {
           color: var(--color-primary);
+        }
+
+        .nav-links a.btn-primary:hover {
+          color: white; /* Keep white on hover or define a slight variation if needed */
         }
 
         .mobile-toggle {

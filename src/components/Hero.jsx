@@ -2,27 +2,27 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
-    return (
-        <section className="hero">
-            <div className="container hero-container">
-                <motion.div
-                    className="hero-content"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <h1>Transformamos ideas en evidencia sólida</h1>
-                    <p className="subtitle">
-                        Consultoría científica y meta-investigación de alto nivel para mejorar la toma de decisiones basada en evidencia.
-                    </p>
-                    <div className="hero-cta">
-                        <a href="#services" className="btn btn-primary">Descubre cómo sumamos valor</a>
-                        <a href="#about" className="btn btn-outline" style={{ marginLeft: '1rem' }}>Conoce CECIMIB</a>
-                    </div>
-                </motion.div>
-            </div>
+  return (
+    <section className="hero">
+      <div className="container hero-container">
+        <motion.div
+          className="hero-content"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1>Transformamos ideas en evidencia sólida</h1>
+          <p className="subtitle">
+            Consultoría científica y meta-investigación de alto nivel para mejorar la toma de decisiones basada en evidencia.
+          </p>
+          <div className="hero-cta">
+            <a href="#services" className="btn btn-primary">Descubre cómo sumamos valor</a>
+            <a href="#about" className="btn btn-outline hero-secondary-btn">Conoce CECIMIB</a>
+          </div>
+        </motion.div>
+      </div>
 
-            <style>{`
+      <style>{`
         .hero {
           min-height: 90vh;
           display: flex;
@@ -55,6 +55,7 @@ const Hero = () => {
 
         .hero-content {
           max-width: 800px;
+          padding: 0 1rem;
         }
 
         .hero h1 {
@@ -73,14 +74,39 @@ const Hero = () => {
           margin-right: auto;
         }
 
+        .hero-secondary-btn {
+          margin-left: 1rem;
+        }
+
         @media (max-width: 768px) {
           .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
+          }
+          
+          .hero .subtitle {
+            font-size: 1rem;
+          }
+
+          .hero-cta {
+             display: flex;
+             flex-direction: column;
+             gap: 1rem;
+             align-items: center;
+             width: 100%;
+          }
+          
+          .hero-secondary-btn {
+             margin-left: 0;
+          }
+
+          .hero .btn {
+            width: 100%;
+            max-width: 300px;
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Hero;
