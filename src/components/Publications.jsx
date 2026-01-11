@@ -69,7 +69,7 @@ const Publications = () => {
                                         <h3>{t(`publications.${category.categoryKey}`)}</h3>
                                         <p>{t(`publications.${category.descriptionKey}`)}</p>
                                         <span className="view-more">
-                                            Ver publicaciones <ExternalLink size={14} style={{ display: 'inline', marginLeft: '4px' }} />
+                                            {t('publications.view_publications')} <ExternalLink size={14} style={{ display: 'inline', marginLeft: '4px' }} />
                                         </span>
                                     </div>
                                 );
@@ -90,7 +90,7 @@ const Publications = () => {
                                 className="back-button"
                             >
                                 <ArrowLeft size={20} />
-                                Volver a Categorías
+                                {t('publications.back_to_categories')}
                             </button>
 
                             <div className="articles-list">

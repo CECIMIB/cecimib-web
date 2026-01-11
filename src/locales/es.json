@@ -16,7 +16,9 @@
     "pharma_desc": "Estudio de la ancestría genética y su impacto en la respuesta farmacológica.",
     "meta_research_cat": "Meta-investigación y análisis de métodos mixtos en servicios de salud e investigación en salud global",
     "gaps_cat": "Brechas y prioridades en I+D en salud",
-    "pharma_cat": "Farmacogenómica y ancestría genética"
+    "pharma_cat": "Farmacogenómica y ancestría genética",
+    "view_publications": "Ver publicaciones",
+    "back_to_categories": "Volver a Categorías"
   },
   "hero": {
     "title": "Transformamos ideas en evidencia sólida",

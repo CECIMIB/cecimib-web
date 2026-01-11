@@ -16,7 +16,9 @@
         "pharma_desc": "Study of genetic ancestry and its impact on pharmacological response.",
         "meta_research_cat": "Meta-research and mixed methods analysis in health services and global health research",
         "gaps_cat": "Gaps and priorities in health R&D",
-        "pharma_cat": "Pharmacogenomics and genetic ancestry"
+        "pharma_cat": "Pharmacogenomics and genetic ancestry",
+        "view_publications": "View publications",
+        "back_to_categories": "Back to Categories"
     },
     "hero": {
         "title": "We transform ideas into solid evidence",
