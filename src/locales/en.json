@@ -3,7 +3,20 @@
         "services": "Services",
         "about": "About Us",
         "researchers": "Team",
+        "publications": "Publications",
         "contact": "Contact Us"
+    },
+    "publications": {
+        "title": "Scientific Publications",
+        "subtitle": "Discover our scientific production and contributions to biomedical research.",
+        "view_article": "View Article",
+        "authors": "Authors",
+        "meta_research_desc": "Analysis of research practices and evidence quality in global health.",
+        "gaps_desc": "Identification of disparities and priorities in health research and development.",
+        "pharma_desc": "Study of genetic ancestry and its impact on pharmacological response.",
+        "meta_research_cat": "Meta-research and mixed methods analysis in health services and global health research",
+        "gaps_cat": "Gaps and priorities in health R&D",
+        "pharma_cat": "Pharmacogenomics and genetic ancestry"
     },
     "hero": {
         "title": "We transform ideas into solid evidence",

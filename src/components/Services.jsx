@@ -74,9 +74,16 @@ const Services = () => {
         }
 
         .services-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 2rem;
+        }
+        
+        .service-card {
+            flex: 0 1 350px; /* Grow 0, Shrink 1, Basis 350px */
+            min-width: 300px;
+            max-width: 400px;
         }
 
         .service-card {

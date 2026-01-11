@@ -2,13 +2,17 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const footerLogoPath = i18n.language === 'en'
+    ? `${import.meta.env.BASE_URL}ingles_blanco.svg`
+    : `${import.meta.env.BASE_URL}logo_blanco.svg`;
 
   return (
     <footer id="contact" className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <img src={`${import.meta.env.BASE_URL}assets/logo.svg`} alt="CECIMIB" className="footer-logo" />
+          <img src={footerLogoPath} alt="CECIMIB" className="footer-logo" />
           <p>{t('footer.brand_text')}</p>
         </div>
 
@@ -23,7 +27,7 @@ const Footer = () => {
         <div className="footer-contact">
           <h4>{t('footer.contact')}</h4>
           <p>{t('footer.contact_text')}</p>
-          <a href="mailto:info@cecimib.com" className="contact-link">info@cecimib.com</a>
+          <a href="mailto:ilozada@cuc.edu.co" className="contact-link">ilozada@cuc.edu.co</a>
         </div>
       </div>
 
@@ -55,7 +59,7 @@ const Footer = () => {
         
         .footer-logo {
           height: 40px;
-          filter: brightness(0) invert(1); /* Make logo white */
+          /* Filter removed as new logos are already white */
         }
 
         .footer h4 {

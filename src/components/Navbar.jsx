@@ -23,8 +23,8 @@ const Navbar = () => {
   // For now, I will assume the standard logo `logo.svg` is for Spanish (or default) and let's try to see if I should switch names.
   // The user requested: "ten en cuenta que los logos tambien están en esos dos idiomas, por lo que tambien deberian cambiar"
   const logoPath = i18n.language === 'en'
-    ? `${import.meta.env.BASE_URL}assets/logo_en.svg`
-    : `${import.meta.env.BASE_URL}assets/logo.svg`; // Default/Spanish
+    ? `${import.meta.env.BASE_URL}ingles_color.svg`
+    : `${import.meta.env.BASE_URL}logo_color.svg`;
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -39,6 +39,7 @@ const Navbar = () => {
           <li><a href="#services">{t('navbar.services')}</a></li>
           <li><a href="#about">{t('navbar.about')}</a></li>
           <li><a href="#researchers">{t('navbar.researchers')}</a></li>
+          <li><a href="#publications">{t('navbar.publications')}</a></li>
           <li><a href="#contact" className="btn btn-primary">{t('navbar.contact')}</a></li>
           <li><LanguageSwitcher /></li>
         </ul>
@@ -60,6 +61,7 @@ const Navbar = () => {
               <li><a href="#services" onClick={() => setIsMenuOpen(false)}>{t('navbar.services')}</a></li>
               <li><a href="#about" onClick={() => setIsMenuOpen(false)}>{t('navbar.about')}</a></li>
               <li><a href="#researchers" onClick={() => setIsMenuOpen(false)}>{t('navbar.researchers')}</a></li>
+              <li><a href="#publications" onClick={() => setIsMenuOpen(false)}>{t('navbar.publications')}</a></li>
               <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>{t('navbar.contact')}</a></li>
             </ul>
           </div>
@@ -96,8 +98,15 @@ const Navbar = () => {
         }
 
         .logo img {
-          height: 40px; /* Adjust based on logo aspect ratio */
+          height: 45px; /* Mobile default */
           width: auto;
+          transition: height 0.3s ease;
+        }
+        
+        @media (min-width: 769px) {
+            .logo img {
+                height: 60px; /* Intermediate size as requested */
+            }
         }
 
         .nav-links {

@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Researchers from './components/Researchers';
+import Publications from './components/Publications';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
       <Services />
       <About />
       <Researchers />
+      <Publications />
       <Footer />
     </div>
   );

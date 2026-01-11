@@ -3,7 +3,20 @@
     "services": "Servicios",
     "about": "Nosotros",
     "researchers": "Equipo",
+    "publications": "Publicaciones",
     "contact": "Contáctanos"
+  },
+  "publications": {
+    "title": "Publicaciones Científicas",
+    "subtitle": "Descubre nuestra producción científica y contribuciones a la investigación biomédica.",
+    "view_article": "Ver Articulo",
+    "authors": "Autores",
+    "meta_research_desc": "Análisis de prácticas de investigación y calidad de la evidencia en salud global.",
+    "gaps_desc": "Identificación de disparidades y prioridades en investigación y desarrollo en salud.",
+    "pharma_desc": "Estudio de la ancestría genética y su impacto en la respuesta farmacológica.",
+    "meta_research_cat": "Meta-investigación y análisis de métodos mixtos en servicios de salud e investigación en salud global",
+    "gaps_cat": "Brechas y prioridades en I+D en salud",
+    "pharma_cat": "Farmacogenómica y ancestría genética"
   },
   "hero": {
     "title": "Transformamos ideas en evidencia sólida",
