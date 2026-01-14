@@ -3,7 +3,10 @@
         "services": "Services",
         "about": "About Us",
         "researchers": "Team",
-        "publications": "Publications",
+        "publications": "Scientific Publications",
+        "group": "Research Group",
+        "bulletins": "Bulletins",
+        "courses": "Courses",
         "contact": "Contact Us"
     },
     "publications": {
@@ -14,9 +17,13 @@
         "meta_research_desc": "Analysis of research practices and evidence quality in global health.",
         "gaps_desc": "Identification of disparities and priorities in health research and development.",
         "pharma_desc": "Study of genetic ancestry and its impact on pharmacological response.",
+        "evidence_desc": "Research on evidence synthesis and its epistemological foundations.",
+        "translation_desc": "Application of evidence-based medicine for clinical decision making.",
         "meta_research_cat": "Meta-research and mixed methods analysis in health services and global health research",
         "gaps_cat": "Gaps and priorities in health R&D",
         "pharma_cat": "Pharmacogenomics and genetic ancestry",
+        "evidence_cat": "Evidence-Based Research and Biomedical Epistemology",
+        "translation_cat": "Evidence-Based Medicine and Knowledge Translation",
         "view_publications": "View publications",
         "back_to_categories": "Back to Categories"
     },
@@ -24,7 +31,7 @@
         "title": "We transform ideas into solid evidence",
         "subtitle": "High-level scientific consulting and meta-research to improve evidence-based decision making.",
         "cta_primary": "Discover how we add value",
-        "cta_secondary": "Meet CECIMIB"
+        "cta_secondary": "About CECIMIB"
     },
     "about": {
         "mission": {
@@ -48,8 +55,8 @@
                 "description": "We evaluate health technologies with methodological rigor and cost-effective vision."
             },
             "strengthening": {
-                "title": "Group Strengthening",
-                "description": "We strengthen or create research groups, boosting their sustainability and productivity."
+                "title": "Strengthening of Groups and Units",
+                "description": "We strengthen or create research groups and units, boosting their sustainability and productivity."
             },
             "design": {
                 "title": "Study Design",
@@ -65,7 +72,7 @@
         "title": "Our Researchers",
         "ivan": {
             "role": "CEO & Founder",
-            "bio": "Physician - Diploma in Epidemiology. MSc in Gerontology. PhD (Candidate) in Biomedical Research Methodology and Public Health. CEO & Founder Center for Scientific Consulting & Meta-Research in Biomedical Sciences (CECIMIB SAS)."
+            "bio": "Physician - Specialist in Epidemiology. Master in Gerontology and Person-Centered Care. PhD Candidate in Biomedical Research Methodology and Public Health. CEO & Founder of the Center for Scientific Consulting and Meta-Research in Biomedical Sciences (CECIMIB SAS)."
         },
         "david": {
             "role": "Research Assistant",
@@ -77,10 +84,64 @@
         }
     },
     "footer": {
-        "brand_text": "Center for Scientific Consulting & Meta-Research in Biomedical Sciences",
+        "brand_text": "Center for Scientific Consulting &\nMeta-Research in Biomedical\nSciences",
         "links": "Links",
         "contact": "Contact",
         "contact_text": "We help researchers, hospitals, and industries.",
-        "rights": "All rights reserved."
+        "rights": "All rights reserved.",
+        "research_group": "Research Group",
+        "courses": "Courses & Training"
+    },
+    "research_group": {
+        "title": "Research Group",
+        "cecimib_minciencias": "CECIMIB MinCiencias",
+        "category_badge": "Category C",
+        "description": "Our group focuses on generating high-quality evidence through meta-research and scientometrics. We aim to transform scientific and clinical practice through rigorous data analysis and methodological evaluation.",
+        "view_gruplac": "View GrupLAC"
+    },
+    "bulletins": {
+        "title": "Technical and Informative Bulletins",
+        "coming_soon": "Coming Soon",
+        "description": "We are preparing interesting analyses on meta-science and scientometrics. Stay tuned!"
+    },
+    "courses": {
+        "title": "Courses & Training",
+        "r_fundamentals": {
+            "title": "Fundamentals of R for Data Analysis",
+            "description": "Master data analysis basics with R. This course offers a rigorous and practical introduction, designed to develop analytical competencies in biomedical research and health sciences.",
+            "more_details": "More details",
+            "view_repo": "View Repository"
+        }
+    },
+    "course_details": {
+        "back_button": "Back to Courses & Training",
+        "r_fundamentals": {
+            "title": "Fundamentals of R for Data Analysis",
+            "download_pdf": "Download PDF",
+            "language_label": "Language",
+            "language_value": "English",
+            "duration_label": "Duration",
+            "duration_value": "10 hours (6 sessions)",
+            "delivery_label": "Delivery",
+            "delivery_value": "Online via Google Meet",
+            "objective_title": "Course Objective",
+            "objective_text": "Develop practical skills in R for data management, data visualization, and statistical analysis. The focus is on applications widely used in scientific research, particularly within the health sciences.",
+            "certification_title": "Certification Issued by",
+            "certification_text": "Center for Scientific Consulting and Meta-Research in Biomedical Sciences (CECIMIB).",
+            "methodology_title": "Teaching Methodology",
+            "methodology_text": "Each session combines theoretical concepts with hands-on practice using pre-prepared datasets. Participants will actively apply methods and tools as they learn, ensuring immediate reinforcement of key ideas.",
+            "plan_title": "Course Plan",
+            "table_week": "Week",
+            "table_session": "Session",
+            "table_topics": "Topics",
+            "w1_s1_topics": "- Introduction to the course.<br />- Understanding the RStudio interface and basic commands.<br />- Introduction to data visualization.",
+            "w1_s2_topics": "- Normality and hypothesis testing",
+            "w2_s3_topics": "- Correlation analyses<br />- Linear regression models",
+            "w2_s4_topics": "- Logistic regression models",
+            "w3_s5_topics": "- ROC Analysis",
+            "w3_s6_topics": "- Just in case",
+            "resources_text": "All course materials and resources are available at:",
+            "github_repo": "GitHub Repository"
+        }
     }
 }

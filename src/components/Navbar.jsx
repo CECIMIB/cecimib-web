@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,31 +19,65 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Determine logo path based on language. 
-  // Assumption: Assumes logo_es.svg and logo_en.svg exist if they are language specific, 
-  // otherwise defaults to logo.svg if they don't (which might need a fallback check, but here we perform simple logic).
-  // Actually, better to check if it exists or just rely on the user adding them.
-  // For now, I will assume the standard logo `logo.svg` is for Spanish (or default) and let's try to see if I should switch names.
-  // The user requested: "ten en cuenta que los logos tambien están en esos dos idiomas, por lo que tambien deberian cambiar"
   const logoPath = i18n.language === 'en'
     ? `${import.meta.env.BASE_URL}ingles_color.svg`
     : `${import.meta.env.BASE_URL}logo_color.svg`;
 
+  const handleNav = (id) => {
+    setIsMenuOpen(false);
+    if (location.pathname === '/') {
+      if (!id) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      if (!id) {
+        navigate('/');
+      } else {
+        navigate('/', { state: { targetId: id } });
+      }
+    }
+  };
+
+  const NavItem = ({ id, label, isBtn = false }) => (
+    <li>
+      <a
+        href={`#${id}`}
+        className={isBtn ? "btn btn-primary" : ""}
+        onClick={(e) => {
+          e.preventDefault();
+          handleNav(id);
+        }}
+      >
+        {label}
+      </a>
+    </li>
+  );
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          {/* Key for forcing re-render if needed, though src change should handle it */}
+        <div className="logo" onClick={() => handleNav(null)}>
           <img key={logoPath} src={logoPath} alt="CECIMIB Logo" />
         </div>
 
         {/* Desktop Menu */}
         <ul className="nav-links desktop-only">
-          <li><a href="#services">{t('navbar.services')}</a></li>
-          <li><a href="#about">{t('navbar.about')}</a></li>
-          <li><a href="#researchers">{t('navbar.researchers')}</a></li>
-          <li><a href="#publications">{t('navbar.publications')}</a></li>
-          <li><a href="#contact" className="btn btn-primary">{t('navbar.contact')}</a></li>
+          <NavItem id="services" label={t('navbar.services')} />
+          <NavItem id="about" label={t('navbar.about')} />
+          <NavItem id="researchers" label={t('navbar.researchers')} />
+          <NavItem id="publications" label={t('navbar.publications')} />
+
+          {/* New Pages converted to Scroll Sections */}
+          <NavItem id="group" label={t('navbar.group')} />
+          <NavItem id="courses" label={t('navbar.courses')} />
+          <NavItem id="bulletins" label={t('navbar.bulletins')} />
+
+          <NavItem id="contact" label={t('navbar.contact')} isBtn={true} />
           <li><LanguageSwitcher /></li>
         </ul>
 
@@ -58,11 +95,16 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="mobile-menu">
             <ul className="nav-links-mobile">
-              <li><a href="#services" onClick={() => setIsMenuOpen(false)}>{t('navbar.services')}</a></li>
-              <li><a href="#about" onClick={() => setIsMenuOpen(false)}>{t('navbar.about')}</a></li>
-              <li><a href="#researchers" onClick={() => setIsMenuOpen(false)}>{t('navbar.researchers')}</a></li>
-              <li><a href="#publications" onClick={() => setIsMenuOpen(false)}>{t('navbar.publications')}</a></li>
-              <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>{t('navbar.contact')}</a></li>
+              <li><a href="#services" onClick={(e) => { e.preventDefault(); handleNav('services'); }}>{t('navbar.services')}</a></li>
+              <li><a href="#about" onClick={(e) => { e.preventDefault(); handleNav('about'); }}>{t('navbar.about')}</a></li>
+              <li><a href="#researchers" onClick={(e) => { e.preventDefault(); handleNav('researchers'); }}>{t('navbar.researchers')}</a></li>
+              <li><a href="#publications" onClick={(e) => { e.preventDefault(); handleNav('publications'); }}>{t('navbar.publications')}</a></li>
+
+              <li><a href="#group" onClick={(e) => { e.preventDefault(); handleNav('group'); }}>{t('navbar.group')}</a></li>
+              <li><a href="#courses" onClick={(e) => { e.preventDefault(); handleNav('courses'); }}>{t('navbar.courses')}</a></li>
+              <li><a href="#bulletins" onClick={(e) => { e.preventDefault(); handleNav('bulletins'); }}>{t('navbar.bulletins')}</a></li>
+
+              <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>{t('navbar.contact')}</a></li>
             </ul>
           </div>
         )}
@@ -76,7 +118,7 @@ const Navbar = () => {
           width: 100%;
           z-index: 1000;
           transition: all 0.3s ease;
-          padding: 1.5rem 0;
+          padding: 1rem 0;
           background-color: transparent;
         }
 
@@ -84,7 +126,7 @@ const Navbar = () => {
           background-color: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(10px);
           box-shadow: var(--shadow);
-          padding: 1rem 0;
+          padding: 0.8rem 0;
         }
 
         .navbar-container {
@@ -98,20 +140,20 @@ const Navbar = () => {
         }
 
         .logo img {
-          height: 45px; /* Mobile default */
+          height: 40px; 
           width: auto;
           transition: height 0.3s ease;
         }
         
         @media (min-width: 769px) {
             .logo img {
-                height: 60px; /* Intermediate size as requested */
+                height: 55px; 
             }
         }
 
         .nav-links {
           display: flex;
-          gap: 2rem;
+          gap: 1rem;
           list-style: none;
           align-items: center;
         }
@@ -119,10 +161,12 @@ const Navbar = () => {
         .nav-links a {
           font-weight: 500;
           color: var(--color-text);
-          font-size: 0.95rem;
+          font-size: 0.9rem;
+          text-decoration: none;
+          cursor: pointer;
+          white-space: nowrap;
         }
 
-        /* Fix specifity issue for the primary button in navbar */
         .nav-links a.btn-primary {
           color: white;
         }
@@ -132,7 +176,7 @@ const Navbar = () => {
         }
 
         .nav-links a.btn-primary:hover {
-          color: white; /* Keep white on hover or define a slight variation if needed */
+          color: white; 
         }
 
         .mobile-toggle-group {
@@ -153,6 +197,8 @@ const Navbar = () => {
           background-color: white;
           padding: 1rem;
           box-shadow: var(--shadow);
+          max-height: 80vh;
+          overflow-y: auto;
         }
 
         .nav-links-mobile {
@@ -162,8 +208,14 @@ const Navbar = () => {
           gap: 1rem;
           text-align: center;
         }
+        
+        .nav-links-mobile a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           .desktop-only {
             display: none;
           }

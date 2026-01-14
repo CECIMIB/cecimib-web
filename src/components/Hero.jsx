@@ -135,6 +135,13 @@ const ExtensiveNetwork = () => {
 const Hero = () => {
   const { t } = useTranslation();
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="hero">
       <ExtensiveNetwork />
@@ -170,11 +177,11 @@ const Hero = () => {
             {t('hero.subtitle')}
           </p>
           <div className="hero-cta">
-            <a href="#services" className="btn btn-primary">{t('hero.cta_primary')}</a>
-            <a href="#about" className="btn btn-outline hero-secondary-btn">{t('hero.cta_secondary')}</a>
+            <button onClick={() => scrollToSection('services')} className="btn btn-primary btn-lg">{t('hero.cta_primary')}</button>
+            <button onClick={() => scrollToSection('about')} className="btn btn-outline btn-lg hero-secondary-btn">{t('hero.cta_secondary')}</button>
           </div>
         </motion.div>
-      </div>
+      </div >
 
       <style>{`
         .hero {
@@ -235,6 +242,16 @@ const Hero = () => {
           line-height: 1.6;
         }
 
+        .hero-cta {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .hero .btn {
+            min-width: 260px;
+        }
+
         .hero-secondary-btn {
           margin-left: 1rem;
         }
@@ -249,10 +266,8 @@ const Hero = () => {
           }
 
           .hero-cta {
-             display: flex;
              flex-direction: column;
              gap: 1rem;
-             align-items: center;
              width: 100%;
           }
           
@@ -262,11 +277,13 @@ const Hero = () => {
 
           .hero .btn {
             width: 100%;
-            max-width: 300px;
+            max-width: 280px; /* Consitent max-width for both */
+            display: flex; /* Centering text if needed, though usually btn has it */
+            justify-content: center;
           }
         }
       `}</style>
-    </section>
+    </section >
   );
 };
 

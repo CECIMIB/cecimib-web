@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { publicationsData } from '../data/publications';
-import { Activity, Search, Dna, ArrowLeft, ExternalLink, FileText } from 'lucide-react';
+import { Activity, Search, Dna, ArrowLeft, ExternalLink, FileText, BookOpen, Stethoscope } from 'lucide-react';
 import '../App.css';
 
 // Map icon names to components
 const IconMap = {
     "Activity": Activity,
     "Search": Search,
-    "Dna": Dna
+    "Dna": Dna,
+    "FileText": FileText,
+    "BookOpen": BookOpen,
+    "Stethoscope": Stethoscope
 };
 
 const Publications = () => {
@@ -18,6 +21,12 @@ const Publications = () => {
 
     const handleCategoryClick = (index) => {
         setSelectedCategoryIndex(index);
+        setTimeout(() => {
+            const element = document.getElementById('publications');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
     };
 
     const handleBackClick = () => {
@@ -139,29 +148,25 @@ const Publications = () => {
 
             <style>{`
         .publications {
-          background-color: var(--color-bg); /* Match Services bg */
-          padding: 5rem 0;
-          min-height: 80vh;
+          background-color: var(--color-bg);
+          padding: 2rem 0; /* Reduced padding */
+          min-height: auto;
         }
 
         .section-header {
           text-align: center;
-          margin-bottom: 4rem;
+          margin-bottom: 3rem;
         }
 
         .section-header h2 {
           font-size: 2.5rem;
           color: var(--color-primary-dark);
           margin-bottom: 1rem;
-        }
-        
-        .subtitle {
-            margin-top: 1rem;
-            color: var(--color-text-light);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.1rem;
+          /* white-space: nowrap; Removed to allow wrapping for long titles */
+          line-height: 1.2;
+          max-width: 900px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .underline {
@@ -171,11 +176,22 @@ const Publications = () => {
           margin: 0 auto;
           border-radius: 2px;
         }
+        
+        .section-header p.subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+            max-width: 1000px; /* Increased to allow single line */
+            margin: 1rem auto 0; /* Added top margin to match title spacing */
+            text-align: center;
+        }
 
-        /* GRID STYLES - MIRRORING SERVICES.JSX */
+        /* ... */
+
+        /* FLEX STYLES FOR CENTERED LAYOUT */
         .publications-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           gap: 2rem;
           max-width: 1200px;
           margin: 0 auto;
@@ -194,11 +210,11 @@ const Publications = () => {
           align-items: center;
           height: 100%;
           cursor: pointer;
-        }
-
-        .publication-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          
+          /* Enforce consistent width */
+          width: 350px;
+          height: 450px; /* Fixed height for uniformity */
+          flex: 0 0 auto; /* Prevent growing/shrinking to maintain exact size */
         }
 
         .icon-wrapper {
@@ -211,7 +227,22 @@ const Publications = () => {
           background-color: rgba(27, 90, 171, 0.1);
           color: var(--color-primary);
           margin-bottom: 1.5rem;
+          flex-shrink: 0;
         }
+        
+        .publication-card h3 {
+           /* ... */
+           flex-grow: 0;
+           min-height: 3.5rem; /* Reserve space for 2 lines of title */
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+
+        .publication-card p {
+           flex-grow: 1; /* Description takes available space */
+        }
+
 
         .publication-card h3 {
           font-size: 1.35rem;

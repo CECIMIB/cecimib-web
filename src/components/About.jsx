@@ -29,6 +29,7 @@ const About = () => {
       <style>{`
         .about {
           background-color: var(--color-bg-alt);
+          padding: 2rem 0;
         }
 
         .about-content {

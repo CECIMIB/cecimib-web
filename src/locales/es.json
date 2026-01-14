@@ -3,20 +3,27 @@
     "services": "Servicios",
     "about": "Nosotros",
     "researchers": "Equipo",
-    "publications": "Publicaciones",
+    "publications": "Publicaciones Científicas",
+    "group": "Grupo de Investigación",
+    "bulletins": "Boletines",
+    "courses": "Cursos",
     "contact": "Contáctanos"
   },
   "publications": {
     "title": "Publicaciones Científicas",
     "subtitle": "Descubre nuestra producción científica y contribuciones a la investigación biomédica.",
-    "view_article": "Ver Articulo",
+    "view_article": "Ver Artículo",
     "authors": "Autores",
     "meta_research_desc": "Análisis de prácticas de investigación y calidad de la evidencia en salud global.",
     "gaps_desc": "Identificación de disparidades y prioridades en investigación y desarrollo en salud.",
     "pharma_desc": "Estudio de la ancestría genética y su impacto en la respuesta farmacológica.",
+    "evidence_desc": "Investigación sobre la síntesis de evidencia y sus fundamentos epistemológicos.",
+    "translation_desc": "Aplicación de la medicina basada en evidencia para la toma de decisiones clínicas.",
     "meta_research_cat": "Meta-investigación y análisis de métodos mixtos en servicios de salud e investigación en salud global",
     "gaps_cat": "Brechas y prioridades en I+D en salud",
     "pharma_cat": "Farmacogenómica y ancestría genética",
+    "evidence_cat": "Investigación Basada en Evidencia y Epistemología Biomédica",
+    "translation_cat": "Medicina Basada en Evidencia y Traducción del Conocimiento",
     "view_publications": "Ver publicaciones",
     "back_to_categories": "Volver a Categorías"
   },
@@ -48,8 +55,8 @@
         "description": "Evaluamos tecnologías sanitarias con rigor metodológico y visión costo-efectiva."
       },
       "strengthening": {
-        "title": "Fortalecimiento de Grupos",
-        "description": "Fortalecemos o creamos grupos de investigación, impulsando su sostenibilidad y productividad."
+        "title": "Fortalecimiento de Grupos y Unidades",
+        "description": "Fortalecemos o creamos grupos y unidades de investigación, impulsando su sostenibilidad y productividad."
       },
       "design": {
         "title": "Diseño de Estudios",
@@ -65,7 +72,7 @@
     "title": "Nuestros Investigadores",
     "ivan": {
       "role": "CEO y Fundador",
-      "bio": "Médico - Diplomado en Epidemiología. Maestría en Gerontología. Candidato a Doctor en Metodología de la Investigación Biomédica y Salud Pública. CEO y Fundador del Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB SAS)."
+      "bio": "Médico - Especialista en Epidemiología. Magister en Gerontología y Atención Centrada en la Persona. Candidato a Doctor en Metodología de la Investigación Biomédica y Salud Pública. CEO y Fundador del Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB SAS)."
     },
     "david": {
       "role": "Asistente de Investigación",
@@ -77,10 +84,64 @@
     }
   },
   "footer": {
-    "brand_text": "Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas",
+    "brand_text": "Centro de Consultoría Científica y\nMeta-Investigación en Ciencias\nBiomédicas",
     "links": "Enlaces",
     "contact": "Contacto",
     "contact_text": "Ayudamos a investigadores, hospitales e industrias.",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "research_group": "Grupo de Investigación",
+    "courses": "Cursos y Formación"
+  },
+  "research_group": {
+    "title": "Grupo de Investigación",
+    "cecimib_minciencias": "CECIMIB MinCiencias",
+    "category_badge": "Categoría C",
+    "description": "Nuestro grupo se enfoca en la generación de evidencia de alta calidad a través de la meta-investigación y la cienciometría. Buscamos transformar la práctica científica y clínica mediante el análisis riguroso de datos y la evaluación metodológica.",
+    "view_gruplac": "Ver GrupLAC"
+  },
+  "bulletins": {
+    "title": "Boletines Técnicos e Informativos",
+    "coming_soon": "Próximamente",
+    "description": "Estamos preparando análisis de interés sobre meta-ciencia y cienciometría. ¡Mantente al tanto!"
+  },
+  "courses": {
+    "title": "Cursos y Formación",
+    "r_fundamentals": {
+      "title": "Fundamentos de R para Análisis de Datos",
+      "description": "Domina las bases del análisis de datos con R. Este curso ofrece una introducción rigurosa y práctica, diseñada para desarrollar competencias analíticas en investigación biomédica y ciencias de la salud.",
+      "more_details": "Más detalles",
+      "view_repo": "Ver Repositorio"
+    }
+  },
+  "course_details": {
+    "back_button": "Volver a Cursos y Formación",
+    "r_fundamentals": {
+      "title": "Fundamentos de R para Análisis de Datos",
+      "download_pdf": "Descargar PDF",
+      "language_label": "Idioma",
+      "language_value": "Inglés",
+      "duration_label": "Duración",
+      "duration_value": "10 horas (6 sesiones)",
+      "delivery_label": "Modalidad",
+      "delivery_value": "Virtual por Google Meet",
+      "objective_title": "Objetivo del Curso",
+      "objective_text": "Desarrollar habilidades prácticas en R para la gestión de datos, visualización y análisis estadístico. El enfoque está en aplicaciones ampliamente utilizadas en investigación científica, particularmente dentro de las ciencias de la salud.",
+      "certification_title": "Certificado por",
+      "certification_text": "Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB).",
+      "methodology_title": "Metodología de Enseñanza",
+      "methodology_text": "Cada sesión combina conceptos teóricos con práctica práctica utilizando conjuntos de datos preparados previamente. Los participantes aplicarán activamente métodos y herramientas a medida que aprenden, asegurando el refuerzo inmediato de ideas clave.",
+      "plan_title": "Plan de Estudios",
+      "table_week": "Semana",
+      "table_session": "Sesión",
+      "table_topics": "Temas",
+      "w1_s1_topics": "- Introducción al curso.<br />- Entendiendo la interfaz de RStudio y comandos básicos.<br />- Introducción a la visualización de datos.",
+      "w1_s2_topics": "- Normalidad y pruebas de hipótesis",
+      "w2_s3_topics": "- Análisis de correlación<br />- Modelos de regresión lineal",
+      "w2_s4_topics": "- Modelos de regresión logística",
+      "w3_s5_topics": "- Análisis ROC",
+      "w3_s6_topics": "- Por si acaso",
+      "resources_text": "Todos los materiales y recursos del curso están disponibles en:",
+      "github_repo": "Repositorio de GitHub"
+    }
   }
 }

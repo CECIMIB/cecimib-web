@@ -52,6 +52,7 @@ const Services = () => {
       <style>{`
         .services {
           background-color: var(--color-bg);
+          padding: 2rem 0;
         }
 
         .section-header {

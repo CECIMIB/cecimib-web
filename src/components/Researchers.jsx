@@ -9,7 +9,7 @@ const Researchers = () => {
     {
       id: 'ivan',
       name: "Ivan David Lozada-Martinez",
-      photo: `${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.jpeg`,
+      photo: `${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.png`,
       links: {
         linkedin: "https://www.linkedin.com/in/ivan-david-lozada-martinez/?originalSubdomain=co",
         orcid: "https://orcid.org/0000-0002-1960-7334",
@@ -90,6 +90,7 @@ const Researchers = () => {
       <style>{`
         .researchers {
           background-color: var(--color-white);
+          padding: 2rem 0;
         }
 
         .researchers-grid {
