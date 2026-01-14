@@ -25,21 +25,10 @@ const Navbar = () => {
 
   const handleNav = (id) => {
     setIsMenuOpen(false);
-    if (location.pathname === '/') {
-      if (!id) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-      }
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+    if (!id) {
+      navigate('/');
     } else {
-      if (!id) {
-        navigate('/');
-      } else {
-        navigate('/', { state: { targetId: id } });
-      }
+      navigate(`/${id}`);
     }
   };
 

@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 // Expanded Background words data
 const scientificTerms = [
@@ -134,12 +135,10 @@ const ExtensiveNetwork = () => {
 
 const Hero = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate(`/${id}`);
   };
 
   return (

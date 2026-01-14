@@ -12,21 +12,10 @@ const Footer = () => {
     : `${import.meta.env.BASE_URL}logo_blanco.svg`;
 
   const handleNav = (id) => {
-    if (location.pathname === '/') {
-      if (!id) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-      }
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+    if (!id) {
+      navigate('/');
     } else {
-      if (!id) {
-        navigate('/');
-      } else {
-        navigate('/', { state: { targetId: id } });
-      }
+      navigate(`/${id}`);
     }
   };
 
