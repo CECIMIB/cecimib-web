@@ -195,7 +195,11 @@ const ResearcherDetails = () => {
                 .social-links-large a {
                     color: var(--color-text-light);
                     transition: all 0.2s;
-                    padding: 0.5rem;
+                    width: 45px;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     border-radius: 50%;
                     background-color: #f8fafc;
                 }
