@@ -1,6 +1,7 @@
 import React from 'react';
-import { Linkedin, BookOpen, FileText, Globe } from 'lucide-react';
+import { Linkedin, BookOpen, FileText, Globe, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Researchers = () => {
   const { t } = useTranslation();
@@ -59,6 +60,11 @@ const Researchers = () => {
                 <h3>{researcher.name}</h3>
                 <span className="role">{t(`researchers.${researcher.id}.role`)}</span>
                 <p>{t(`researchers.${researcher.id}.bio`)}</p>
+
+                <Link to={`/researcher/${researcher.id}`} className="view-more-link">
+                  {t('researchers_details.view_more')} <ArrowRight size={16} />
+                </Link>
+
                 <div className="social-links">
                   {researcher.links.linkedin && (
                     <a href={researcher.links.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
@@ -161,6 +167,23 @@ const Researchers = () => {
           margin-bottom: 1.5rem;
           font-size: 0.95rem;
           flex-grow: 1;
+        }
+
+        .view-more-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: var(--color-primary);
+          font-weight: 600;
+          font-size: 0.95rem;
+          margin-bottom: 1.5rem;
+          align-self: center;
+          transition: gap 0.2s;
+        }
+
+        .view-more-link:hover {
+          gap: 0.8rem;
+          text-decoration: underline;
         }
 
         .social-links {

@@ -111,18 +111,5 @@ export const publicationsData = [
             }
         ]
     },
-    {
-        category: "Evidence-Based Research and Biomedical Epistemology",
-        categoryKey: "evidence_cat",
-        descriptionKey: "evidence_desc",
-        icon: "BookOpen",
-        articles: []
-    },
-    {
-        category: "Evidence-Based Medicine and Knowledge Translation",
-        categoryKey: "translation_cat",
-        descriptionKey: "translation_desc",
-        icon: "Stethoscope",
-        articles: []
-    }
+
 ];

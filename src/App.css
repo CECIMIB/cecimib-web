@@ -1,6 +1,13 @@
 /* Cleaned for custom styles */
 
 /* Research Group Styles */
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
 .research-group {
     padding: 2rem 0;
     background-color: var(--color-bg);
@@ -13,7 +20,7 @@
 }
 
 .research-group .section-header h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--color-primary-dark);
     margin-bottom: 1rem;
 }
@@ -42,7 +49,7 @@
 }
 
 .info-block h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: var(--color-text);
     margin-bottom: 0.5rem;
 }
@@ -61,7 +68,7 @@
     color: var(--color-text-light);
     margin-bottom: 2rem;
     line-height: 1.6;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 /* Bulletins Styles */
@@ -76,7 +83,7 @@
 }
 
 .bulletins .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--color-primary-dark);
     margin-bottom: 1rem;
 }
@@ -116,13 +123,13 @@
 }
 
 .empty-state h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: var(--color-text);
     margin-bottom: 1rem;
 }
 
 .empty-state p {
     color: var(--color-text-light);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     max-width: 400px;
 }

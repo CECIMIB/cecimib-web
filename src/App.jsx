@@ -11,6 +11,7 @@ import ResearchGroup from './components/ResearchGroup';
 import Bulletins from './components/Bulletins';
 import Courses from './components/Courses';
 import CourseDetails from './components/CourseDetails';
+import ResearcherDetails from './components/ResearcherDetails';
 import './App.css';
 
 const Home = () => {
@@ -72,6 +73,7 @@ function App() {
           <Route path="/courses" element={<Home />} />
           <Route path="/bulletins" element={<Home />} />
           <Route path="/course-details" element={<CourseDetails />} />
+          <Route path="/researcher/:id" element={<ResearcherDetails />} />
         </Routes>
         <Footer />
       </div>

@@ -3,7 +3,7 @@
     "services": "Servicios",
     "about": "Nosotros",
     "researchers": "Equipo",
-    "publications": "Publicaciones Científicas",
+    "publications": "Publicaciones",
     "group": "Grupo de Investigación",
     "bulletins": "Boletines",
     "courses": "Cursos",
@@ -81,6 +81,23 @@
     "andy": {
       "role": "Asistente de Investigación",
       "bio": "Estudiante de biología enfocado en bibliometría y meta-investigación, estudiando la producción científica, coherencia de la investigación y patrones globales en ciencias de la salud y ambientales."
+    }
+  },
+  "researchers_details": {
+    "view_more": "Saber más",
+    "back_to_team": "Volver a Equipo",
+    "information": "Información",
+    "ivan": {
+      "title": "CEO y Fundador CECIMIB SAS (Colombia)",
+      "detailed_bio": "Ivan David Lozada-Martinez es médico investigador y profesor de tiempo completo en la Universidad de la Costa (Barranquilla, Colombia), donde desarrolla investigación en la intersección entre meta-ciencia, cienciometría, investigación basada en evidencia, brechas del conocimiento en ciencias médicas, medicina basada en evidencia, salud global y gerociencias. En su trayectoria se ha caracterizado por abordar preguntas de alto impacto traslacional: cómo se produce, evalúa y mejora la evidencia biomédica, y cómo ese conocimiento puede convertirse en decisiones más precisas en clínica, políticas y sistemas de salud.\n\nEn el plano institucional y de liderazgo científico, es el Líder de la Unidad de Cienciometría Biomédica e Investigación Basada en Evidencia (METRIC-BIO) en su departamento académico, y también como Director Científico del grupo de investigación CECIMIB (Centro de Meta-Investigación y Cienciometría en Ciencias Biomédicas; Barranquilla), iniciativa orientada a fortalecer investigación reproducible, evaluación crítica y métricas responsables en salud.\n\nUna de sus líneas más visibles se centra en longevidad extrema y envejecimiento saludable, con énfasis en la investigación de centenarios en Colombia. En el contexto del Proyecto/Alianza Centenarios de Colombia, ha contribuido a caracterizar poblaciones de centenarios y a discutir sus implicaciones epidemiológicas y traslacionales.\n\nEn paralelo, su producción incluye contribuciones en revistas y foros internacionales donde plantea preguntas científicas que combinan demografía, salud pública y gerociencia, como la discusión sobre el subregistro o centenarios desaparecidos como problema con implicaciones globales, así como trabajos sobre la conceptualización de zonas azules y su utilidad para guiar investigación y políticas de envejecimiento saludable.\n\nOtra línea transversal en su trabajo es la meta-investigación aplicada a las ciencias biomédicas: evaluar calidad metodológica, sesgos, transparencia, incentivos y brechas del conocimiento, con llamados explícitos a fortalecer estos enfoques en áreas específicas (por ejemplo, neurociencias), y a consolidar capacidades en contextos de ingresos medios y bajos.\n\nSu agenda científica y académica converge en un objetivo: producir y usar mejor evidencia para que el conocimiento biomédico sea más riguroso, útil y equitativo, conectando análisis cuantitativos de la investigación (cienciometría/meta-ciencia) con problemas clínicos y poblacionales (gerociencia, salud pública, salud global). Sus proyecciones públicas se orientan a expandir plataformas e iniciativas de investigación, consolidar colaboraciones interdisciplinarias y seguir desarrollando proyectos que acerquen la evidencia de alta calidad a la toma de decisiones en salud."
+    },
+    "david": {
+      "title": "Asistente de Investigación",
+      "detailed_bio": "David A. Hernandez-Paez es médico en formación, investigador asociado del Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas y miembro de la International Biometric Society. Su actividad académica se enfoca en la meta-investigación y en la evaluación de la coherencia de la producción científica mediante la estimación del potencial impacto de esta en indicadores poblacionales y desenlaces de salud. En su metodología emplea modelos de regresión, modelos jerárquicos de efectos mixtos y búsqueda de moderadores. En 2025, recibió el premio al Mejor Estudiante de Medicina Investigador de Colombia, otorgado por la Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia (ASCEMCOL)."
+    },
+    "andy": {
+      "title": "Asistente de Investigación",
+      "detailed_bio": "Andy A. Acosta-Monterrosa es biólogo de la Universidad de Cartagena, asistente investigador del Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas y miembro de la Asociación Colombiana de Genética Humana y de la Red de Investigación Diversidad Funcional. Su trabajo integra investigación en ciencias naturales y biomédicas con un fuerte componente cuantitativo, enfocándose en manejo, análisis y visualización de datos y bioestadística en R, además de divulgación y comunicación científica.\n\nSu actividad académica se organiza en dos ejes; biodiversidad marina del Caribe colombiano, con énfasis en ecología, diversidad y taxonomía de macroalgas, conservación marina y gobernanza costera; y bibliometría y meta-investigación, estudiando producción científica, coherencia de la investigación y patrones globales en salud y medio ambiente.\n\nDe manera complementaria, ha desarrollado investigación en farmacogenómica y ancestría genética en poblaciones colombianas, explorando cómo las diferencias en la frecuencia de variantes genéticas pueden relacionarse con variación en la respuesta a medicamentos y con la implementación de enfoques de medicina de precisión."
     }
   },
   "footer": {

@@ -3,7 +3,7 @@
         "services": "Services",
         "about": "About Us",
         "researchers": "Team",
-        "publications": "Scientific Publications",
+        "publications": "Publications",
         "group": "Research Group",
         "bulletins": "Bulletins",
         "courses": "Courses",
@@ -81,6 +81,23 @@
         "andy": {
             "role": "Research Assistant",
             "bio": "Biology undergraduate focused on bibliometrics and meta-research, studying scientific production, research coherence, and global patterns in health and environmental sciences."
+        }
+    },
+    "researchers_details": {
+        "view_more": "Learn more",
+        "back_to_team": "Back to Team",
+        "information": "Information",
+        "ivan": {
+            "title": "CEO & Founder CECIMIB SAS (Colombia)",
+            "detailed_bio": "Ivan David Lozada-Martinez is a medical researcher and full-time professor at the Universidad de la Costa (Barranquilla, Colombia), where he conducts research at the intersection of meta-science, scientometrics, evidence-based research, knowledge gaps in medical sciences, evidence-based medicine, global health, and geroscience. Throughout his career, he has been characterized by addressing questions of high translational impact: how biomedical evidence is produced, evaluated, and improved, and how that knowledge can be converted into more precise decisions in clinical practice, policies, and health systems.\n\nOn an institutional and scientific leadership level, he is the Leader of the Biomedical Scientometrics and Evidence-Based Research Unit (METRIC-BIO) in his academic department, and also serves as Scientific Director of the CECIMIB research group (Center for Meta-Research and Scientometrics in Biomedical Sciences; Barranquilla), an initiative aimed at strengthening reproducible research, critical evaluation, and responsible metrics in health.\n\nOne of his most visible lines of work focuses on extreme longevity and healthy aging, with an emphasis on research on centenarians in Colombia. Within the context of the Colombia Centenarians Project/Alliance, he has contributed to characterizing centenarian populations and discussing their epidemiological and translational implications.\n\nIn parallel, his production includes contributions to international journals and forums where he poses scientific questions combining demographics, public health, and geroscience, such as the discussion on under-registration or missing centenarians as a problem with global implications, as well as work on the conceptualization of blue zones and their utility for guiding healthy aging research and policies.\n\nAnother cross-cutting line in his work is meta-research applied to biomedical sciences: evaluating methodological quality, bias, transparency, incentives, and knowledge gaps, with explicit calls to strengthen these approaches in specific areas (e.g., neurosciences), and to consolidate capacities in low- and middle-income contexts.\n\nHis scientific and academic agenda converges on one goal: to produce and use better evidence so that biomedical knowledge is more rigorous, useful, and equitable, connecting quantitative analysis of research (scientometrics/meta-science) with clinical and population problems (geroscience, public health, global health). His public projections are oriented towards expanding research platforms and initiatives, consolidating interdisciplinary collaborations, and continuing to develop projects that bring high-quality evidence closer to decision-making in health."
+        },
+        "david": {
+            "title": "Research Assistant",
+            "detailed_bio": "David A. Hernandez-Paez is a physician-in-training, associate researcher at the Center for Scientific Consulting and Meta-Research in Biomedical Sciences, and a member of the International Biometric Society. His academic activity focuses on meta-research and the assessment of scientific production coherence by estimating its potential impact on population indicators and health outcomes. His methodology utilizes regression models, hierarchical mixed-effects models, and moderator analysis. In 2025, he was awarded the Best Medical Student Researcher in Colombia prize by the Association of Medical Student Scientific Societies of Colombia (ASCEMCOL)."
+        },
+        "andy": {
+            "title": "Research Assistant",
+            "detailed_bio": "Andy A. Acosta-Monterrosa is a biologist from the University of Cartagena, research assistant at the Center for Scientific Consulting and Meta-Research in Biomedical Sciences, and member of the Colombian Association of Human Genetics and the Functional Diversity Research Network. His work integrates research in natural and biomedical sciences with a strong quantitative component, focusing on data management, analysis, and visualization, and biostatistics in R, in addition to scientific dissemination and communication.\n\nHis academic activity is organized into two axes; marine biodiversity of the Colombian Caribbean, with an emphasis on ecology, diversity and taxonomy of macroalgae, marine conservation and coastal governance; and bibliometrics and meta-research, studying scientific production, research coherence and global patterns in health and the environment.\n\nComplementarily, he has developed research in pharmacogenomics and genetic ancestry in Colombian populations, exploring how differences in the frequency of genetic variants can be related to variation in response to medications and the implementation of precision medicine approaches."
         }
     },
     "footer": {

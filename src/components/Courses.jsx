@@ -58,7 +58,7 @@ const Courses = () => {
                 }
 
                 .section-header h2 {
-                    font-size: 2.5rem;
+                    font-size: 2.2rem;
                     color: var(--color-primary-dark);
                     margin-bottom: 1rem;
                 }
@@ -107,7 +107,7 @@ const Courses = () => {
                 }
 
                 .course-content h3 {
-                    font-size: 1.5rem;
+                    font-size: 1.35rem;
                     color: var(--color-text);
                     margin-bottom: 1rem;
                 }
@@ -116,6 +116,7 @@ const Courses = () => {
                     color: var(--color-text-light);
                     margin-bottom: 2rem;
                     line-height: 1.6;
+                    font-size: 0.95rem;
                 }
 
                 .course-actions {

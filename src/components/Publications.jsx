@@ -159,7 +159,7 @@ const Publications = () => {
         }
 
         .section-header h2 {
-          font-size: 2.5rem;
+          font-size: 2.2rem;
           color: var(--color-primary-dark);
           margin-bottom: 1rem;
           /* white-space: nowrap; Removed to allow wrapping for long titles */
