@@ -263,6 +263,7 @@ const Navbar = () => {
         .nav-links a.btn-primary {
           color: white;
           padding: 0.5rem 1.2rem;
+          background-color: var(--color-primary);
         }
         
         .nav-links a:hover, .dropdown-toggle:hover {
@@ -271,6 +272,7 @@ const Navbar = () => {
 
         .nav-links a.btn-primary:hover {
           color: white; 
+          background-color: var(--color-primary-dark);
         }
 
         /* Dropdown Styles */
@@ -384,6 +386,7 @@ const Navbar = () => {
         .mobile-contact-btn a.btn {
             display: inline-block;
             width: 100%;
+            color: white !important;
         }
 
         /* Mobile Dropdowns */
