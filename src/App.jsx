@@ -12,6 +12,7 @@ import Bulletins from './components/Bulletins';
 import Courses from './components/Courses';
 import CourseDetails from './components/CourseDetails';
 import ResearcherDetails from './components/ResearcherDetails';
+import Repositories from './components/Repositories';
 import './App.css';
 
 const Home = () => {
@@ -50,6 +51,7 @@ const Home = () => {
       <About />
       <Researchers />
       <Publications />
+      <Repositories />
       <ResearchGroup />
       <Courses />
       <Bulletins />
@@ -68,6 +70,7 @@ function App() {
           <Route path="/about" element={<Home />} />
           <Route path="/researchers" element={<Home />} />
           <Route path="/publications" element={<Home />} />
+          <Route path="/repositories" element={<Home />} />
           <Route path="/contact" element={<Home />} />
           <Route path="/group" element={<Home />} />
           <Route path="/courses" element={<Home />} />

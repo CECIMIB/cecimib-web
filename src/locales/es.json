@@ -7,7 +7,16 @@
     "group": "Grupo de Investigación",
     "bulletins": "Boletines",
     "courses": "Cursos",
-    "contact": "Contáctanos"
+    "repositories": "Repositorios",
+    "contact": "Contáctanos",
+    "institutional": "Nosotros",
+    "research": "Investigación"
+  },
+  "repositories": {
+    "title": "Repositorios",
+    "subtitle": "Explora nuestros repositorios de datos y código utilizados en nuestros artículos científicos.",
+    "github_desc": "Encuentra nuestro código abierto y repositorios de proyectos.",
+    "zenodo_desc": "Accede a nuestros conjuntos de datos y resultados de investigación."
   },
   "publications": {
     "title": "Publicaciones Científicas",
