@@ -103,7 +103,9 @@ const Publications = () => {
                             </button>
 
                             <div className="articles-list">
-                                {publicationsData[selectedCategoryIndex].articles.map((article, index) => (
+                                {[...publicationsData[selectedCategoryIndex].articles]
+                                    .sort((a, b) => parseInt(b.year) - parseInt(a.year))
+                                    .map((article, index) => (
                                     <motion.div
                                         key={index}
                                         initial={{ opacity: 0, y: 10 }}

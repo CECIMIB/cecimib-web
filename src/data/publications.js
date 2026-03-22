@@ -52,6 +52,14 @@ export const publicationsData = [
                 year: "2025",
                 link: "https://journals.sagepub.com/doi/full/10.1177/11786329251352018",
                 type: "Scientometric Analysis"
+            },
+            {
+                title: "Exploring the potential impact of medical errors research on population health",
+                authors: "Sarquis Rivera, M. A., Hernandez-Paez, D. A., Galván-Barrios, J., Barceló-Martinez, E., Narvaez-Rojas, A. R., & Lozada-Martinez, I. D.",
+                journal: "PLoS One, 21(3), e0340153",
+                year: "2026",
+                link: "https://doi.org/10.1371/journal.pone.0340153",
+                type: "Original Research"
             }
         ]
     },
@@ -108,6 +116,14 @@ export const publicationsData = [
                 year: "2025",
                 link: "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2025.1636451/full",
                 type: "Genetic Study"
+            },
+            {
+                title: "Pharmacogenomics and genetic ancestry: an opportunity to transform clinical practice in Colombia",
+                authors: "Acosta-Monterrosa, A. A., Montoya-Quintero, K. F., Barceló-Martinez, E., & Galván-Barrios, J.",
+                journal: "Frontiers in Pharmacology, 17, 1774562",
+                year: "2026",
+                link: "https://doi.org/10.3389/fphar.2026.1774562",
+                type: "Perspective"
             }
         ]
     },
