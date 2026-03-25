@@ -73,6 +73,7 @@ function App() {
           <Route path="/repositories" element={<Home />} />
           <Route path="/contact" element={<Home />} />
           <Route path="/group" element={<Home />} />
+          <Route path="/collaborators" element={<Home />} />
           <Route path="/courses" element={<Home />} />
           <Route path="/bulletins" element={<Home />} />
           <Route path="/course-details" element={<CourseDetails />} />

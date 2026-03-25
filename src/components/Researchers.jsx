@@ -1,10 +1,19 @@
-import React from 'react';
-import { Linkedin, BookOpen, FileText, Globe, ArrowRight } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Linkedin, BookOpen, FileText, Globe, ArrowRight, ChevronDown, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+const collaborators = [
+  { id: 'fabriccio', flag: '🇵🇪' },
+  { id: 'foday', flag: '🇸🇱' },
+  { id: 'johana', flag: '🇨🇴' },
+  { id: 'kevin', flag: '🇨🇴' },
+];
+
 const Researchers = () => {
   const { t } = useTranslation();
+  const [showCollaborators, setShowCollaborators] = useState(false);
+  const collabRef = useRef(null);
 
   const researchers = [
     {
@@ -41,6 +50,10 @@ const Researchers = () => {
       }
     }
   ];
+
+  const toggleCollaborators = () => {
+    setShowCollaborators(prev => !prev);
+  };
 
   return (
     <section id="researchers" className="section researchers">
@@ -90,6 +103,55 @@ const Researchers = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Collapsible Collaborators Toggle */}
+        <div className="collaborators-cta">
+          <button
+            onClick={toggleCollaborators}
+            className={`btn btn-outline collaborators-toggle-btn ${showCollaborators ? 'active' : ''}`}
+          >
+            {t('researchers.view_collaborators')}
+            <ChevronDown size={18} className={`toggle-chevron ${showCollaborators ? 'rotated' : ''}`} />
+          </button>
+        </div>
+
+        {/* Collapsible Collaborators Panel */}
+        <div
+          ref={collabRef}
+          className={`collaborators-panel ${showCollaborators ? 'expanded' : ''}`}
+          style={{
+            maxHeight: showCollaborators ? (collabRef.current ? collabRef.current.scrollHeight + 'px' : '600px') : '0px',
+          }}
+        >
+          <div className="collaborators-panel-inner" id="collaborators">
+            <h3 className="collab-section-title">{t('collaborators.title')}</h3>
+            <p className="collab-section-subtitle">{t('collaborators.subtitle')}</p>
+
+            <div className="collaborators-grid">
+              {collaborators.map((collab) => (
+                <div key={collab.id} className="collaborator-card">
+                  <div className="collab-avatar">
+                    <span className="collab-initials">
+                      {t(`collaborators.${collab.id}.name`).split(' ').map(w => w[0]).filter((_, i, arr) => i === 0 || i === arr.length - 1).join('')}
+                    </span>
+                  </div>
+                  <div className="collab-info">
+                    <h4 className="collab-name">{t(`collaborators.${collab.id}.name`)}</h4>
+                    <div className="collab-affiliation">
+                      <Building2 size={15} />
+                      <span>{t(`collaborators.${collab.id}.affiliation`)}</span>
+                    </div>
+                    <div className="collab-country">
+                      <MapPin size={15} />
+                      <span>{t(`collaborators.${collab.id}.country`)}</span>
+                      <span className="country-flag">{collab.flag}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -201,6 +263,169 @@ const Researchers = () => {
         .social-links a:hover {
           color: var(--color-primary);
           transform: translateY(-2px);
+        }
+
+        /* Collaborators Toggle Button */
+        .collaborators-cta {
+          text-align: center;
+          margin-top: 2.5rem;
+        }
+
+        .collaborators-toggle-btn {
+          font-size: 0.95rem;
+          padding: 0.75rem 2rem;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .collaborators-toggle-btn.active {
+          background-color: var(--color-primary);
+          color: white;
+          border-color: var(--color-primary);
+        }
+
+        .toggle-chevron {
+          transition: transform 0.3s ease;
+        }
+
+        .toggle-chevron.rotated {
+          transform: rotate(180deg);
+        }
+
+        /* Collapsible Panel */
+        .collaborators-panel {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .collaborators-panel.expanded {
+          /* max-height set via inline style */
+        }
+
+        .collaborators-panel-inner {
+          padding-top: 2.5rem;
+          text-align: center;
+        }
+
+        .collab-section-title {
+          font-size: 1.5rem;
+          color: var(--color-primary-dark);
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+        }
+
+        .collab-section-subtitle {
+          color: var(--color-text-light);
+          font-size: 0.95rem;
+          margin-bottom: 2rem;
+        }
+
+        /* Collaborators Grid & Cards */
+        .collaborators-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        .collaborator-card {
+          background: var(--color-bg-alt);
+          border-radius: 1rem;
+          padding: 1.75rem;
+          box-shadow: var(--shadow-sm);
+          border: 1px solid rgba(0,0,0,0.05);
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          text-align: left;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .collaborator-card:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--shadow);
+        }
+
+        .collab-avatar {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, rgba(27, 90, 171, 0.12) 0%, rgba(27, 90, 171, 0.06) 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          border: 2px solid rgba(27, 90, 171, 0.15);
+        }
+
+        .collab-initials {
+          font-family: var(--font-heading);
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: var(--color-primary);
+          letter-spacing: 0.5px;
+        }
+
+        .collab-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+          min-width: 0;
+        }
+
+        .collab-name {
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: var(--color-primary-dark);
+          line-height: 1.3;
+        }
+
+        .collab-affiliation {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.4rem;
+          color: var(--color-text-light);
+          font-size: 0.88rem;
+          line-height: 1.4;
+        }
+
+        .collab-affiliation svg {
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        .collab-country {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          color: var(--color-text-light);
+          font-size: 0.85rem;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+
+        .collab-country svg {
+          flex-shrink: 0;
+        }
+
+        .country-flag {
+          font-size: 0.95rem;
+          margin-left: 0.1rem;
+        }
+
+        @media (max-width: 768px) {
+          .collaborators-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .collaborator-card {
+            padding: 1.5rem;
+          }
         }
       `}</style>
     </section>

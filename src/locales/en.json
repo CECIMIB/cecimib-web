@@ -10,7 +10,8 @@
         "repositories": "Repositories",
         "contact": "Contact Us",
         "institutional": "Institutional",
-        "research": "Research"
+        "research": "Research",
+        "collaborators": "Collaborators"
     },
     "repositories": {
         "title": "Repositories",
@@ -79,6 +80,7 @@
     },
     "researchers": {
         "title": "Our Researchers",
+        "view_collaborators": "View Collaborators",
         "ivan": {
             "role": "CEO & Founder",
             "bio": "Physician - Specialist in Epidemiology. Master in Gerontology and Person-Centered Care. PhD Candidate in Biomedical Research Methodology and Public Health. CEO & Founder of the Center for Scientific Consulting and Meta-Research in Biomedical Sciences (CECIMIB SAS)."
@@ -168,6 +170,30 @@
             "w3_s6_topics": "- Just in case",
             "resources_text": "All course materials and resources are available at:",
             "github_repo": "GitHub Repository"
+        }
+    },
+    "collaborators": {
+        "title": "Collaborators & Affiliated Academics",
+        "subtitle": "External researchers who actively contribute to our lines of investigation.",
+        "fabriccio": {
+            "name": "Fabriccio J. Visconti-Lopez",
+            "affiliation": "Universidad Científica del Sur",
+            "country": "Lima, Peru"
+        },
+        "foday": {
+            "name": "Foday Tejan Mansaray",
+            "affiliation": "Connaught Hospital",
+            "country": "Freetown, Sierra Leone"
+        },
+        "johana": {
+            "name": "Johana Galvan Barrios",
+            "affiliation": "Universidad de la Costa",
+            "country": "Barranquilla, Colombia"
+        },
+        "kevin": {
+            "name": "Kevin Fernando Montoya-Quintero",
+            "affiliation": "Universidad de Manizales",
+            "country": "Manizales, Colombia"
         }
     }
 }

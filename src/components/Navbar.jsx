@@ -106,6 +106,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}>
                 <a onClick={() => handleNav('about')}>{t('navbar.about')}</a>
                 <a onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</a>
+                <a onClick={() => handleNav('collaborators')}>{t('navbar.collaborators')}</a>
                 <a onClick={() => handleNav('group')}>{t('navbar.group')}</a>
               </div>
             )}
@@ -166,6 +167,7 @@ const Navbar = () => {
                   <ul className="mobile-submenu">
                     <li><a onClick={() => handleNav('about')}>{t('navbar.about')}</a></li>
                     <li><a onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</a></li>
+                    <li><a onClick={() => handleNav('collaborators')}>{t('navbar.collaborators')}</a></li>
                     <li><a onClick={() => handleNav('group')}>{t('navbar.group')}</a></li>
                   </ul>
                 )}
