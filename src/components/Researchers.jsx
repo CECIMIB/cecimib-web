@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Linkedin, BookOpen, FileText, Globe, ArrowRight, ChevronDown, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const collaborators = [
   { id: 'fabriccio', flag: '🇵🇪' },
@@ -14,6 +14,15 @@ const Researchers = () => {
   const { t } = useTranslation();
   const [showCollaborators, setShowCollaborators] = useState(false);
   const collabRef = useRef(null);
+  const location = useLocation();
+
+  // Auto-expand when navigated to /collaborators
+  useEffect(() => {
+    const path = location.pathname.substring(1);
+    if (path === 'collaborators') {
+      setShowCollaborators(true);
+    }
+  }, [location]);
 
   const researchers = [
     {
@@ -106,7 +115,7 @@ const Researchers = () => {
         </div>
 
         {/* Collapsible Collaborators Toggle */}
-        <div className="collaborators-cta">
+        <div id="collaborators" className="collaborators-cta">
           <button
             onClick={toggleCollaborators}
             className={`btn btn-outline collaborators-toggle-btn ${showCollaborators ? 'active' : ''}`}
@@ -124,7 +133,7 @@ const Researchers = () => {
             maxHeight: showCollaborators ? (collabRef.current ? collabRef.current.scrollHeight + 'px' : '600px') : '0px',
           }}
         >
-          <div className="collaborators-panel-inner" id="collaborators">
+          <div className="collaborators-panel-inner">
             <h3 className="collab-section-title">{t('collaborators.title')}</h3>
             <p className="collab-section-subtitle">{t('collaborators.subtitle')}</p>
 
