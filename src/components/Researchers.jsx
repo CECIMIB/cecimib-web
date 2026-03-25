@@ -8,6 +8,8 @@ const collaborators = [
   { id: 'foday', flag: '🇸🇱' },
   { id: 'johana', flag: '🇨🇴' },
   { id: 'kevin', flag: '🇨🇴' },
+  { id: 'sulaiman', flag: '🇸🇱' },
+  { id: 'juan', flag: '🇨🇴' },
 ];
 
 const Researchers = () => {
