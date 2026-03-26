@@ -182,7 +182,7 @@
         },
         "foday": {
             "name": "Foday Tejan Mansaray",
-            "affiliation": "Connaught Hospital",
+            "affiliation": "Connaught Hospital | Universidad Centroccidental Lisandro Alvarado",
             "country": "Freetown, Sierra Leone"
         },
         "johana": {
@@ -201,9 +201,14 @@
             "country": "Freetown, Sierra Leone"
         },
         "juan": {
-            "name": "Juan David Reyes-Gómez",
-            "affiliation": "Observatorio Colombiano de Ciencia y Tecnología",
-            "country": "Bogota, Colombia"
+            "name": "Juan David Reyes Duque",
+            "affiliation": "Universidad de Manizales",
+            "country": "Manizales, Colombia"
+        },
+        "wendy": {
+            "name": "Wendy Cuji-Galarza",
+            "affiliation": "Universidad de Cuenca",
+            "country": "Cuenca, Ecuador"
         }
     }
 }

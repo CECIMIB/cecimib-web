@@ -10,6 +10,7 @@ const collaborators = [
   { id: 'kevin', flag: '🇨🇴' },
   { id: 'sulaiman', flag: '🇸🇱' },
   { id: 'juan', flag: '🇨🇴' },
+  { id: 'wendy', flag: '🇪🇨' },
 ];
 
 const Researchers = () => {
@@ -120,7 +121,7 @@ const Researchers = () => {
         <div id="collaborators" className="collaborators-cta">
           <button
             onClick={toggleCollaborators}
-            className={`btn btn-outline collaborators-toggle-btn ${showCollaborators ? 'active' : ''}`}
+            className={`btn btn-primary collaborators-toggle-btn ${showCollaborators ? 'active' : ''}`}
           >
             {t('researchers.view_collaborators')}
             <ChevronDown size={18} className={`toggle-chevron ${showCollaborators ? 'rotated' : ''}`} />
