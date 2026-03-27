@@ -4,13 +4,19 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 const collaborators = [
-  { id: 'fabriccio', flag: '🇵🇪' },
-  { id: 'foday', flag: '🇸🇱' },
-  { id: 'johana', flag: '🇨🇴' },
-  { id: 'kevin', flag: '🇨🇴' },
-  { id: 'sulaiman', flag: '🇸🇱' },
-  { id: 'juan', flag: '🇨🇴' },
-  { id: 'wendy', flag: '🇪🇨' },
+  { id: 'fabriccio', flag: '🇵🇪', orcid: 'https://orcid.org/0000-0002-8056-2112' },
+  { id: 'foday', flag: '🇸🇱 🇻🇪', orcid: 'https://orcid.org/0009-0002-1988-5462' },
+  { id: 'johana', flag: '🇨🇴', orcid: 'https://orcid.org/0000-0003-2445-3680' },
+  { id: 'kevin', flag: '🇨🇴', orcid: 'https://orcid.org/0000-0002-6212-7141' },
+  { id: 'sulaiman', flag: '🇸🇱', orcid: 'https://orcid.org/0009-0004-4862-3474' },
+  { id: 'juan', flag: '🇨🇴', orcid: 'https://orcid.org/0000-0002-2363-6058' },
+  { id: 'wendy', flag: '🇪🇨', orcid: 'https://orcid.org/0000-0002-7167-3232' },
+  { id: 'johan', flag: '🇨🇴', orcid: 'https://orcid.org/0009-0003-3429-7463' },
+  { id: 'jhony', flag: '🇨🇴', orcid: 'https://orcid.org/0000-0002-0784-6688' },
+  { id: 'yelson', flag: '🇪🇸', orcid: 'https://orcid.org/0000-0002-7498-5346' },
+  { id: 'alexis', flag: '🇳🇮 🇺🇸', orcid: 'https://orcid.org/0000-0001-6987-5030' },
+  { id: 'patricia', flag: '🇳🇮', orcid: 'https://orcid.org/0000-0002-7779-9995' },
+  { id: 'luz', flag: '🇨🇴', orcid: 'https://orcid.org/0009-0002-0195-4108' }
 ];
 
 const Researchers = () => {
@@ -157,8 +163,22 @@ const Researchers = () => {
                     <div className="collab-country">
                       <MapPin size={15} />
                       <span>{t(`collaborators.${collab.id}.country`)}</span>
-                      <span className="country-flag">{collab.flag}</span>
+                      <span className="country-flag" style={{ letterSpacing: '2px' }}>{collab.flag}</span>
                     </div>
+                    {collab.orcid && (
+                      <div className="collab-orcid" style={{ marginTop: '0.6rem' }}>
+                        <a 
+                          href={collab.orcid} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: 'var(--color-primary)', fontSize: '0.85rem', fontWeight: '500', textDecoration: 'none', transition: 'opacity 0.2s' }}
+                          onMouseOver={(e) => e.currentTarget.style.opacity = 0.8}
+                          onMouseOut={(e) => e.currentTarget.style.opacity = 1}
+                        >
+                          <FileText size={15} /> ORCID
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
