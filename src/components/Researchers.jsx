@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Linkedin, BookOpen, FileText, Globe, ArrowRight, ChevronDown, MapPin, Building2 } from 'lucide-react';
+import { Linkedin, BookOpen, FileText, Globe, ArrowRight, ChevronDown, ChevronLeft, ChevronRight, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -16,14 +16,34 @@ const collaborators = [
   { id: 'yelson', flag: '🇪🇸', orcid: 'https://orcid.org/0000-0002-7498-5346' },
   { id: 'alexis', flag: '🇳🇮 🇺🇸', orcid: 'https://orcid.org/0000-0001-6987-5030' },
   { id: 'patricia', flag: '🇳🇮', orcid: 'https://orcid.org/0000-0002-7779-9995' },
-  { id: 'luz', flag: '🇨🇴', orcid: 'https://orcid.org/0009-0002-0195-4108' }
+  { id: 'luz', flag: '🇨🇴', orcid: 'https://orcid.org/0009-0002-0195-4108' },
+  { id: 'martha', flag: '🇨🇴', orcid: 'https://orcid.org/0000-0002-0525-649X' }
 ];
 
 const Researchers = () => {
   const { t } = useTranslation();
   const [showCollaborators, setShowCollaborators] = useState(false);
   const collabRef = useRef(null);
+  const carouselRef = useRef(null);
   const location = useLocation();
+
+  const scrollCarousel = (direction) => {
+    if (carouselRef.current) {
+      const container = carouselRef.current;
+      const card = container.querySelector('.collaborator-card');
+      if (!card) return;
+
+      const style = window.getComputedStyle(container);
+      const gap = parseFloat(style.gap) || 24;
+      const scrollAmount = card.offsetWidth + gap;
+
+      if (direction === 'left') {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
+  };
 
   // Auto-expand when navigated to /collaborators
   useEffect(() => {
@@ -32,6 +52,35 @@ const Researchers = () => {
       setShowCollaborators(true);
     }
   }, [location]);
+
+  // Center carousel scroll initially when panel is opened
+  useEffect(() => {
+    if (showCollaborators && carouselRef.current) {
+      const container = carouselRef.current;
+      const card = container.querySelector('.collaborator-card');
+      if (card) {
+        setTimeout(() => {
+          const style = window.getComputedStyle(container);
+          const gap = parseFloat(style.gap) || 24;
+          const scrollAmount = card.offsetWidth + gap;
+          
+          // Disable smooth scroll temporarily so it jumps instantly
+          container.style.scrollBehavior = 'auto';
+          container.scrollLeft = scrollAmount * collaborators.length * 10;
+          
+          // Re-enable smooth scroll after jumping
+          requestAnimationFrame(() => {
+            // A small timeout ensures the jump finishes before restoring smooth scroll
+            setTimeout(() => {
+              container.style.scrollBehavior = '';
+            }, 10);
+          });
+        }, 50);
+      }
+    }
+  }, [showCollaborators]);
+
+  const extendedCollaborators = Array(20).fill(collaborators).flat();
 
   const researchers = [
     {
@@ -146,9 +195,13 @@ const Researchers = () => {
             <h3 className="collab-section-title">{t('collaborators.title')}</h3>
             <p className="collab-section-subtitle">{t('collaborators.subtitle')}</p>
 
-            <div className="collaborators-grid">
-              {collaborators.map((collab) => (
-                <div key={collab.id} className="collaborator-card">
+            <div className="collaborators-carousel-container">
+              <button className="carousel-btn left" onClick={() => scrollCarousel('left')} aria-label="Anterior">
+                <ChevronLeft size={24} />
+              </button>
+              <div className="collaborators-grid carousel-view" ref={carouselRef}>
+                {extendedCollaborators.map((collab, index) => (
+                <div key={`${collab.id}-${index}`} className="collaborator-card">
                   <div className="collab-avatar">
                     <span className="collab-initials">
                       {t(`collaborators.${collab.id}.name`).split(' ').map(w => w[0]).filter((_, i, arr) => i === 0 || i === arr.length - 1).join('')}
@@ -182,6 +235,10 @@ const Researchers = () => {
                   </div>
                 </div>
               ))}
+              </div>
+              <button className="carousel-btn right" onClick={() => scrollCarousel('right')} aria-label="Siguiente">
+                <ChevronRight size={24} />
+              </button>
             </div>
           </div>
         </div>
@@ -356,16 +413,58 @@ const Researchers = () => {
           margin-bottom: 2rem;
         }
 
-        /* Collaborators Grid & Cards */
-        .collaborators-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 1.5rem;
-          max-width: 1000px;
+        /* Collaborators Carousel & Cards */
+        .collaborators-carousel-container {
+          display: flex;
+          align-items: center;
+          position: relative;
+          max-width: 1100px;
           margin: 0 auto;
+          gap: 1rem;
+        }
+
+        .carousel-btn {
+          background-color: var(--color-white);
+          border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 50%;
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: var(--color-primary);
+          box-shadow: var(--shadow-sm);
+          transition: all 0.2s ease;
+          flex-shrink: 0;
+          z-index: 2;
+        }
+
+        .carousel-btn:hover {
+          background-color: var(--color-primary);
+          color: white;
+          transform: scale(1.05);
+        }
+
+        .collaborators-grid.carousel-view {
+          display: flex;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+          scroll-snap-type: x mandatory;
+          gap: 1.5rem;
+          padding: 1rem 0.5rem;
+          /* Hide scrollbar */
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
+        .collaborators-grid.carousel-view::-webkit-scrollbar {
+          display: none;
         }
 
         .collaborator-card {
+          flex: 0 0 calc(33.333% - 1rem);
+          scroll-snap-align: start;
           background: var(--color-bg-alt);
           border-radius: 1rem;
           padding: 1.75rem;
@@ -450,12 +549,23 @@ const Researchers = () => {
           margin-left: 0.1rem;
         }
 
-        @media (max-width: 768px) {
-          .collaborators-grid {
-            grid-template-columns: 1fr;
-          }
-
+        @media (max-width: 992px) {
           .collaborator-card {
+            flex: 0 0 calc(50% - 0.75rem);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .collaborators-carousel-container {
+            gap: 0.5rem;
+          }
+          
+          .carousel-btn {
+            display: none; /* Hide buttons on mobile, rely on touch swipe */
+          }
+          
+          .collaborator-card {
+            flex: 0 0 calc(85%);
             padding: 1.5rem;
           }
         }
