@@ -297,3 +297,10 @@
     justify-content: center;
     text-align: center;
 }
+
+/* Mobile Adjustments for Section Titles */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 1.65rem !important;
+    }
+}
