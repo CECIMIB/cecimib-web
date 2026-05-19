@@ -30,6 +30,9 @@ const Bulletins = () => {
                             </div>
                             <div className="bulletin-content">
                                 <h3>{t(`bulletins.items.${bulletin.id}.title`)}</h3>
+                                {t(`bulletins.items.${bulletin.id}.date`) !== `bulletins.items.${bulletin.id}.date` && (
+                                    <p className="bulletin-date">{t(`bulletins.items.${bulletin.id}.date`)}</p>
+                                )}
                                 <p className="bulletin-excerpt">{t(`bulletins.items.${bulletin.id}.p1`)}</p>
                                 <button className="btn-read-more" onClick={(e) => {
                                     e.stopPropagation();

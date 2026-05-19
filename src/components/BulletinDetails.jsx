@@ -45,6 +45,10 @@ const BulletinDetails = () => {
         <div className="bulletin-content-wrapper">
           <h1 className="bulletin-main-title">{title}</h1>
           
+          {t(`${bulletinKey}.date`) !== `${bulletinKey}.date` && (
+            <p className="bulletin-detail-date">{t(`${bulletinKey}.date`)}</p>
+          )}
+
           {images[id] && (
             <div className="bulletin-image-container">
               <img src={images[id]} alt={title} className="bulletin-hero-image" />
