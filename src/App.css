@@ -300,7 +300,9 @@
 
 /* Mobile Adjustments for Section Titles */
 @media (max-width: 768px) {
-    .section-header h2 {
+    .section-header h2,
+    .bulletin-main-title,
+    .header-row h1 {
         font-size: 1.65rem !important;
     }
 }
