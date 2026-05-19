@@ -262,10 +262,10 @@
 
 .bulletin-text-content p {
     color: var(--color-text);
-    line-height: 1.8;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-    text-align: justify;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .bulletin-text-content p:last-child {
@@ -304,5 +304,9 @@
     .bulletin-main-title,
     .header-row h1 {
         font-size: 1.65rem !important;
+    }
+
+    .bulletin-content-wrapper {
+        padding: 1.5rem;
     }
 }
