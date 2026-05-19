@@ -130,7 +130,18 @@
     "bulletins": {
         "title": "Technical and Informative Bulletins",
         "coming_soon": "Coming Soon",
-        "description": "We are preparing interesting analyses on meta-science and scientometrics. Stay tuned!"
+        "description": "We are preparing interesting analyses on meta-science and scientometrics. Stay tuned!",
+        "read_more": "Read more",
+        "items": {
+            "fabriccio_renacyt": {
+                "title": "Congratulations to Dr. Fabriccio J. Visconti-Lopez on Achieving the Category of Distinguished Researcher RENACYT",
+                "p1": "The Center for Scientific Consulting and Meta-Research in Biomedical Sciences (CECIMIB) extends its congratulations to Dr. Fabriccio J. Visconti-Lopez, an international collaborator and academic affiliated with our research group, for having achieved the category of Distinguished Researcher RENACYT, the highest classification granted by the National Council of Science, Technology and Technological Innovation, CONCYTEC, of Peru.",
+                "p2": "This recognition represents an important milestone in his career as a researcher and reflects his scientific production, academic commitment, methodological rigor, and contribution to the development of biomedical research, public health, and meta-research.",
+                "p3": "From CECIMIB, we highlight this achievement with special satisfaction, since approximately only 2% of the registered researchers in Peru obtain this distinction. This reaffirms the importance of promoting quality scientific research, with academic impact and oriented to answer relevant questions for health and society.",
+                "p4": "We commend Dr. Visconti-Lopez for this national recognition and express our gratitude to him for being part of our academic community. His trajectory constitutes an example of perseverance, discipline, and commitment to science.",
+                "p5": "Dr. Visconti-Lopez is an active contributor in the research lines of meta-science, evidence-based medicine, biomedical scientometrics, epidemiology, and global health."
+            }
+        }
     },
     "courses": {
         "title": "Courses & Training",

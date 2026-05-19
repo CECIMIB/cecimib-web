@@ -13,6 +13,7 @@ import Courses from './components/Courses';
 import CourseDetails from './components/CourseDetails';
 import ResearcherDetails from './components/ResearcherDetails';
 import Repositories from './components/Repositories';
+import BulletinDetails from './components/BulletinDetails';
 import './App.css';
 
 const Home = () => {
@@ -76,6 +77,7 @@ function App() {
           <Route path="/collaborators" element={<Home />} />
           <Route path="/courses" element={<Home />} />
           <Route path="/bulletins" element={<Home />} />
+          <Route path="/bulletin/:id" element={<BulletinDetails />} />
           <Route path="/course-details" element={<CourseDetails />} />
           <Route path="/researcher/:id" element={<ResearcherDetails />} />
         </Routes>
