@@ -10,6 +10,21 @@ const images = {
   'johana_aster': johanaImg
 };
 
+const linkPreviews = {
+  'https://es-us.finanzas.yahoo.com/noticias/premio-aster-guardians-global-nursing-081700931.html': {
+    title: 'El premio Aster Guardians Global Nursing Award anuncia a los diez principales finalistas de 2026',
+    description: 'DUBÁI, Emiratos Árabes Unidos, May 14, 2026--En ocasión del Día Internacional de la Enfermería, Aster DM Healthcare ha anunciado a los diez principales finalistas...',
+    image: 'https://s.yimg.com/os/es/business-wire.com/710a81f197076ba1606b3b2af2211d2f',
+    domain: 'es-us.finanzas.yahoo.com'
+  },
+  'https://www.asterguardians.com/top-10-finalists-2026/': {
+    title: 'Top 10 Finalists 2026 - Aster Guardians',
+    description: 'Announcing the Top 10 finalists for...',
+    image: 'https://www.asterguardians.com/wp-content/uploads/2023/04/cropped-277102532_162188859498581_3888878120673797667_n-e1680690320153.jpg',
+    domain: 'www.asterguardians.com'
+  }
+};
+
 const BulletinDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -65,16 +80,32 @@ const BulletinDetails = () => {
                 <p key={index}>{paragraphText}</p>
               ) : null;
             })}
-            
             {links.map((link, index) => {
               const linkUrl = t(`${bulletinKey}.${link}`);
-              return linkUrl !== `${bulletinKey}.${link}` ? (
+              if (linkUrl === `${bulletinKey}.${link}`) return null;
+              
+              const preview = linkPreviews[linkUrl];
+              
+              if (preview) {
+                return (
+                  <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="link-preview-card" key={`link-${index}`}>
+                    <div className="link-preview-image" style={{ backgroundImage: `url(${preview.image})` }}></div>
+                    <div className="link-preview-content">
+                      <h4 className="link-preview-title">{preview.title}</h4>
+                      <p className="link-preview-description">{preview.description}</p>
+                      <span className="link-preview-domain">{preview.domain}</span>
+                    </div>
+                  </a>
+                );
+              }
+
+              return (
                 <p key={`link-${index}`} className="bulletin-link-container">
                   <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="bulletin-external-link">
                     {linkUrl}
                   </a>
                 </p>
-              ) : null;
+              );
             })}
           </div>
         </div>
