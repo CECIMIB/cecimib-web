@@ -287,6 +287,24 @@
     margin-bottom: 0;
 }
 
+.bulletin-link-container {
+    word-break: break-all;
+}
+
+.bulletin-external-link {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bulletin-external-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+}
+
 .btn-back {
     display: inline-flex;
     align-items: center;
