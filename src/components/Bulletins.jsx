@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import fabriccioImg from '../assets/fabriccio-blog.jpeg';
+import johanaImg from '../assets/johana-blog.jpeg';
 
 const Bulletins = () => {
     const { t } = useTranslation();
@@ -11,6 +12,10 @@ const Bulletins = () => {
         {
             id: 'fabriccio_renacyt',
             image: fabriccioImg,
+        },
+        {
+            id: 'johana_aster',
+            image: johanaImg,
         }
     ];
 

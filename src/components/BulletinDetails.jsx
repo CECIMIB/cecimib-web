@@ -3,9 +3,11 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft } from 'lucide-react';
 import fabriccioImg from '../assets/fabriccio-blog.jpeg';
+import johanaImg from '../assets/johana-blog.jpeg';
 
 const images = {
-  'fabriccio_renacyt': fabriccioImg
+  'fabriccio_renacyt': fabriccioImg,
+  'johana_aster': johanaImg
 };
 
 const BulletinDetails = () => {
@@ -33,7 +35,8 @@ const BulletinDetails = () => {
     );
   }
 
-  const paragraphs = ['p1', 'p2', 'p3', 'p4', 'p5'];
+  const paragraphs = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10'];
+  const links = ['link1', 'link2', 'link3', 'link4', 'link5'];
 
   return (
     <div className="bulletin-details-page section">
@@ -60,6 +63,17 @@ const BulletinDetails = () => {
               const paragraphText = t(`${bulletinKey}.${p}`);
               return paragraphText !== `${bulletinKey}.${p}` ? (
                 <p key={index}>{paragraphText}</p>
+              ) : null;
+            })}
+            
+            {links.map((link, index) => {
+              const linkUrl = t(`${bulletinKey}.${link}`);
+              return linkUrl !== `${bulletinKey}.${link}` ? (
+                <p key={`link-${index}`} className="bulletin-link-container">
+                  <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="bulletin-external-link">
+                    {linkUrl}
+                  </a>
+                </p>
               ) : null;
             })}
           </div>
