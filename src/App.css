@@ -588,3 +588,65 @@
         padding: 1.5rem;
     }
 }
+
+@media (max-width: 768px) {
+    .bulletin-editorial-header {
+        padding-top: 100px;
+        padding-bottom: 2rem;
+    }
+    
+    .bulletin-header-container {
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        gap: 2rem;
+    }
+    
+    .bulletin-header-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding-bottom: 0;
+    }
+    
+    .bulletin-editorial-title {
+        font-size: 2rem;
+    }
+    
+    .bulletin-header-image-col {
+        margin: 0 auto 2rem auto;
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+    
+    .bulletin-floating-image-wrapper {
+        margin: 0 auto;
+    }
+    
+    .bulletin-floating-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    
+    .bulletin-editorial-body {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+    
+    .social-share-sidebar {
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        padding-top: 0;
+        flex: none;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .social-share-label {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+    }
+}
