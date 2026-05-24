@@ -57,7 +57,7 @@ const Researchers = () => {
 
   // Center carousel scroll initially when panel is opened
   useEffect(() => {
-    if (showCollaborators && carouselRef.current) {
+    if (carouselRef.current) {
       const container = carouselRef.current;
       const card = container.querySelector('.collaborator-card');
       if (card) {
