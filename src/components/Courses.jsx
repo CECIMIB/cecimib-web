@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BookOpen, Download, Github } from 'lucide-react';
+import { BookOpen, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import githubLogo from '../assets/Github_logo.svg';
 
 const Courses = () => {
     const { t } = useTranslation();
@@ -38,7 +39,7 @@ const Courses = () => {
                                 rel="noopener noreferrer"
                                 className="btn btn-outline"
                             >
-                                <Github size={18} style={{ marginRight: '0.5rem' }} />
+                                <img src={githubLogo} alt="GitHub" width={18} height={18} style={{ marginRight: '0.5rem' }} />
                                 {t('courses.r_fundamentals.view_repo')}
                             </a>
                         </div>

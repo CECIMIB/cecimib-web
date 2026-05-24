@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Github, Database, ExternalLink } from 'lucide-react';
+import { Database, ExternalLink } from 'lucide-react';
+import githubLogo from '../assets/Github_logo.svg';
 import '../App.css';
 
 const Repositories = () => {
@@ -30,7 +31,7 @@ const Repositories = () => {
                         onClick={() => handleCardClick('https://github.com/CECIMIB')}
                     >
                         <div className="repo-icon-wrapper github">
-                            <Github size={48} />
+                            <img src={githubLogo} alt="GitHub" width={48} height={48} />
                         </div>
                         <h3>GitHub</h3>
                         <p>{t('repositories.github_desc')}</p>
