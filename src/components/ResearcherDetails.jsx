@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Linkedin, FileText, BookOpen, Globe } from 'lucide-react';
+import OrcidIcon from './OrcidIcon';
 
 
 // To avoid circular dependencies or complex refactors, I'll define the static data mapping here or reuse if possible.
@@ -90,8 +91,8 @@ const ResearcherDetails = () => {
                                     </a>
                                 )}
                                 {researcher.links.orcid && (
-                                    <a href={researcher.links.orcid} target="_blank" rel="noopener noreferrer" title="ORCID">
-                                        <FileText size={24} />
+                                    <a href={researcher.links.orcid} target="_blank" rel="noopener noreferrer" title="ORCiD">
+                                        <OrcidIcon size={24} />
                                     </a>
                                 )}
                                 {researcher.links.scholar && (

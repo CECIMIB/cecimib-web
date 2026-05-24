@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Linkedin, BookOpen, FileText, Globe, ArrowRight, ChevronDown, ChevronLeft, ChevronRight, MapPin, Building2 } from 'lucide-react';
+import React, { useRef, useEffect } from 'react';
+import { Linkedin, BookOpen, FileText, Globe, ArrowRight, ChevronLeft, ChevronRight, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
+import OrcidIcon from './OrcidIcon';
 
 const collaborators = [
   { id: 'fabriccio', flag: '🇵🇪', orcid: 'https://orcid.org/0000-0002-8056-2112' },
@@ -22,8 +23,6 @@ const collaborators = [
 
 const Researchers = () => {
   const { t } = useTranslation();
-  const [showCollaborators, setShowCollaborators] = useState(false);
-  const collabRef = useRef(null);
   const carouselRef = useRef(null);
   const location = useLocation();
 
@@ -45,11 +44,14 @@ const Researchers = () => {
     }
   };
 
-  // Auto-expand when navigated to /collaborators
+  // The collaborators section is now always visible
   useEffect(() => {
     const path = location.pathname.substring(1);
     if (path === 'collaborators') {
-      setShowCollaborators(true);
+      const element = document.getElementById('collaborators');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }, [location]);
 
@@ -78,7 +80,7 @@ const Researchers = () => {
         }, 50);
       }
     }
-  }, [showCollaborators]);
+  }, []);
 
   const extendedCollaborators = Array(20).fill(collaborators).flat();
 
@@ -152,8 +154,8 @@ const Researchers = () => {
                     </a>
                   )}
                   {researcher.links.orcid && (
-                    <a href={researcher.links.orcid} target="_blank" rel="noopener noreferrer" title="ORCID">
-                      <FileText size={20} />
+                    <a href={researcher.links.orcid} target="_blank" rel="noopener noreferrer" title="ORCiD">
+                      <OrcidIcon size={20} />
                     </a>
                   )}
                   {researcher.links.scholar && (
@@ -172,26 +174,9 @@ const Researchers = () => {
           ))}
         </div>
 
-        {/* Collapsible Collaborators Toggle */}
-        <div id="collaborators" className="collaborators-cta">
-          <button
-            onClick={toggleCollaborators}
-            className={`btn btn-primary collaborators-toggle-btn ${showCollaborators ? 'active' : ''}`}
-          >
-            {t('researchers.view_collaborators')}
-            <ChevronDown size={18} className={`toggle-chevron ${showCollaborators ? 'rotated' : ''}`} />
-          </button>
-        </div>
-
-        {/* Collapsible Collaborators Panel */}
-        <div
-          ref={collabRef}
-          className={`collaborators-panel ${showCollaborators ? 'expanded' : ''}`}
-          style={{
-            maxHeight: showCollaborators ? (collabRef.current ? collabRef.current.scrollHeight + 'px' : '600px') : '0px',
-          }}
-        >
-          <div className="collaborators-panel-inner">
+        {/* Collaborators Panel (Always Visible) */}
+        <div id="collaborators" className="collaborators-panel expanded" style={{ maxHeight: 'none', opacity: 1, overflow: 'visible' }}>
+          <div className="collaborators-panel-inner" style={{ transform: 'none' }}>
             <h3 className="collab-section-title">{t('collaborators.title')}</h3>
             <p className="collab-section-subtitle">{t('collaborators.subtitle')}</p>
 
@@ -228,7 +213,7 @@ const Researchers = () => {
                           onMouseOver={(e) => e.currentTarget.style.opacity = 0.8}
                           onMouseOut={(e) => e.currentTarget.style.opacity = 1}
                         >
-                          <FileText size={15} /> ORCID
+                          <OrcidIcon size={15} /> ORCiD
                         </a>
                       </div>
                     )}
