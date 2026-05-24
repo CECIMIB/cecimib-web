@@ -55,7 +55,6 @@ const Home = () => {
       <Repositories />
       <ResearchGroup />
       <Courses />
-      <Bulletins />
     </>
   );
 };
@@ -76,7 +75,7 @@ function App() {
           <Route path="/group" element={<Home />} />
           <Route path="/collaborators" element={<Home />} />
           <Route path="/courses" element={<Home />} />
-          <Route path="/bulletins" element={<Home />} />
+          <Route path="/bulletins" element={<Bulletins />} />
           <Route path="/bulletin/:id" element={<BulletinDetails />} />
           <Route path="/course-details" element={<CourseDetails />} />
           <Route path="/researcher/:id" element={<ResearcherDetails />} />

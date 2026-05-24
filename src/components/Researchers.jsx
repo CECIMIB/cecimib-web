@@ -91,6 +91,7 @@ const Researchers = () => {
     {
       id: 'ivan',
       name: "Ivan David Lozada-Martinez",
+      email: "ivan@cecimib.com",
       photo: `${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.png`,
       links: {
         linkedin: "https://www.linkedin.com/in/ivan-david-lozada-martinez/?originalSubdomain=co",
@@ -102,6 +103,7 @@ const Researchers = () => {
     {
       id: 'david',
       name: "David A. Hernandez-Paez",
+      email: "david@cecimib.com",
       photo: `${import.meta.env.BASE_URL}researchers/david-hernandez-paez.jpeg`,
       links: {
         linkedin: "https://www.linkedin.com/in/david-a-hernandez-paez-463a24273/",
@@ -113,6 +115,7 @@ const Researchers = () => {
     {
       id: 'andy',
       name: "Andy A. Acosta-Monterrosa",
+      email: "andy@cecimib.com",
       photo: `${import.meta.env.BASE_URL}researchers/andy-acosta-monterrosa.jpeg`,
       links: {
         linkedin: "https://www.linkedin.com/in/andy-a-acosta-monterrosa-08a7b2353/",
@@ -144,6 +147,11 @@ const Researchers = () => {
               <div className="researcher-info">
                 <h3>{researcher.name}</h3>
                 <span className="role">{t(`researchers.${researcher.id}.role`)}</span>
+                {researcher.email && (
+                  <a href={`mailto:${researcher.email}`} className="researcher-email">
+                    {researcher.email}
+                  </a>
+                )}
                 <p>{t(`researchers.${researcher.id}.bio`)}</p>
 
                 <Link to={`/researcher/${researcher.id}`} className="view-more-link">
@@ -298,7 +306,20 @@ const Researchers = () => {
           color: var(--color-primary);
           font-weight: 600;
           font-size: 0.9rem;
+          margin-bottom: 0.25rem;
+        }
+
+        .researcher-email {
+          display: block;
+          font-size: 0.85rem;
+          color: var(--color-text-light);
           margin-bottom: 1rem;
+          text-decoration: underline;
+          transition: color 0.2s;
+        }
+
+        .researcher-email:hover {
+          color: var(--color-primary);
         }
 
         .researcher-info p {

@@ -133,18 +133,30 @@
     "description": "Estamos preparando análisis de interés sobre meta-ciencia y cienciometría. ¡Mantente al tanto!",
     "read_more": "Leer más",
     "items": {
-      "fabriccio_renacyt": {
+      "1-1-2026": {
         "date": "18 de Mayo de 2026",
         "title": "Felicitaciones al Dr. Fabriccio J. Visconti-Lopez por alcanzar la categoría de Investigador Distinguido RENACYT",
+        "author": "Andy A. Acosta-Monterrosa",
+        "subtitle": "Reconocimiento a la excelencia y rigor científico en el Perú.",
+        "doi": "10.XXXX/XXXX",
+        "volume": "1",
+        "number": "1",
+        "keywords": ["RENACYT", "Investigador Distinguido", "Cienciometría", "Perú"],
         "p1": "El Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB) expresa su felicitación al Dr. Fabriccio J. Visconti-Lopez, colaborador internacional y académico adscrito a nuestro grupo de investigación, por haber alcanzado la categoría de Investigador Distinguido RENACYT, la máxima clasificación otorgada por el Consejo Nacional de Ciencia, Tecnología e Innovación Tecnológica, CONCYTEC, del Perú.",
         "p2": "Este reconocimiento representa un hito importante en su trayectoria como investigador y refleja su producción científica, compromiso académico, rigor metodológico y contribución al desarrollo de la investigación biomédica, la salud pública y la meta-investigación.",
         "p3": "Desde CECIMIB, destacamos este logro con especial satisfacción, pues aproximadamente solo el 2% de los investigadores inscritos en Perú, obtienen esta distinción. Ello reafirma la importancia de promover una investigación científica de calidad, con impacto académico y orientada a responder preguntas relevantes para la salud y la sociedad.",
         "p4": "Elogiamos al Dr. Visconti-Lopez por este reconocimiento nacional y le expresamos nuestro agradecimiento por formar parte de nuestra comunidad académica. Su trayectoria constituye un ejemplo de constancia, disciplina y compromiso con la ciencia.",
         "p5": "El Dr. Visconti-Lopez es contribuyente activo en las líneas de investigación de meta-ciencia, medicina basada en evidencia, cienciometría biomédica, epidemiología, y salud global."
       },
-      "johana_aster": {
+      "1-2-2026": {
         "date": "20 de Mayo de 2026",
         "title": "Reconocimiento a Johana Patricia Galván Barrios: Top 10 Finalists del Aster Guardians Global Nursing Award 2026",
+        "author": "Andy A. Acosta-Monterrosa",
+        "subtitle": "Un logro global en la innovación y excelencia de la enfermería.",
+        "doi": "10.XXXX/XXXX",
+        "volume": "1",
+        "number": "2",
+        "keywords": ["Aster Guardians", "Enfermería", "Top 10 Finalists", "Salud Pública"],
         "p1": "Desde el Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas expresamos nuestro más sincero reconocimiento y felicitación a Johana Patricia Galván Barrios por haber sido seleccionada dentro del Top 10 Finalists del Aster Guardians Global Nursing Award 2026, uno de los reconocimientos más prestigiosos para la enfermería a nivel mundial, organizado por Aster DM Healthcare.",
         "p2": "Este importante logro internacional exalta su trayectoria científica, liderazgo académico y compromiso con la transformación de los sistemas de salud mediante investigación, innovación y tecnologías emergentes aplicadas a la seguridad del paciente y la calidad asistencial. Su trabajo en inteligencia artificial, realidad virtual y tecnologías 4.0 refleja el impacto que la enfermería puede generar en el fortalecimiento de la salud pública y la gestión del riesgo en contextos nacionales e internacionales.",
         "p3": "Para CECIMIB es motivo de orgullo contar con una profesional cuya trayectoria representa la excelencia, la disciplina y la generación de conocimiento con impacto social, contribuyendo al posicionamiento de la investigación latinoamericana en escenarios globales de alto nivel.",

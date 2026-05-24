@@ -133,18 +133,30 @@
         "description": "We are preparing interesting analyses on meta-science and scientometrics. Stay tuned!",
         "read_more": "Read more",
         "items": {
-            "fabriccio_renacyt": {
+            "1-1-2026": {
                 "date": "May 18, 2026",
                 "title": "Congratulations to Dr. Fabriccio J. Visconti-Lopez on Achieving the Category of Distinguished Researcher RENACYT",
+                "author": "Andy A. Acosta-Monterrosa",
+                "subtitle": "Recognition of scientific excellence and rigor in Peru.",
+                "doi": "10.XXXX/XXXX",
+                "volume": "1",
+                "number": "1",
+                "keywords": ["RENACYT", "Distinguished Researcher", "Scientometrics", "Peru"],
                 "p1": "The Center for Scientific Consulting and Meta-Research in Biomedical Sciences (CECIMIB) expresses its congratulations to Dr. Fabriccio J. Visconti-Lopez, international collaborator and academic affiliated with our research group, for having achieved the category of Distinguished Researcher RENACYT, the highest classification granted by the National Council of Science, Technology and Technological Innovation, CONCYTEC, of Peru.",
                 "p2": "This recognition represents an important milestone in his career as a researcher and reflects his scientific production, academic commitment, methodological rigor, and contribution to the development of biomedical research, public health, and meta-research.",
                 "p3": "From CECIMIB, we highlight this achievement with special satisfaction, since approximately only 2% of the registered researchers in Peru obtain this distinction. This reaffirms the importance of promoting quality scientific research, with academic impact and oriented to answer relevant questions for health and society.",
                 "p4": "We commend Dr. Visconti-Lopez for this national recognition and express our gratitude to him for being part of our academic community. His trajectory constitutes an example of perseverance, discipline, and commitment to science.",
                 "p5": "Dr. Visconti-Lopez is an active contributor in the research lines of meta-science, evidence-based medicine, biomedical scientometrics, epidemiology, and global health."
             },
-            "johana_aster": {
+            "1-2-2026": {
                 "date": "May 20, 2026",
                 "title": "Recognition to Johana Patricia Galván Barrios: Top 10 Finalist of the Aster Guardians Global Nursing Award 2026",
+                "author": "Andy A. Acosta-Monterrosa",
+                "subtitle": "A global achievement in nursing innovation and excellence.",
+                "doi": "10.XXXX/XXXX",
+                "volume": "1",
+                "number": "2",
+                "keywords": ["Aster Guardians", "Nursing", "Top 10 Finalists", "Public Health"],
                 "p1": "From the Center for Scientific Consulting and Meta-Research in Biomedical Sciences, we express our most sincere recognition and congratulations to Johana Patricia Galván Barrios for having been selected among the Top 10 Finalists of the Aster Guardians Global Nursing Award 2026, one of the most prestigious recognitions for nursing worldwide, organized by Aster DM Healthcare.",
                 "p2": "This important international achievement highlights her scientific trajectory, academic leadership, and commitment to the transformation of health systems through research, innovation, and emerging technologies applied to patient safety and quality of care. Her work in artificial intelligence, virtual reality, and 4.0 technologies reflects the impact that nursing can generate in strengthening public health and risk management in national and international contexts.",
                 "p3": "For CECIMIB, it is a matter of pride to have a professional whose trajectory represents excellence, discipline, and the generation of knowledge with social impact, contributing to the positioning of Latin American research in high-level global scenarios.",

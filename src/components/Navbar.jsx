@@ -37,9 +37,12 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isDarkBackgroundPage = location.pathname.startsWith('/bulletin/');
+  const shouldUseWhiteNav = isDarkBackgroundPage && !isScrolled;
+
   const logoPath = i18n.language === 'en'
-    ? `${import.meta.env.BASE_URL}ingles_color.svg`
-    : `${import.meta.env.BASE_URL}logo_color.svg`;
+    ? (shouldUseWhiteNav ? `${import.meta.env.BASE_URL}ingles_blanco.svg` : `${import.meta.env.BASE_URL}ingles_color.svg`)
+    : (shouldUseWhiteNav ? `${import.meta.env.BASE_URL}logo_blanco.svg` : `${import.meta.env.BASE_URL}logo_color.svg`);
 
   const handleNav = (id) => {
     setIsMenuOpen(false);
@@ -79,7 +82,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isDarkBackgroundPage ? 'navbar-dark-bg' : ''}`}>
       <div className="container navbar-container">
         <div className="logo" onClick={() => handleNav(null)}>
           <img key={logoPath} src={logoPath} alt="CECIMIB Logo" />
@@ -127,13 +130,15 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}>
                 <a onClick={() => handleNav('publications')}>{t('navbar.publications')}</a>
                 <a onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</a>
-                <a onClick={() => handleNav('bulletins')}>{t('navbar.bulletins')}</a>
               </div>
             )}
           </li>
 
           {/* Courses - Standalone */}
           <TopLevelItem id="courses" label={t('navbar.courses')} />
+
+          {/* Bulletins - Standalone */}
+          <TopLevelItem id="bulletins" label={t('navbar.bulletins')} />
 
           {/* Contact - Standalone */}
           <TopLevelItem id="contact" label={t('navbar.contact')} isBtn={true} />
@@ -183,12 +188,12 @@ const Navbar = () => {
                   <ul className="mobile-submenu">
                     <li><a onClick={() => handleNav('publications')}>{t('navbar.publications')}</a></li>
                     <li><a onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</a></li>
-                    <li><a onClick={() => handleNav('bulletins')}>{t('navbar.bulletins')}</a></li>
                   </ul>
                 )}
               </li>
 
               <li><a href="#courses" onClick={(e) => { e.preventDefault(); handleNav('courses'); }}>{t('navbar.courses')}</a></li>
+              <li><a href="#bulletins" onClick={(e) => { e.preventDefault(); handleNav('bulletins'); }}>{t('navbar.bulletins')}</a></li>
 
               <li className="mobile-contact-btn">
                 <a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>{t('navbar.contact')}</a>
