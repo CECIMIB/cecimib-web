@@ -176,14 +176,11 @@
     color: #000;
     margin: 0;
     font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1.5px;
+    text-decoration: none;
 }
 
 .editorial-item:hover .editorial-title {
     color: var(--color-primary);
-    text-decoration-color: var(--color-primary);
 }
 
 .editorial-authors {
