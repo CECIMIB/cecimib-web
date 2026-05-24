@@ -1,8 +1,11 @@
 import React, { useRef, useEffect } from 'react';
-import { Linkedin, BookOpen, FileText, Globe, ArrowRight, ChevronLeft, ChevronRight, MapPin, Building2 } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import OrcidIcon from './OrcidIcon';
+import orcidLogo from '../assets/orcid_logo.svg';
+import researchGateLogo from '../assets/research-gate-logo.svg';
+import linkedinLogo from '../assets/linkedin-icon.svg';
+import scholarLogo from '../assets/Google_Scholar_logo.svg';
 
 const collaborators = [
   { id: 'fabriccio', flag: '🇵🇪', orcid: 'https://orcid.org/0000-0002-8056-2112' },
@@ -150,22 +153,22 @@ const Researchers = () => {
                 <div className="social-links">
                   {researcher.links.linkedin && (
                     <a href={researcher.links.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                      <Linkedin size={20} />
+                      <img src={linkedinLogo} alt="LinkedIn" width={20} height={20} />
                     </a>
                   )}
                   {researcher.links.orcid && (
                     <a href={researcher.links.orcid} target="_blank" rel="noopener noreferrer" title="ORCiD">
-                      <OrcidIcon size={20} />
+                      <img src={orcidLogo} alt="ORCiD" width={20} height={20} />
                     </a>
                   )}
                   {researcher.links.scholar && (
                     <a href={researcher.links.scholar} target="_blank" rel="noopener noreferrer" title="Google Scholar">
-                      <BookOpen size={20} />
+                      <img src={scholarLogo} alt="Google Scholar" width={20} height={20} />
                     </a>
                   )}
                   {researcher.links.researchgate && (
                     <a href={researcher.links.researchgate} target="_blank" rel="noopener noreferrer" title="ResearchGate">
-                      <Globe size={20} />
+                      <img src={researchGateLogo} alt="ResearchGate" width={20} height={20} />
                     </a>
                   )}
                 </div>
@@ -213,7 +216,7 @@ const Researchers = () => {
                           onMouseOver={(e) => e.currentTarget.style.opacity = 0.8}
                           onMouseOut={(e) => e.currentTarget.style.opacity = 1}
                         >
-                          <OrcidIcon size={15} /> ORCiD
+                          <img src={orcidLogo} alt="ORCiD" width={15} height={15} /> ORCiD
                         </a>
                       </div>
                     )}

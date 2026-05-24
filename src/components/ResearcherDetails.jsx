@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, Linkedin, FileText, BookOpen, Globe } from 'lucide-react';
-import OrcidIcon from './OrcidIcon';
+import { ArrowLeft } from 'lucide-react';
+import orcidLogo from '../assets/orcid_logo.svg';
+import researchGateLogo from '../assets/research-gate-logo.svg';
+import linkedinLogo from '../assets/linkedin-icon.svg';
+import scholarLogo from '../assets/Google_Scholar_logo.svg';
 
 
 // To avoid circular dependencies or complex refactors, I'll define the static data mapping here or reuse if possible.
@@ -87,22 +90,22 @@ const ResearcherDetails = () => {
                             <div className="social-links-large">
                                 {researcher.links.linkedin && (
                                     <a href={researcher.links.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                                        <Linkedin size={24} />
+                                        <img src={linkedinLogo} alt="LinkedIn" width={24} height={24} />
                                     </a>
                                 )}
                                 {researcher.links.orcid && (
                                     <a href={researcher.links.orcid} target="_blank" rel="noopener noreferrer" title="ORCiD">
-                                        <OrcidIcon size={24} />
+                                        <img src={orcidLogo} alt="ORCiD" width={24} height={24} />
                                     </a>
                                 )}
                                 {researcher.links.scholar && (
                                     <a href={researcher.links.scholar} target="_blank" rel="noopener noreferrer" title="Google Scholar">
-                                        <BookOpen size={24} />
+                                        <img src={scholarLogo} alt="Google Scholar" width={24} height={24} />
                                     </a>
                                 )}
                                 {researcher.links.researchgate && (
                                     <a href={researcher.links.researchgate} target="_blank" rel="noopener noreferrer" title="ResearchGate">
-                                        <Globe size={24} />
+                                        <img src={researchGateLogo} alt="ResearchGate" width={24} height={24} />
                                     </a>
                                 )}
                             </div>
