@@ -53,7 +53,7 @@ const Bulletins = () => {
                 </div>
 
                 <div className="section-header">
-                    <h2 className="pt-serif-bold">{t('bulletins.title')}</h2>
+                    <h2>{t('bulletins.title')}</h2>
                     <div className="underline"></div>
                 </div>
 
