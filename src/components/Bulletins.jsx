@@ -68,7 +68,7 @@ const Bulletins = () => {
                             </div>
                             
                             <div className="editorial-content">
-                                <h3 className="editorial-title pt-serif-bold">{t(`bulletins.items.${bulletin.id}.title`)}</h3>
+                                <h3 className="editorial-title">{t(`bulletins.items.${bulletin.id}.title`)}</h3>
                                 <p className="editorial-authors pt-serif-regular">{t(`bulletins.items.${bulletin.id}.author`, { defaultValue: 'Andy A. Acosta-Monterrosa' })}</p>
                                 <p className="editorial-excerpt pt-serif-regular">{t(`bulletins.items.${bulletin.id}.p1`)}</p>
                             </div>

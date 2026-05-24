@@ -75,7 +75,7 @@ const BulletinDetails = () => {
               <span>{i18n.language === 'es' ? 'BOLETÍN' : 'BULLETIN'}</span>
             </div>
 
-            <h1 className="bulletin-editorial-title pt-serif-bold">{title}</h1>
+            <h1 className="bulletin-editorial-title">{title}</h1>
             
             {subtitle !== `${bulletinKey}.subtitle` && (
               <h2 className="bulletin-editorial-subtitle pt-serif-regular">{subtitle}</h2>
