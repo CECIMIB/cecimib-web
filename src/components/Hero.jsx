@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -29,60 +29,136 @@ const scientificTerms = [
 
 // Static Extensive Network (Non-circular, No curved vectors)
 const ExtensiveNetwork = () => {
-  // Generate scattered nodes for a wide, non-circular network on the left
-  const nodes = useMemo(() => {
-    const items = [];
-    const count = 60; // Increased count for density
+  const svgRef = useRef(null);
+  // Generate multiple scattered networks to fade between
+  const networks = useMemo(() => {
+    return [0, 1, 2].map(() => {
+      const items = [];
+      const count = 60; // Increased count for density
 
-    for (let i = 0; i < count; i++) {
-      let x, y;
-      // Bias towards the left side
-      if (Math.random() > 0.3) {
-        x = Math.random() * 450;
-      } else {
-        x = Math.random() * 800; // Occasional spread
+      for (let i = 0; i < count; i++) {
+        let x, y;
+        // Bias towards the left side
+        if (Math.random() > 0.3) {
+          x = Math.random() * 450;
+        } else {
+          x = Math.random() * 800; // Occasional spread
+        }
+        y = Math.random() * 800;
+
+        // Avoid the very center where text is 
+        if (x > 300 && x < 600 && y > 300 && y < 500) {
+          x = x / 2;
+        }
+
+        items.push({ x, y, r: Math.random() * 2.5 + 1.5, depth: Math.random() * 1.5 + 0.5 });
       }
-      y = Math.random() * 800;
 
-      // Avoid the very center where text is 
-      if (x > 300 && x < 600 && y > 300 && y < 500) {
-        x = x / 2;
+      const lines = [];
+      for (let i = 0; i < items.length; i++) {
+        // Connect to nearest neighbors
+        const neighbors = items
+          .map((n, idx) => ({ ...n, idx, dist: Math.hypot(n.x - items[i].x, n.y - items[i].y) }))
+          .filter(n => n.idx !== i)
+          .sort((a, b) => a.dist - b.dist)
+          .slice(0, 3);
+
+        neighbors.forEach(n => {
+          if (n.dist < 200) {
+            lines.push({
+              sourceIdx: i,
+              targetIdx: n.idx,
+              x1: items[i].x,
+              y1: items[i].y,
+              x2: n.x,
+              y2: n.y,
+              opacity: 1 - n.dist / 200
+            });
+          }
+        });
       }
-
-      items.push({ x, y, r: Math.random() * 2.5 + 1.5 });
-    }
-    return items;
+      return { nodes: items, connections: lines };
+    });
   }, []);
 
-  // Generate specific connections
-  const connections = useMemo(() => {
-    const lines = [];
-    for (let i = 0; i < nodes.length; i++) {
-      // Connect to nearest neighbors
-      const neighbors = nodes
-        .map((n, idx) => ({ ...n, idx, dist: Math.hypot(n.x - nodes[i].x, n.y - nodes[i].y) }))
-        .filter(n => n.idx !== i)
-        .sort((a, b) => a.dist - b.dist)
-        .slice(0, 3);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-      neighbors.forEach(n => {
-        if (n.dist < 200) {
-          lines.push({
-            x1: nodes[i].x,
-            y1: nodes[i].y,
-            x2: n.x,
-            y2: n.y,
-            opacity: 1 - n.dist / 200
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % networks.length);
+    }, 5000); // Change network every 5 seconds
+    return () => clearInterval(interval);
+  }, [networks.length]);
+
+  useEffect(() => {
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    
+    const handleMouseMove = (e) => {
+      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    let animationFrameId;
+    
+    const renderLoop = () => {
+      // Ease towards target
+      currentX += (mouseX - currentX) * 0.05;
+      currentY += (mouseY - currentY) * 0.05;
+      
+      if (svgRef.current) {
+        const circles = svgRef.current.querySelectorAll('circle');
+        const lineElements = svgRef.current.querySelectorAll('line');
+        const maxOffset = 30; // Max pixels to move
+        
+        let circleIdx = 0;
+        let lineIdx = 0;
+
+        networks.forEach((net) => {
+          net.nodes.forEach((node) => {
+            if (circles[circleIdx]) {
+              const offsetX = currentX * maxOffset * node.depth;
+              const offsetY = currentY * maxOffset * node.depth;
+              circles[circleIdx].setAttribute('cx', node.x + offsetX);
+              circles[circleIdx].setAttribute('cy', node.y + offsetY);
+            }
+            circleIdx++;
           });
-        }
-      });
-    }
-    return lines;
-  }, [nodes]);
+          
+          net.connections.forEach((line) => {
+            if (lineElements[lineIdx]) {
+              const n1 = net.nodes[line.sourceIdx];
+              const n2 = net.nodes[line.targetIdx];
+              const offsetX1 = currentX * maxOffset * n1.depth;
+              const offsetY1 = currentY * maxOffset * n1.depth;
+              const offsetX2 = currentX * maxOffset * n2.depth;
+              const offsetY2 = currentY * maxOffset * n2.depth;
+              
+              lineElements[lineIdx].setAttribute('x1', line.x1 + offsetX1);
+              lineElements[lineIdx].setAttribute('y1', line.y1 + offsetY1);
+              lineElements[lineIdx].setAttribute('x2', line.x2 + offsetX2);
+              lineElements[lineIdx].setAttribute('y2', line.y2 + offsetY2);
+            }
+            lineIdx++;
+          });
+        });
+      }
+      animationFrameId = requestAnimationFrame(renderLoop);
+    };
+    
+    renderLoop();
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [networks]);
 
   return (
     <div className="network-container">
-      <svg viewBox="0 0 800 800" className="network-svg">
+      <svg ref={svgRef} viewBox="0 0 800 800" className="network-svg">
         <defs>
           <linearGradient id="fade-grad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#1b5aab" stopOpacity="0.1" />
@@ -90,27 +166,37 @@ const ExtensiveNetwork = () => {
           </linearGradient>
         </defs>
 
-        {/* Network Lines */}
-        {connections.map((line, i) => (
-          <line
-            key={`line-${i}`}
-            x1={line.x1} y1={line.y1}
-            x2={line.x2} y2={line.y2}
-            stroke="#1b5aab"
-            strokeWidth="0.8"
-            strokeOpacity={line.opacity * 0.25}
-          />
-        ))}
+        {networks.map((net, netIdx) => (
+          <g 
+            key={`network-${netIdx}`}
+            style={{ 
+              opacity: activeIndex === netIdx ? 1 : 0,
+              transition: 'opacity 3s ease-in-out'
+            }}
+          >
+            {/* Network Lines */}
+            {net.connections.map((line, i) => (
+              <line
+                key={`line-${netIdx}-${i}`}
+                x1={line.x1} y1={line.y1}
+                x2={line.x2} y2={line.y2}
+                stroke="#1b5aab"
+                strokeWidth="0.8"
+                strokeOpacity={line.opacity * 0.25}
+              />
+            ))}
 
-        {/* Nodes */}
-        {nodes.map((node, i) => (
-          <circle
-            key={`node-${i}`}
-            cx={node.x} cy={node.y}
-            r={node.r}
-            fill="#1b5aab"
-            fillOpacity="0.5"
-          />
+            {/* Nodes */}
+            {net.nodes.map((node, i) => (
+              <circle
+                key={`node-${netIdx}-${i}`}
+                cx={node.x} cy={node.y}
+                r={node.r}
+                fill="#1b5aab"
+                fillOpacity="0.5"
+              />
+            ))}
+          </g>
         ))}
       </svg>
       <style>{`
