@@ -37,7 +37,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isDarkBackgroundPage = location.pathname.startsWith('/bulletin/');
+  const isDarkBackgroundPage = location.pathname.startsWith('/news/');
   const shouldUseWhiteNav = isDarkBackgroundPage && !isScrolled;
 
   const logoPath = i18n.language === 'en'
@@ -137,8 +137,8 @@ const Navbar = () => {
           {/* Courses - Standalone */}
           <TopLevelItem id="courses" label={t('navbar.courses')} />
 
-          {/* Bulletins - Standalone */}
-          <TopLevelItem id="bulletins" label={t('navbar.bulletins')} />
+          {/* Publications - Standalone */}
+          <TopLevelItem id="publications" label={t('navbar.news')} />
 
           {/* Contact - Standalone */}
           <TopLevelItem id="contact" label={t('navbar.contact')} isBtn={true} />
@@ -193,7 +193,7 @@ const Navbar = () => {
               </li>
 
               <li><a href="#courses" onClick={(e) => { e.preventDefault(); handleNav('courses'); }}>{t('navbar.courses')}</a></li>
-              <li><a href="#bulletins" onClick={(e) => { e.preventDefault(); handleNav('bulletins'); }}>{t('navbar.bulletins')}</a></li>
+              <li><a href="#publications" onClick={(e) => { e.preventDefault(); handleNav('publications'); }}>{t('navbar.news')}</a></li>
 
               <li className="mobile-contact-btn">
                 <a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>{t('navbar.contact')}</a>

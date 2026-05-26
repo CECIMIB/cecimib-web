@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { publicationsData } from '../data/publications';
 import { Activity, Search, Dna, ArrowLeft, ExternalLink, FileText, BookOpen, Stethoscope } from 'lucide-react';
 import '../App.css';
@@ -17,16 +18,11 @@ const IconMap = {
 
 const Publications = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null);
 
     const handleCategoryClick = (index) => {
-        setSelectedCategoryIndex(index);
-        setTimeout(() => {
-            const element = document.getElementById('publications');
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 100);
+        navigate('/publications');
     };
 
     const handleBackClick = () => {

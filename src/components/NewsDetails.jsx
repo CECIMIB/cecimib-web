@@ -20,13 +20,13 @@ const XIcon = () => (
   </svg>
 );
 
-const BulletinDetails = () => {
+const NewsDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  const allBulletins = ['1-2-2026', '1-1-2026'];
-  const recentBulletins = allBulletins.filter(b => b !== id).slice(0, 3);
+  const allNews = ['1-2-2026', '1-1-2026'];
+  const recentNews = allNews.filter(b => b !== id).slice(0, 3);
   
   // Flatten all articles, then sort them by year descending to get the absolute latest
   const allArticles = publicationsData.flatMap(cat => cat.articles);
@@ -38,29 +38,29 @@ const BulletinDetails = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const bulletinKey = `bulletins.items.${id}`;
-  const title = t(`${bulletinKey}.title`);
+  const newsKey = `news.items.${id}`;
+  const title = t(`${newsKey}.title`);
 
-  if (title === bulletinKey) {
+  if (title === newsKey) {
     return (
-      <div className="bulletin-details-page not-found section">
+      <div className="news-details-page not-found section">
         <div className="container">
-          <h2>Bulletin not found</h2>
-          <button className="btn-back" onClick={() => navigate('/bulletins')}>
-            <ArrowLeft size={20} /> {i18n.language === 'es' ? 'Volver a Boletines' : 'Back to Bulletins'}
+          <h2>News not found</h2>
+          <button className="btn-back" onClick={() => navigate('/news')}>
+            <ArrowLeft size={20} /> {i18n.language === 'es' ? 'Volver a Boletines' : 'Back to News'}
           </button>
         </div>
       </div>
     );
   }
 
-  const date = t(`${bulletinKey}.date`);
-  const author = t(`${bulletinKey}.author`);
-  const subtitle = t(`${bulletinKey}.subtitle`);
-  const doi = t(`${bulletinKey}.doi`);
-  const volume = t(`${bulletinKey}.volume`);
-  const number = t(`${bulletinKey}.number`);
-  const keywords = t(`${bulletinKey}.keywords`, { returnObjects: true });
+  const date = t(`${newsKey}.date`);
+  const author = t(`${newsKey}.author`);
+  const subtitle = t(`${newsKey}.subtitle`);
+  const doi = t(`${newsKey}.doi`);
+  const volume = t(`${newsKey}.volume`);
+  const number = t(`${newsKey}.number`);
+  const keywords = t(`${newsKey}.keywords`, { returnObjects: true });
   
   const paragraphs = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10'];
   const currentUrl = window.location.href;
@@ -69,49 +69,49 @@ const BulletinDetails = () => {
   const shareUrl = encodeURIComponent(currentUrl);
 
   return (
-    <div className="bulletin-editorial-wrapper">
+    <div className="news-editorial-wrapper">
       
       {/* Header Section */}
-      <div className="bulletin-editorial-header">
-        <div className="container bulletin-header-container">
-          <div className="bulletin-header-content">
-            <div className="bulletin-breadcrumbs">
+      <div className="news-editorial-header">
+        <div className="container news-header-container">
+          <div className="news-header-content">
+            <div className="news-breadcrumbs">
               <span style={{cursor: 'pointer'}} onClick={() => navigate('/')}>{i18n.language === 'es' ? 'INICIO' : 'HOME'}</span> &gt;
-              <span style={{cursor: 'pointer'}} onClick={() => navigate('/bulletins')}> {i18n.language === 'es' ? 'BOLETINES' : 'BULLETINS'}</span> &gt;
+              <span style={{cursor: 'pointer'}} onClick={() => navigate('/publications')}> {i18n.language === 'es' ? 'PUBLICACIONES' : 'PUBLICATIONS'}</span> &gt;
               <span> {title.substring(0, 40)}...</span>
             </div>
             
-            <div className="bulletin-category">
-              <span>{i18n.language === 'es' ? 'BOLETÍN' : 'BULLETIN'}</span>
+            <div className="news-category">
+              <span>{i18n.language === 'es' ? 'NOTICIA' : 'NEWS'}</span>
             </div>
 
-            <h1 className="bulletin-editorial-title">{title}</h1>
+            <h1 className="news-editorial-title">{title}</h1>
             
-            {subtitle !== `${bulletinKey}.subtitle` && (
-              <h2 className="bulletin-editorial-subtitle pt-serif-regular">{subtitle}</h2>
+            {subtitle !== `${newsKey}.subtitle` && (
+              <h2 className="news-editorial-subtitle pt-serif-regular">{subtitle}</h2>
             )}
 
-            <div className="bulletin-editorial-meta">
-              <span>{date !== `${bulletinKey}.date` ? date : ''}</span>
-              {author !== `${bulletinKey}.author` && (
+            <div className="news-editorial-meta">
+              <span>{date !== `${newsKey}.date` ? date : ''}</span>
+              {author !== `${newsKey}.author` && (
                 <>
                   <span>•</span>
-                  <span>{i18n.language === 'es' ? 'POR' : 'BY'} <span className="bulletin-editorial-author">{author}</span></span>
+                  <span>{i18n.language === 'es' ? 'POR' : 'BY'} <span className="news-editorial-author">{author}</span></span>
                 </>
               )}
             </div>
           </div>
           
           {/* Floating Image Column inside Header */}
-          <div className="bulletin-header-image-col">
-            <div className="bulletin-floating-image-wrapper">
+          <div className="news-header-image-col">
+            <div className="news-floating-image-wrapper">
               {images[id] ? (
-                <img src={images[id]} alt={title} className="bulletin-floating-image" />
+                <img src={images[id]} alt={title} className="news-floating-image" />
               ) : (
-                <div className="bulletin-floating-image placeholder-img"></div>
+                <div className="news-floating-image placeholder-img"></div>
               )}
-              <div className="bulletin-image-caption">
-                {t(`${bulletinKey}.caption`, { defaultValue: "Imagen del artículo. Archivos CECIMIB." })}
+              <div className="news-image-caption">
+                {t(`${newsKey}.caption`, { defaultValue: "Imagen del artículo. Archivos CECIMIB." })}
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ const BulletinDetails = () => {
       </div>
 
       {/* Body Section */}
-      <div className="bulletin-editorial-body">
+      <div className="news-editorial-body">
         
         {/* Social Share Sidebar */}
         <div className="social-share-sidebar">
@@ -143,34 +143,34 @@ const BulletinDetails = () => {
         </div>
 
         {/* Content */}
-        <div className="bulletin-editorial-content pt-serif-regular">
+        <div className="news-editorial-content pt-serif-regular">
           {paragraphs.map((p, index) => {
-            const paragraphText = t(`${bulletinKey}.${p}`);
-            return paragraphText !== `${bulletinKey}.${p}` ? (
+            const paragraphText = t(`${newsKey}.${p}`);
+            return paragraphText !== `${newsKey}.${p}` ? (
               <p key={index}>{paragraphText}</p>
             ) : null;
           })}
 
           {/* Tracking Footer */}
-          <div className="bulletin-tracking-info">
-            {doi !== `${bulletinKey}.doi` && (
-              <div className="bulletin-tracking-item">
+          <div className="news-tracking-info">
+            {doi !== `${newsKey}.doi` && (
+              <div className="news-tracking-item">
                 <strong>doi:</strong> {doi}
               </div>
             )}
             
-            {volume !== `${bulletinKey}.volume` && number !== `${bulletinKey}.number` && (
-              <div className="bulletin-tracking-item">
-                <strong>Referencia:</strong> {author !== `${bulletinKey}.author` ? author : 'CECIMIB'}. {title}. Boletín CECIMIB. {new Date().getFullYear()}; {volume}({number}). {doi !== `${bulletinKey}.doi` ? `doi: ${doi}` : ''}
+            {volume !== `${newsKey}.volume` && number !== `${newsKey}.number` && (
+              <div className="news-tracking-item">
+                <strong>Referencia:</strong> {author !== `${newsKey}.author` ? author : 'CECIMIB'}. {title}. Noticia CECIMIB. {new Date().getFullYear()}; {volume}({number}). {doi !== `${newsKey}.doi` ? `doi: ${doi}` : ''}
               </div>
             )}
 
             {Array.isArray(keywords) && keywords.length > 0 && (
-              <div className="bulletin-tags">
-                <div className="bulletin-tags-label">RELEVANT TAGS:</div>
-                <div className="bulletin-tags-list">
+              <div className="news-tags">
+                <div className="news-tags-label">RELEVANT TAGS:</div>
+                <div className="news-tags-list">
                   {keywords.map((kw, i) => (
-                    <span key={i} className="bulletin-tag">{kw}</span>
+                    <span key={i} className="news-tag">{kw}</span>
                   ))}
                 </div>
               </div>
@@ -180,24 +180,38 @@ const BulletinDetails = () => {
         </div>
 
         {/* Right Sidebar Widgets */}
-        <div className="bulletin-widgets-sidebar">
+        <div className="news-widgets-sidebar">
           
-          {recentBulletins.length > 0 && (
+          {recentNews.length > 0 && (
             <div className="widget-section">
-              <div className="widget-section-title">{i18n.language === 'es' ? 'Últimos Boletines' : 'Latest Bulletins'}</div>
+              <div className="widget-section-title">{i18n.language === 'es' ? 'Últimas Noticias' : 'Latest News'}</div>
               <div className="widget-list">
-                {recentBulletins.map(bId => (
-                  <div className="widget-item" key={bId} onClick={() => navigate(`/bulletin/${bId}`)}>
+                {recentNews.map(bId => (
+                  <div className="widget-item" key={bId} onClick={() => navigate(`/news/${bId}`)}>
                     <div className="widget-img-wrapper">
                       <img src={images[bId]} className="widget-img" alt="" />
                     </div>
                     <div className="widget-item-info">
-                      <div className="widget-date">{t(`bulletins.items.${bId}.date`)}</div>
-                      <div className="widget-item-title">{t(`bulletins.items.${bId}.title`)}</div>
-                      <div className="widget-author">{t(`bulletins.items.${bId}.author`, { defaultValue: 'Andy A. Acosta-Monterrosa' })}</div>
+                      <div className="widget-date">{t(`news.items.${bId}.date`)}</div>
+                      <div className="widget-item-title">{t(`news.items.${bId}.title`)}</div>
+                      <div className="widget-author">{t(`news.items.${bId}.author`, { defaultValue: 'Andy A. Acosta-Monterrosa' })}</div>
                     </div>
                   </div>
                 ))}
+              </div>
+              <div style={{ textAlign: 'right', marginTop: '1rem' }}>
+                <span 
+                  onClick={() => navigate('/all-news')} 
+                  style={{ 
+                    cursor: 'pointer', 
+                    color: 'var(--color-primary)', 
+                    fontWeight: 'bold', 
+                    fontSize: '0.85rem', 
+                    letterSpacing: '0.5px' 
+                  }}
+                >
+                  {i18n.language === 'es' ? 'VER MÁS >' : 'VIEW MORE >'}
+                </span>
               </div>
             </div>
           )}
@@ -219,6 +233,20 @@ const BulletinDetails = () => {
                   </a>
                 ))}
               </div>
+              <div style={{ textAlign: 'right', marginTop: '1rem' }}>
+                <span 
+                  onClick={() => navigate('/articles')} 
+                  style={{ 
+                    cursor: 'pointer', 
+                    color: 'var(--color-primary)', 
+                    fontWeight: 'bold', 
+                    fontSize: '0.85rem', 
+                    letterSpacing: '0.5px' 
+                  }}
+                >
+                  {i18n.language === 'es' ? 'VER MÁS >' : 'VIEW MORE >'}
+                </span>
+              </div>
             </div>
           )}
         </div>
@@ -229,4 +257,4 @@ const BulletinDetails = () => {
   );
 };
 
-export default BulletinDetails;
+export default NewsDetails;

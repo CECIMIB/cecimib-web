@@ -6,6 +6,22 @@ export const publicationsData = [
         icon: "Activity", // Lucid icon name placeholder, will map in component
         articles: [
             {
+                title: "Scientific coherence in climate change research: a meta-research perspective to accelerate scientific progress and climate justice",
+                authors: "Acosta-Monterrosa AA, Montoya-Quintero KF, Visconti-López FJ, Lozada-Martínez ID.",
+                journal: "Front Environ Sci. 2026 Apr 24;14",
+                year: "2026",
+                link: "https://doi.org/10.3389/fenvs.2026.1766738",
+                type: "Meta-Research"
+            },
+            {
+                title: "Structural Capacity, Food Security-Related Publications, and Crop Production: A Multilevel Global Analysis Across Income Settings",
+                authors: "Acosta-Monterrosa AA, Florián-Pérez MC, Montoya-Vega ME, Lozada-Martinez ID.",
+                journal: "Agriculture. 2026 Apr 30;16(9):995",
+                year: "2026",
+                link: "https://doi.org/10.3390/agriculture16090995",
+                type: "Meta-Research"
+            },
+            {
                 title: "Meta-research in biomedical investigation: gaps and opportunities based on meta-research publications and global indicators in health, science, and human development",
                 authors: "Lozada-Martinez, I. D., Hernandez-Paz, D. A., Fiorillo-Moreno, O., Picón-Jaimes, Y. A., & Bermúdez, V.",
                 journal: "Publications, 13(1), 7",
@@ -69,6 +85,22 @@ export const publicationsData = [
         descriptionKey: "gaps_desc",
         icon: "Search",
         articles: [
+            {
+                title: "Does food security research really improve people’s lives? A framework to estimate its potential impact from 2000 to 2025",
+                authors: "Hernández-Paez DA, Vergara-Rios JC, Montoya-Quintero KF, Lozada-Martinez ID.",
+                journal: "Glob Food Sec. 2026 May;100925",
+                year: "2026",
+                link: "https://doi.org/10.1016/j.gfs.2026.100925",
+                type: "Impact Estimation"
+            },
+            {
+                title: "Estimating the potential impact of global research on neglected tropical diseases on population-level indicators of health access, sanitation, and research capacity",
+                authors: "Hernandez-Paez DA, Lozada-Martinez ID, Reyes-Duque JD, Kalokoh S.",
+                journal: "PLoS Negl Trop Dis. 2026 May 21;20(5):e0014343",
+                year: "2026",
+                link: "https://doi.org/10.1371/journal.pntd.0014343",
+                type: "Impact Estimation"
+            },
             {
                 title: "Gaps and Opportunities in Global Mental Health Research: Disparities Across Geographic Regions and Income Levels",
                 authors: "Acuña-Rodríguez, M., Quintero, K. F. M., Bolaño-Romero, M. P., & Lozada-Martinez, I. D.",

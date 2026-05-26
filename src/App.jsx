@@ -8,12 +8,14 @@ import Researchers from './components/Researchers';
 import Publications from './components/Publications';
 import Footer from './components/Footer';
 import ResearchGroup from './components/ResearchGroup';
-import Bulletins from './components/Bulletins';
+import News from './components/News';
 import Courses from './components/Courses';
 import CourseDetails from './components/CourseDetails';
 import ResearcherDetails from './components/ResearcherDetails';
 import Repositories from './components/Repositories';
-import BulletinDetails from './components/BulletinDetails';
+import NewsDetails from './components/NewsDetails';
+import AllNews from './components/AllNews';
+import Articles from './components/Articles';
 import './App.css';
 
 const Home = () => {
@@ -69,14 +71,15 @@ function App() {
           <Route path="/services" element={<Home />} />
           <Route path="/about" element={<Home />} />
           <Route path="/researchers" element={<Home />} />
-          <Route path="/publications" element={<Home />} />
           <Route path="/repositories" element={<Home />} />
           <Route path="/contact" element={<Home />} />
           <Route path="/group" element={<Home />} />
           <Route path="/collaborators" element={<Home />} />
           <Route path="/courses" element={<Home />} />
-          <Route path="/bulletins" element={<Bulletins />} />
-          <Route path="/bulletin/:id" element={<BulletinDetails />} />
+          <Route path="/publications" element={<News />} />
+          <Route path="/all-news" element={<AllNews />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/news/:id" element={<NewsDetails />} />
           <Route path="/course-details" element={<CourseDetails />} />
           <Route path="/researcher/:id" element={<ResearcherDetails />} />
         </Routes>
