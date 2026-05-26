@@ -214,6 +214,12 @@ const ExtensiveNetwork = () => {
                     width: 100%;
                     height: 100%;
                 }
+                @media (max-width: 768px) {
+                    .network-container {
+                        width: 150%;
+                        left: -25%;
+                    }
+                }
             `}</style>
     </div>
   );
