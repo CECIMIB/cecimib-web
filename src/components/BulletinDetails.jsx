@@ -7,6 +7,7 @@ import johanaImg from '../assets/johana-blog.jpeg';
 import facebookIcon from '../assets/Facebook_icon.svg';
 import linkedinIcon from '../assets/linkedin-icon.svg';
 import whatsappIcon from '../assets/whatsapp-icon.svg';
+import { publicationsData } from '../data/publications';
 
 const images = {
   '1-1-2026': fabriccioImg,
@@ -23,6 +24,15 @@ const BulletinDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+
+  const allBulletins = ['1-2-2026', '1-1-2026'];
+  const recentBulletins = allBulletins.filter(b => b !== id).slice(0, 3);
+  
+  // Flatten all articles, then sort them by year descending to get the absolute latest
+  const allArticles = publicationsData.flatMap(cat => cat.articles);
+  const latestArticles = allArticles
+    .sort((a, b) => parseInt(b.year) - parseInt(a.year))
+    .slice(0, 3);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -167,6 +177,50 @@ const BulletinDetails = () => {
             )}
           </div>
 
+        </div>
+
+        {/* Right Sidebar Widgets */}
+        <div className="bulletin-widgets-sidebar">
+          
+          {recentBulletins.length > 0 && (
+            <div className="widget-section">
+              <div className="widget-section-title">{i18n.language === 'es' ? 'Últimos Boletines' : 'Latest Bulletins'}</div>
+              <div className="widget-list">
+                {recentBulletins.map(bId => (
+                  <div className="widget-item" key={bId} onClick={() => navigate(`/bulletin/${bId}`)}>
+                    <div className="widget-img-wrapper">
+                      <img src={images[bId]} className="widget-img" alt="" />
+                    </div>
+                    <div className="widget-item-info">
+                      <div className="widget-date">{t(`bulletins.items.${bId}.date`)}</div>
+                      <div className="widget-item-title">{t(`bulletins.items.${bId}.title`)}</div>
+                      <div className="widget-author">{t(`bulletins.items.${bId}.author`, { defaultValue: 'Andy A. Acosta-Monterrosa' })}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {latestArticles.length > 0 && (
+            <div className="widget-section">
+              <div className="widget-section-title">{i18n.language === 'es' ? 'Últimos Artículos' : 'Latest Articles'}</div>
+              <div className="widget-list">
+                {latestArticles.map((article, idx) => (
+                  <a href={article.link} target="_blank" rel="noopener noreferrer" className="widget-item" key={idx}>
+                    <div className="widget-item-info">
+                      <div className="widget-date">{article.year}</div>
+                      <div className="widget-item-title">{article.title}</div>
+                      <div className="widget-author">
+                        {article.authors} <br/>
+                        <span style={{fontStyle: 'italic', color: '#888', marginTop: '2px', display: 'inline-block'}}>{article.journal}</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
       </div>

@@ -309,10 +309,11 @@
 
 .bulletin-header-container {
     display: flex;
-    max-width: none;
-    margin: 0;
-    padding-left: 4rem;
-    gap: 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 3rem;
     align-items: flex-start;
     box-sizing: border-box;
 }
@@ -321,16 +322,15 @@
     /* Align with text column */
     margin-left: calc(60px + 3rem); 
     max-width: 650px;
-    padding-bottom: 2rem;
     flex: 1;
 }
 
 .bulletin-header-image-col {
-    flex: 0 0 32%;
-    max-width: 420px;
-    margin-top: 2.8rem; /* Align top with BULLETIN */
-    margin-bottom: -150px; /* Hang out of the header */
-    margin-right: 4rem;
+    flex: 0 0 380px;
+    max-width: 380px;
+    margin-top: 3.5rem; /* Align slightly lower */
+    margin-bottom: -160px; /* Pull up container to create overhang */
+    margin-right: 0;
     z-index: 10;
 }
 
@@ -397,12 +397,93 @@
 
 .bulletin-editorial-body {
     display: flex;
-    max-width: none;
-    margin: 0;
-    padding: 0 4rem 3rem 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem 2rem;
     gap: 3rem;
     align-items: flex-start;
     box-sizing: border-box;
+}
+
+.bulletin-editorial-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+/* Right Sidebar Widgets */
+.bulletin-widgets-sidebar {
+    flex: 0 0 380px;
+    max-width: 380px;
+    padding-top: 180px; /* Space for the overhanging image */
+}
+
+.widget-section {
+    margin-bottom: 3rem;
+}
+
+.widget-section-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+.widget-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.widget-item {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    align-items: flex-start;
+}
+
+.widget-item:hover .widget-item-title {
+    color: var(--color-primary);
+}
+
+.widget-img-wrapper {
+    flex: 0 0 80px;
+}
+
+.widget-img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.widget-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.widget-date {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.widget-item-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    transition: color 0.2s;
+}
+
+.widget-author {
+    font-size: 0.75rem;
+    color: #666;
 }
 
 /* Navbar dark mode override */
@@ -633,6 +714,13 @@
         flex-direction: column;
         padding: 2rem 1.5rem;
         gap: 2rem;
+    }
+    
+    .bulletin-widgets-sidebar {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        padding-top: 2rem;
     }
     
     .social-share-sidebar {
