@@ -290,6 +290,12 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
                     width: 100%;
                     height: 100%;
                 }
+                @media (max-width: 768px) {
+                    .network-container {
+                        width: 150%;
+                        left: -25%;
+                    }
+                }
             `})]})},I6=()=>{const{t:n}=ot(),i=cn(),s=o=>{i(`/${o}`)};return g.jsxs("section",{className:"hero",children:[g.jsx(Z6,{}),Q6.map((o,l)=>g.jsx(Oi.div,{className:"scientific-term",style:{left:o.x,top:o.y},initial:{opacity:0},animate:{opacity:[0,.25,0]},transition:{duration:7,repeat:1/0,delay:o.delay,ease:"easeInOut"},children:o.text},l)),g.jsx("div",{className:"container hero-container",children:g.jsxs(Oi.div,{className:"hero-content",initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.8},children:[g.jsx("h1",{children:n("hero.title")}),g.jsx("p",{className:"subtitle",children:n("hero.subtitle")}),g.jsxs("div",{className:"hero-cta",children:[g.jsx("button",{onClick:()=>s("services"),className:"btn btn-primary btn-lg",children:n("hero.cta_primary")}),g.jsx("button",{onClick:()=>s("about"),className:"btn btn-outline btn-lg hero-secondary-btn",children:n("hero.cta_secondary")})]})]})}),g.jsx("style",{children:`
         .hero {
           min-height: 100vh;
