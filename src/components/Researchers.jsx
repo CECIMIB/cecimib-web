@@ -141,9 +141,9 @@ const Researchers = () => {
         <div className="researchers-grid">
           {researchers.map((researcher, index) => (
             <div key={index} className="researcher-card">
-              <div className="image-wrapper">
-                <img src={researcher.photo} alt={researcher.name} />
-              </div>
+              <Link to={`/researcher/${researcher.id}`} className="image-wrapper" style={{ display: 'block' }}>
+                <img src={researcher.photo} alt={researcher.name} style={{ cursor: 'pointer' }} />
+              </Link>
               <div className="researcher-info">
                 <h3>{researcher.name}</h3>
                 <span className="role">{t(`researchers.${researcher.id}.role`)}</span>
