@@ -115,24 +115,8 @@ const Navbar = () => {
             )}
           </li>
 
-          {/* Research Dropdown */}
-          <li
-            className="desktop-dropdown-container"
-            onMouseEnter={() => handleMouseEnter('research')}
-            onMouseLeave={handleMouseLeave}
-          >
-            <button className="dropdown-toggle">
-              {t('navbar.research')} <ChevronDown size={16} />
-            </button>
-            {desktopDropdown === 'research' && (
-              <div className="dropdown-menu"
-                onMouseEnter={() => handleMouseEnter('research')}
-                onMouseLeave={handleMouseLeave}>
-                <a onClick={() => handleNav('publications')}>{t('navbar.publications')}</a>
-                <a onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</a>
-              </div>
-            )}
-          </li>
+          {/* Repositories - Standalone */}
+          <TopLevelItem id="repositories" label={t('navbar.repositories')} />
 
           {/* Courses - Standalone */}
           <TopLevelItem id="courses" label={t('navbar.courses')} />
@@ -178,19 +162,7 @@ const Navbar = () => {
                 )}
               </li>
 
-              {/* Mobile Research Dropdown */}
-              <li className="mobile-dropdown-item">
-                <div className="mobile-dropdown-header" onClick={() => toggleMobileDropdown('research')}>
-                  <span>{t('navbar.research')}</span>
-                  <ChevronDown size={16} className={mobileDropdowns['research'] ? 'rotate-180' : ''} />
-                </div>
-                {mobileDropdowns['research'] && (
-                  <ul className="mobile-submenu">
-                    <li><a onClick={() => handleNav('publications')}>{t('navbar.publications')}</a></li>
-                    <li><a onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</a></li>
-                  </ul>
-                )}
-              </li>
+              <li><a href="#repositories" onClick={(e) => { e.preventDefault(); handleNav('repositories'); }}>{t('navbar.repositories')}</a></li>
 
               <li><a href="#courses" onClick={(e) => { e.preventDefault(); handleNav('courses'); }}>{t('navbar.courses')}</a></li>
               <li><a href="#publications" onClick={(e) => { e.preventDefault(); handleNav('publications'); }}>{t('navbar.news')}</a></li>
