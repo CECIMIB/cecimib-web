@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import fabriccioImg from '../assets/fabriccio-blog.jpeg';
 import johanaImg from '../assets/johana-blog.jpeg';
+import andyImg from '../assets/Andy-grado.jpeg';
 import { publicationsData } from '../data/publications';
 
 const News = () => {
@@ -14,6 +15,10 @@ const News = () => {
     }, []);
 
     const news = [
+        {
+            id: '1-3-2026',
+            image: andyImg,
+        },
         {
             id: '1-1-2026',
             image: fabriccioImg,

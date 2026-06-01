@@ -19,129 +19,47 @@ const IconMap = {
 const Publications = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null);
-
     const handleCategoryClick = (index) => {
-        navigate('/publications');
-    };
-
-    const handleBackClick = () => {
-        setSelectedCategoryIndex(null);
+        const categoryKey = publicationsData[index].categoryKey;
+        navigate(`/articles?line=${categoryKey}`);
     };
 
     return (
         <section id="publications" className="section publications">
             <div className="container">
-                {/* Header matches Services exactly */}
                 <div className="section-header">
-                    {selectedCategoryIndex === null ? (
-                        <>
-                            <h2>{t('publications.title')}</h2>
-                            <div className="underline"></div>
-                            <p className="subtitle">{t('publications.subtitle')}</p>
-                        </>
-                    ) : (
-                        <div className="detail-header">
-                            <h2>{t(`publications.${publicationsData[selectedCategoryIndex].categoryKey}`)}</h2>
-                            <div className="underline"></div>
-                            <p className="subtitle">{t(`publications.${publicationsData[selectedCategoryIndex].descriptionKey}`)}</p>
-                        </div>
-                    )}
+                    <h2>{t('publications.title')}</h2>
+                    <div className="underline"></div>
+                    <p className="subtitle">{t('publications.subtitle')}</p>
                 </div>
 
-                <AnimatePresence mode="wait">
-                    {selectedCategoryIndex === null ? (
-                        // MAIN VIEW: Grid identical to Services
-                        <motion.div
-                            key="categories"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.4 }}
-                            className="publications-grid"
-                        >
-                            {publicationsData.map((category, index) => {
-                                const IconComponent = IconMap[category.icon] || FileText;
-                                return (
-                                    <div
-                                        key={index}
-                                        className="publication-card clickable"
-                                        onClick={() => handleCategoryClick(index)}
-                                    >
-                                        <div className="icon-wrapper">
-                                            <IconComponent size={40} />
-                                        </div>
-                                        <h3>{t(`publications.${category.categoryKey}`)}</h3>
-                                        <p>{t(`publications.${category.descriptionKey}`)}</p>
-                                        <span className="view-more">
-                                            {t('publications.view_publications')} <ExternalLink size={14} style={{ display: 'inline', marginLeft: '4px' }} />
-                                        </span>
-                                    </div>
-                                );
-                            })}
-                        </motion.div>
-                    ) : (
-                        // DETAIL VIEW: Spacious Horizontal Cards
-                        <motion.div
-                            key="details"
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 20 }}
-                            transition={{ duration: 0.4 }}
-                            className="articles-container"
-                        >
-                            <button
-                                onClick={handleBackClick}
-                                className="back-button"
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4 }}
+                    className="publications-grid"
+                >
+                    {publicationsData.map((category, index) => {
+                        const IconComponent = IconMap[category.icon] || FileText;
+                        return (
+                            <div
+                                key={index}
+                                className="publication-card clickable"
+                                onClick={() => handleCategoryClick(index)}
                             >
-                                <ArrowLeft size={20} />
-                                {t('publications.back_to_categories')}
-                            </button>
-
-                            <div className="articles-list">
-                                {[...publicationsData[selectedCategoryIndex].articles]
-                                    .sort((a, b) => parseInt(b.year) - parseInt(a.year))
-                                    .map((article, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className="article-card"
-                                    >
-                                        {/* Clean Title */}
-                                        <h4 className="article-title">
-                                            <a href={article.link} target="_blank" rel="noopener noreferrer">
-                                                {article.title}
-                                            </a>
-                                        </h4>
-
-                                        {/* Authors - Grey as requested */}
-                                        <div className="article-authors">
-                                            {article.authors}
-                                        </div>
-
-                                        {/* Footer: Journal & Action */}
-                                        <div className="article-footer">
-                                            <span className="journal-info">
-                                                {article.journal} &bull; {article.year}
-                                            </span>
-                                            <a
-                                                href={article.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="view-link"
-                                            >
-                                                {t('publications.view_article')}
-                                                <ExternalLink size={16} />
-                                            </a>
-                                        </div>
-                                    </motion.div>
-                                ))}
+                                <div className="icon-wrapper">
+                                    <IconComponent size={40} />
+                                </div>
+                                <h3>{t(`publications.${category.categoryKey}`)}</h3>
+                                <p>{t(`publications.${category.descriptionKey}`)}</p>
+                                <span className="view-more">
+                                    {t('publications.view_publications')} <ExternalLink size={14} style={{ display: 'inline', marginLeft: '4px' }} />
+                                </span>
                             </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+                        );
+                    })}
+                </motion.div>
             </div>
 
             <style>{`

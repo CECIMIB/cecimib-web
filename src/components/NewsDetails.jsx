@@ -4,12 +4,14 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft } from 'lucide-react';
 import fabriccioImg from '../assets/fabriccio-blog.jpeg';
 import johanaImg from '../assets/johana-blog.jpeg';
+import andyImg from '../assets/Andy-grado.jpeg';
 import facebookIcon from '../assets/Facebook_icon.svg';
 import linkedinIcon from '../assets/linkedin-icon.svg';
 import whatsappIcon from '../assets/whatsapp-icon.svg';
 import { publicationsData } from '../data/publications';
 
 const images = {
+  '1-3-2026': andyImg,
   '1-1-2026': fabriccioImg,
   '1-2-2026': johanaImg
 };
@@ -25,7 +27,7 @@ const NewsDetails = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  const allNews = ['1-2-2026', '1-1-2026'];
+  const allNews = ['1-3-2026', '1-2-2026', '1-1-2026'];
   const recentNews = allNews.filter(b => b !== id).slice(0, 3);
   
   // Flatten all articles, then sort them by year descending to get the absolute latest
