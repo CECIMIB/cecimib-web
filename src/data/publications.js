@@ -6,6 +6,14 @@ export const publicationsData = [
         icon: "Activity", // Lucid icon name placeholder, will map in component
         articles: [
             {
+                title: "Scientific Production in Global Mental Health: A Meta-Research Study of Income-Stratified Trends, Gaps, and Health Metrics Impact",
+                authors: "Hernandez-Paez DA, Acuña-Rodriguez M, Montoya-Quintero KF, Vidal-Durango JV.",
+                journal: "Publications. 2026;14(2).",
+                year: "2026",
+                link: "https://doi.org/10.3390/publications14020035",
+                type: "Meta-Research"
+            },
+            {
                 title: "Scientific coherence in climate change research: a meta-research perspective to accelerate scientific progress and climate justice",
                 authors: "Acosta-Monterrosa AA, Montoya-Quintero KF, Visconti-López FJ, Lozada-Martínez ID.",
                 journal: "Front Environ Sci. 2026 Apr 24;14",
