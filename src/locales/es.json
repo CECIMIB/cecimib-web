@@ -332,7 +332,8 @@
     "colaboradora": "Colaboradora",
     "colaborador_int": "Colaborador Internacional",
     "colaboradora_int": "Colaboradora Internacional",
-    "medico_formacion": "Médico en formación e Investigador Asociado"
+    "medico_formacion": "Médico en formación e Investigador Asociado",
+    "investigador_principal": "Investigador Principal"
   },
   "map_investigators_in": "Investigadores en",
   "map_orcid_profile": "Perfil ORCiD"

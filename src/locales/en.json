@@ -332,7 +332,8 @@
         "colaboradora": "Collaborator",
         "colaborador_int": "International Collaborator",
         "colaboradora_int": "International Collaborator",
-        "medico_formacion": "Medical Trainee and Associate Researcher"
+        "medico_formacion": "Medical Trainee and Associate Researcher",
+        "investigador_principal": "Principal Investigator"
     },
     "map_investigators_in": "Researchers in",
     "map_orcid_profile": "ORCiD Profile"

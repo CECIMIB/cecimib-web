@@ -19,6 +19,8 @@ const countryNodes = {
 // Collaborators data grouped by country
 const collaboratorsByCountry = {
   colombia: [
+    { name: "Ivan David Lozada-Martinez", role: "Investigador Principal", institution: "Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB)", orcid: "https://orcid.org/0000-0002-1960-7334" },
+    { name: "Andy A. Acosta-Monterrosa", role: "Investigador Principal", institution: "Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB)", orcid: "https://orcid.org/0000-0002-6860-1043" },
     { name: "David A. Hernandez-Paez", role: "Médico en formación e Investigador Asociado", institution: "Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB)", orcid: "https://orcid.org/0000-0002-6742-3185" },
     { name: "Johana Galvan Barrios", role: "Colaboradora", institution: "Universidad de la Costa", orcid: "https://orcid.org/0000-0003-2445-3680" },
     { name: "Kevin Fernando Montoya-Quintero", role: "Colaborador", institution: "Universidad de Manizales", orcid: "https://orcid.org/0000-0002-6212-7141" },
@@ -290,6 +292,7 @@ const CollaboratorsMap = () => {
                 if (collab.role === 'Colaborador Internacional') roleKey = 'colaborador_int';
                 if (collab.role === 'Colaboradora Internacional') roleKey = 'colaboradora_int';
                 if (collab.role === 'Médico en formación e Investigador Asociado') roleKey = 'medico_formacion';
+                if (collab.role === 'Investigador Principal') roleKey = 'investigador_principal';
                 
                 return (
                   <div className="map-researcher-card" key={index}>
