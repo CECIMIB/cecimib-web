@@ -919,3 +919,40 @@
     margin-bottom: 2rem;
   }
 }
+
+/* ==========================================================================
+   Legal Pages Styles
+   ========================================================================== */
+.legal-page-container {
+  padding: 6rem 0 4rem 0;
+  min-height: calc(100vh - 200px);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.legal-page-container h1 {
+  font-size: 2.2rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.legal-page-container h2 {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.legal-page-container p {
+  margin-bottom: 1rem;
+}
+
+.legal-page-container ul {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.legal-page-container li {
+  margin-bottom: 0.5rem;
+}

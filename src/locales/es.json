@@ -122,7 +122,10 @@
     "contact_text": "Ayudamos a investigadores, hospitales e industrias.",
     "rights": "Todos los derechos reservados.",
     "research_group": "Grupo de Investigación",
-    "courses": "Cursos y Formación"
+    "courses": "Cursos y Formación",
+    "legal": "Legal y Normativa",
+    "terms": "Términos de Uso",
+    "open_science": "Ciencia Abierta y Licencias"
   },
   "research_group": {
     "title": "Grupo de Investigación",
@@ -342,5 +345,42 @@
     "asistente_investigacion": "Asistente de Investigación"
   },
   "map_investigators_in": "Investigadores en",
-  "map_orcid_profile": "Perfil ORCiD"
+  "map_orcid_profile": "Perfil ORCiD",
+  "legal": {
+    "terms": {
+        "title": "Términos y Condiciones de Uso",
+        "updated": "Última actualización:",
+        "s1_title": "1. Aceptación de los Términos",
+        "s1_text": "Al acceder y navegar por el sitio web de CECIMIB, usted acepta cumplir con los presentes términos y condiciones. Si no está de acuerdo con alguna de las disposiciones, le solicitamos abstenerse de utilizar nuestra plataforma.",
+        "s2_title": "2. Naturaleza del Contenido y Exención de Responsabilidad Médica",
+        "s2_alert_strong": "AVISO CRÍTICO:",
+        "s2_alert_p1_1": "El contenido publicado en este sitio web (incluyendo revisiones sistemáticas, análisis cienciométricos, resúmenes de evidencia y opiniones expertas) tiene ",
+        "s2_alert_p1_2": "fines exclusivamente académicos, investigativos y de meta-investigación.",
+        "s2_alert_p2": "Bajo ninguna circunstancia la información aquí provista debe interpretarse como consejo clínico, diagnóstico, o recomendación terapéutica, ni sustituye el criterio, consulta o diagnóstico de un profesional de la salud debidamente cualificado. Las decisiones médicas deben ser tomadas exclusivamente por el personal médico tratante en el contexto clínico individual del paciente.",
+        "s3_title": "3. Uso del Portal",
+        "s3_text": "El sitio web está diseñado para divulgar investigaciones y métricas de producción científica. El usuario se compromete a hacer un uso adecuado del contenido, evitando conductas que atenten contra la integridad del portal o violen derechos de propiedad intelectual.",
+        "s4_title": "4. Modificaciones",
+        "s4_text": "CECIMIB se reserva el derecho de actualizar, modificar o eliminar contenido del sitio web, así como de alterar estos términos de uso en cualquier momento, sin previo aviso."
+    },
+    "open_science": {
+        "title": "Política de Licenciamiento y Ciencia Abierta",
+        "s1_title": "1. Compromiso con la Ciencia Abierta",
+        "s1_text_1": "El Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB) se posiciona firmemente como un promotor activo de la Ciencia Abierta (",
+        "s1_text_2": "Open Science",
+        "s1_text_3": "). Creemos que el conocimiento y las herramientas desarrolladas con recursos institucionales deben ser accesibles al público para fomentar el avance de la ciencia y la reproducibilidad.",
+        "s2_title": "2. Licencia MIT",
+        "s2_text_1": "Todo el código, los scripts de análisis metodológico y las herramientas de software albergadas en nuestros repositorios o publicadas en este sitio web se distribuyen bajo la ",
+        "s2_text_2": "Licencia MIT",
+        "s2_text_3": ", una de las licencias de código abierto más permisivas.",
+        "permissions_title": "Esta licencia le otorga libertad para:",
+        "perm_1_strong": "Usar comercial y no comercialmente:",
+        "perm_1_text": "Puede usar nuestro código en sus propios proyectos.",
+        "perm_2_strong": "Modificar y Adaptar:",
+        "perm_2_text": "Puede cambiar el código para adaptarlo a sus necesidades.",
+        "perm_3_strong": "Distribuir:",
+        "perm_3_text": "Puede compartir el código libremente.",
+        "condition_strong": "Única condición:",
+        "condition_text": "Debe incluir el aviso de copyright y el texto de la licencia original en cualquier copia o modificación sustancial que distribuya."
+    }
+  }
 }

@@ -16,6 +16,8 @@ import Repositories from './components/Repositories';
 import NewsDetails from './components/NewsDetails';
 import AllNews from './components/AllNews';
 import Articles from './components/Articles';
+import TermsOfUse from './components/TermsOfUse';
+import OpenScience from './components/OpenScience';
 import './App.css';
 
 const Home = () => {
@@ -82,6 +84,8 @@ function App() {
           <Route path="/news/:id" element={<NewsDetails />} />
           <Route path="/course-details" element={<CourseDetails />} />
           <Route path="/researcher/:id" element={<ResearcherDetails />} />
+          <Route path="/terminos" element={<TermsOfUse />} />
+          <Route path="/licencias" element={<OpenScience />} />
         </Routes>
         <Footer />
       </div>

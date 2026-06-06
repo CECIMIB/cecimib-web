@@ -122,7 +122,10 @@
         "contact_text": "We help researchers, hospitals, and industries.",
         "rights": "All rights reserved.",
         "research_group": "Research Group",
-        "courses": "Courses & Training"
+        "courses": "Courses & Training",
+        "legal": "Legal & Regulatory",
+        "terms": "Terms of Use",
+        "open_science": "Open Science & Licensing"
     },
     "research_group": {
         "title": "Research Group",
@@ -342,5 +345,42 @@
         "asistente_investigacion": "Research Assistant"
     },
     "map_investigators_in": "Researchers in",
-    "map_orcid_profile": "ORCiD Profile"
+    "map_orcid_profile": "ORCiD Profile",
+    "legal": {
+        "terms": {
+            "title": "Terms and Conditions of Use",
+            "updated": "Last updated:",
+            "s1_title": "1. Acceptance of Terms",
+            "s1_text": "By accessing and browsing the CECIMIB website, you agree to comply with these terms and conditions. If you do not agree with any of the provisions, we request that you refrain from using our platform.",
+            "s2_title": "2. Nature of Content and Medical Disclaimer",
+            "s2_alert_strong": "CRITICAL NOTICE:",
+            "s2_alert_p1_1": "The content published on this website (including systematic reviews, scientometric analyses, evidence summaries, and expert opinions) is for ",
+            "s2_alert_p1_2": "exclusive academic, research, and meta-research purposes.",
+            "s2_alert_p2": "Under no circumstances should the information provided herein be construed as clinical advice, diagnosis, or therapeutic recommendation, nor does it substitute for the judgment, consultation, or diagnosis of a duly qualified healthcare professional. Medical decisions must be made exclusively by the treating medical personnel within the individual clinical context of the patient.",
+            "s3_title": "3. Use of the Portal",
+            "s3_text": "The website is designed to disseminate research and scientific production metrics. The user agrees to make appropriate use of the content, avoiding behaviors that compromise the integrity of the portal or violate intellectual property rights.",
+            "s4_title": "4. Modifications",
+            "s4_text": "CECIMIB reserves the right to update, modify, or remove content from the website, as well as to alter these terms of use at any time, without prior notice."
+        },
+        "open_science": {
+            "title": "Licensing and Open Science Policy",
+            "s1_title": "1. Commitment to Open Science",
+            "s1_text_1": "The Center for Scientific Consulting and Meta-Research in Biomedical Sciences (CECIMIB) firmly positions itself as an active promoter of ",
+            "s1_text_2": "Open Science",
+            "s1_text_3": ". We believe that knowledge and tools developed with institutional resources should be accessible to the public to foster scientific advancement and reproducibility.",
+            "s2_title": "2. MIT License",
+            "s2_text_1": "All code, methodological analysis scripts, and software tools hosted in our repositories or published on this website are distributed under the ",
+            "s2_text_2": "MIT License",
+            "s2_text_3": ", one of the most permissive open-source licenses.",
+            "permissions_title": "This license grants you the freedom to:",
+            "perm_1_strong": "Use commercially and non-commercially:",
+            "perm_1_text": "You can use our code in your own projects.",
+            "perm_2_strong": "Modify and Adapt:",
+            "perm_2_text": "You can change the code to suit your needs.",
+            "perm_3_strong": "Distribute:",
+            "perm_3_text": "You can freely share the code.",
+            "condition_strong": "Only condition:",
+            "condition_text": "You must include the copyright notice and the original license text in any copy or substantial modification that you distribute."
+        }
+    }
 }

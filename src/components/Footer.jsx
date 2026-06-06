@@ -34,15 +34,22 @@ const Footer = () => {
               <li><button onClick={() => handleNav('services')}>{t('navbar.services')}</button></li>
               <li><button onClick={() => handleNav('about')}>{t('navbar.about')}</button></li>
               <li><button onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</button></li>
+              <li><button onClick={() => handleNav('publications')} className="first-link">{t('navbar.publications')}</button></li>
             </ul>
           </div>
           <div className="links-col">
             <ul className="right-col-list">
-              <li><button onClick={() => handleNav('publications')} className="first-link">{t('navbar.publications')}</button></li>
               <li><button onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</button></li>
               <li><button onClick={() => handleNav('group')}>{t('footer.research_group')}</button></li>
               <li><button onClick={() => handleNav('courses')}>{t('footer.courses')}</button></li>
               <li><button onClick={() => handleNav('news')}>{t('navbar.news')}</button></li>
+            </ul>
+          </div>
+          <div className="links-col">
+            <h4 className="links-header">{t('footer.legal')}</h4>
+            <ul>
+              <li><button onClick={() => handleNav('terminos')}>{t('footer.terms')}</button></li>
+              <li><button onClick={() => handleNav('licencias')}>{t('footer.open_science')}</button></li>
             </ul>
           </div>
         </div>
@@ -50,7 +57,7 @@ const Footer = () => {
         <div className="footer-contact">
           <h4 className="links-header">{t('footer.contact')}</h4>
           <p>{t('footer.contact_text')}</p>
-          <a href="mailto:gerencia.cecimib@gmail.com" className="contact-link">gerencia.cecimib@gmail.com</a>
+          <a href="mailto:ivan@cecimib.com" className="contact-link">ivan@cecimib.com</a>
         </div>
       </div>
 
@@ -70,7 +77,7 @@ const Footer = () => {
         .footer-container {
           display: grid;
           /* Shifted middle column right by increasing first column space */
-          grid-template-columns: 2fr 2.5fr 1fr; 
+          grid-template-columns: 2.5fr 3fr 1.5fr; 
           gap: 2rem;
           padding-bottom: 2rem;
           align-items: start;
@@ -91,12 +98,12 @@ const Footer = () => {
 
         .footer-links-wrapper {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
           gap: 1rem;
         }
 
         .links-col:first-child {
-           padding-left: 2rem; /* Shift left column (Enlaces) to the right */
+           padding-left: 0; 
         }
 
         .links-header {
@@ -208,12 +215,9 @@ const Footer = () => {
           }
           
           .footer-links-wrapper {
-             /* Keep 2 columns on mobile to save vertical space */
-             grid-template-columns: 1fr 1fr; 
-             gap: 1rem;
-             text-align: left; /* Align left for cleaner 2-column look, or center if preferred. Let's try centering the block but text-align left usually looks better for lists. User's screenshot was centered. Let's keep it somewhat centered but 2 columns. */
-             /* Actually, if we do 2 columns, centering text looks odd. Let's try left align for links in mobile 2-col, or keep centered if they fit well. */
-             /* Let's try to replicate the desktop 2-col structure but stacked below logo. */
+             /* Keep 1 column on mobile to save horizontal space with 3 link sections */
+             grid-template-columns: 1fr; 
+             gap: 1.5rem;
              text-align: left;
              max-width: 400px;
              margin: 0 auto; /* Center the grid container */
