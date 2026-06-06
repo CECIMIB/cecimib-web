@@ -1,8 +1,76 @@
 {
-  "hash": "f0e2d663",
+  "hash": "6e91616f",
   "configHash": "bc307730",
-  "lockfileHash": "764a6bbe",
-  "browserHash": "4f9d5576",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "7f8e1784",
+  "browserHash": "0a5b2d2d",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "8c2e992d",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "bfb4cd1e",
+      "needsInterop": true
+    },
+    "i18next": {
+      "src": "../../node_modules/i18next/dist/esm/i18next.js",
+      "file": "i18next.js",
+      "fileHash": "4cc866ca",
+      "needsInterop": false
+    },
+    "react-i18next": {
+      "src": "../../node_modules/react-i18next/dist/es/index.js",
+      "file": "react-i18next.js",
+      "fileHash": "726881eb",
+      "needsInterop": false
+    },
+    "i18next-browser-languagedetector": {
+      "src": "../../node_modules/i18next-browser-languagedetector/dist/esm/i18nextBrowserLanguageDetector.js",
+      "file": "i18next-browser-languagedetector.js",
+      "fileHash": "47b42439",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "620fa62c",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "04f0e602",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "cf0e9f55",
+      "needsInterop": false
+    },
+    "react-globe.gl": {
+      "src": "../../node_modules/react-globe.gl/dist/react-globe.gl.mjs",
+      "file": "react-globe__gl.js",
+      "fileHash": "614c534f",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-DER4UHXC": {
+      "file": "chunk-DER4UHXC.js"
+    },
+    "chunk-R3E4LXVO": {
+      "file": "chunk-R3E4LXVO.js"
+    },
+    "chunk-P6RTVJOB": {
+      "file": "chunk-P6RTVJOB.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
 }
