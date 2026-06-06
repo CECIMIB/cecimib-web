@@ -333,7 +333,9 @@
     "colaborador_int": "Colaborador Internacional",
     "colaboradora_int": "Colaboradora Internacional",
     "medico_formacion": "Médico en formación e Investigador Asociado",
-    "investigador_principal": "Investigador Principal"
+    "investigador_principal": "Investigador Principal",
+    "ceo_fundador": "CEO y Fundador",
+    "asistente_investigacion": "Asistente de Investigación"
   },
   "map_investigators_in": "Investigadores en",
   "map_orcid_profile": "Perfil ORCiD"
