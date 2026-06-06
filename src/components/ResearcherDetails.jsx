@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft } from 'lucide-react';
@@ -45,6 +45,7 @@ const ResearcherDetails = () => {
     const { id } = useParams();
     const { t } = useTranslation();
     const researcher = researchersMap[id];
+    const [metrics, setMetrics] = useState(null);
 
     if (!researcher) {
         return <div className="container section">Researcher not found</div>;
@@ -52,6 +53,15 @@ const ResearcherDetails = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        
+        fetch(`${import.meta.env.BASE_URL}data/metrics.json`)
+            .then(res => res.json())
+            .then(data => {
+                if (data[id]) {
+                    setMetrics(data[id]);
+                }
+            })
+            .catch(err => console.error('Error fetching metrics:', err));
     }, [id]);
 
     return (
@@ -109,6 +119,26 @@ const ResearcherDetails = () => {
                                     </a>
                                 )}
                             </div>
+
+                            {metrics && (
+                                <div className="metrics-card">
+                                    <h3 className="metrics-title">{t('researchers_details.metrics_title')}</h3>
+                                    <div className="metrics-grid">
+                                        <div className="metric-item">
+                                            <span className="metric-value">{metrics.works_count}</span>
+                                            <span className="metric-label">{t('researchers_details.works')}</span>
+                                        </div>
+                                        <div className="metric-item">
+                                            <span className="metric-value">{metrics.h_index}</span>
+                                            <span className="metric-label">{t('researchers_details.h_index')}</span>
+                                        </div>
+                                        <div className="metric-item">
+                                            <span className="metric-value">{metrics.cited_by_count}</span>
+                                            <span className="metric-label">{t('researchers_details.citations')}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -212,6 +242,51 @@ const ResearcherDetails = () => {
                     color: var(--color-primary);
                     background-color: #e0f2fe;
                     transform: translateY(-2px);
+                }
+
+                .metrics-card {
+                    margin-top: 2rem;
+                    padding: 1.5rem;
+                    background: #f8fafc;
+                    border-radius: 0.75rem;
+                    border: 1px solid #e2e8f0;
+                }
+
+                .metrics-title {
+                    font-size: 1rem;
+                    color: var(--color-primary-dark);
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                .metrics-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1rem;
+                    text-align: center;
+                }
+
+                .metric-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .metric-value {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: var(--color-primary);
+                    line-height: 1;
+                    margin-bottom: 0.25rem;
+                }
+
+                .metric-label {
+                    font-size: 0.75rem;
+                    color: var(--color-text-light);
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
                 }
 
                 .bio-content {

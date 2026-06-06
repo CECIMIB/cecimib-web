@@ -104,12 +104,16 @@
         },
         "david": {
             "title": "Research Assistant",
-            "detailed_bio": "David A. Hernandez-Paez is a physician-in-training, associate researcher at the Center for Scientific Consulting and Meta-Research in Biomedical Sciences, and a member of the International Biometric Society. His academic activity focuses on meta-research and the assessment of scientific production coherence by estimating its potential impact on population indicators and health outcomes. His methodology utilizes regression models, hierarchical mixed-effects models, and moderator analysis. In 2025, he was awarded the Best Medical Student Researcher in Colombia prize by the Association of Medical Student Scientific Societies of Colombia (ASCEMCOL)."
+            "detailed_bio": "David A. Hernandez-Paez is a physician-in-training, associate researcher at the Center for Scientific Consulting and Meta-Research in Biomedical Sciences, and a member of the International Biometric Society. His academic activity focuses on meta-research and the assessment of scientific production coherence by estimating its potential impact on population indicators and health outcomes. His methodology utilizes regression models, hierarchical mixed-effects models, and moderator analysis. In 2025, he was awarded the Best Physician-in-Training Researcher in Colombia prize by the Association of Medical Student Scientific Societies of Colombia (ASCEMCOL)."
         },
         "andy": {
             "title": "Research Assistant",
             "detailed_bio": "Andy A. Acosta-Monterrosa is a biologist from the University of Cartagena, research assistant at the Center for Scientific Consulting and Meta-Research in Biomedical Sciences, and member of the Colombian Association of Human Genetics and the Functional Diversity Research Network. His work integrates research in natural and biomedical sciences with a strong quantitative component, focusing on data management, analysis, and visualization, and biostatistics in R, in addition to scientific dissemination and communication.\n\nHis academic activity is organized into two axes; marine biodiversity of the Colombian Caribbean, with an emphasis on ecology, diversity and taxonomy of macroalgae, marine conservation and coastal governance; and bibliometrics and meta-research, studying scientific production, research coherence and global patterns in health and the environment.\n\nComplementarily, he has developed research in pharmacogenomics and genetic ancestry in Colombian populations, exploring how differences in the frequency of genetic variants can be related to variation in response to medications and the implementation of precision medicine approaches."
-        }
+        },
+        "metrics_title": "Scientific Metrics",
+        "works": "Publications",
+        "citations": "Citations",
+        "h_index": "H-Index"
     },
     "footer": {
         "brand_text": "Center for Scientific Consulting &\nMeta-Research in Biomedical\nSciences",
