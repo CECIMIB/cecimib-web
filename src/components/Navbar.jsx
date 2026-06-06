@@ -109,7 +109,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}>
                 <a onClick={() => handleNav('about')}>{t('navbar.about')}</a>
                 <a onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</a>
-                <a onClick={() => handleNav('collaborators')}>{t('navbar.collaborators')}</a>
+                <a onClick={() => handleNav('publications')}>{t('navbar.publications')}</a>
                 <a onClick={() => handleNav('group')}>{t('navbar.group')}</a>
               </div>
             )}

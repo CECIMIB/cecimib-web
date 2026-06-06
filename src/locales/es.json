@@ -5,13 +5,14 @@
     "researchers": "Equipo",
     "publications": "Publicaciones",
     "group": "Grupo de Investigación",
-    "news": "Publicaciones",
+    "news": "Noticias",
     "courses": "Cursos",
     "repositories": "Repositorios",
     "contact": "Contáctanos",
     "institutional": "Institucional",
     "research": "Investigación",
-    "collaborators": "Colaboradores"
+    "collaborators": "Colaboradores",
+    "certificates": "Certificados"
   },
   "repositories": {
     "title": "Repositorios",
@@ -123,6 +124,7 @@
     "rights": "Todos los derechos reservados.",
     "research_group": "Grupo de Investigación",
     "courses": "Cursos y Formación",
+    "certificates": "Certificados",
     "legal": "Legal y Normativa",
     "terms": "Términos de Uso",
     "open_science": "Ciencia Abierta y Licencias"
@@ -228,8 +230,8 @@
       "language_value": "Inglés",
       "duration_label": "Duración",
       "duration_value": "10 horas (6 sesiones)",
-      "delivery_label": "Modalidad",
-      "delivery_value": "Virtual por Google Meet",
+      "delivery_label": "MODALIDAD",
+      "delivery_value": "Virtual o Presencial",
       "objective_title": "Objetivo del Curso",
       "objective_text": "Desarrollar habilidades prácticas en R para la gestión de datos, visualización y análisis estadístico. El enfoque está en aplicaciones ampliamente utilizadas en investigación científica, particularmente dentro de las ciencias de la salud.",
       "certification_title": "Certificado por",
@@ -245,9 +247,10 @@
       "w2_s3_topics": "- Análisis de correlación<br />- Modelos de regresión lineal",
       "w2_s4_topics": "- Modelos de regresión logística",
       "w3_s5_topics": "- Análisis ROC",
-      "w3_s6_topics": "- Sesión de contingencia",
-      "resources_text": "Todos los materiales y recursos del curso están disponibles en:",
-      "github_repo": "Repositorio de GitHub"
+      "w3_s6_topics": "<ul><li>Visualización de datos avanzados y modelos de publicación</li><li>Mejores prácticas en reproducibilidad</li></ul>",
+      "resources_text": "Todos los materiales del curso, códigos y conjuntos de datos están disponibles en nuestro repositorio público de GitHub:",
+      "github_repo": "Repositorio del curso",
+      "download_cert_badge": "Obtener Certificado"
     }
   },
   "collaborators": {
@@ -382,5 +385,30 @@
         "condition_strong": "Única condición:",
         "condition_text": "Debe incluir el aviso de copyright y el texto de la licencia original en cualquier copia o modificación sustancial que distribuya."
     }
+  },
+  "certificates": {
+    "title": "Verificación de Certificados",
+    "subtitle": "Valide y descargue su certificado académico.",
+    "input_placeholder": "Ingrese su número de documento",
+    "search_button": "Buscar Certificado",
+    "searching": "Buscando...",
+    "error_empty": "Por favor, ingrese un número de documento.",
+    "error_not_found": "No se encontró ningún certificado asociado a este número de documento.",
+    "error_fetch": "Ocurrió un error al consultar la base de datos. Intente más tarde.",
+    "success_title": "¡Certificado Encontrado!",
+    "success_desc": "Su certificado está disponible para descarga e integración profesional.",
+    "download_button": "Descargar Certificado",
+    "linkedin_button": "Añadir a LinkedIn",
+    "cvlac_instructions_title": "Instrucciones para CvLAC",
+    "cvlac_instructions_desc": "Puedes incluir esta formación en tu CvLAC como: Formación complementaria > Curso de corta duración, con los siguientes datos:",
+    "cvlac_name": "Nombre",
+    "cvlac_institution": "Institución",
+    "cvlac_intensity": "Intensidad",
+    "cvlac_year": "Año",
+    "course_name": "Fundamentals of R for Data Analysis",
+    "course_institution": "Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas",
+    "course_intensity": "5 semanas",
+    "course_year": "2026",
+    "contact_help": "Si tienes cualquier duda sobre el certificado o necesitas ayuda con algo relacionado con lo aprendido en el curso, no dudes en escribirme a:"
   }
 }

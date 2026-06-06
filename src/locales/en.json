@@ -5,7 +5,7 @@
         "researchers": "Team",
         "publications": "Publications",
         "group": "Research Group",
-        "news": "Publications",
+        "news": "News",
         "courses": "Courses",
         "repositories": "Repositories",
         "contact": "Contact Us",
@@ -123,6 +123,7 @@
         "rights": "All rights reserved.",
         "research_group": "Research Group",
         "courses": "Courses & Training",
+        "certificates": "Certificates",
         "legal": "Legal & Regulatory",
         "terms": "Terms of Use",
         "open_science": "Open Science & Licensing"
@@ -228,8 +229,8 @@
             "language_value": "English",
             "duration_label": "Duration",
             "duration_value": "10 hours (6 sessions)",
-            "delivery_label": "Delivery",
-            "delivery_value": "Online via Google Meet",
+            "delivery_label": "DELIVERY",
+            "delivery_value": "Online or In-person",
             "objective_title": "Course Objective",
             "objective_text": "Develop practical skills in R for data management, data visualization, and statistical analysis. The focus is on applications widely used in scientific research, particularly within the health sciences.",
             "certification_title": "Certification Issued by",
@@ -245,9 +246,10 @@
             "w2_s3_topics": "- Correlation analyses<br />- Linear regression models",
             "w2_s4_topics": "- Logistic regression models",
             "w3_s5_topics": "- ROC Analysis",
-            "w3_s6_topics": "- Contingency session",
-            "resources_text": "All course materials and resources are available at:",
-            "github_repo": "GitHub Repository"
+            "w3_s6_topics": "<ul><li>Advanced data visualization and publication models</li><li>Best practices in reproducibility</li></ul>",
+            "resources_text": "All course materials, code, and datasets are available in our public GitHub repository:",
+            "github_repo": "Course Repository",
+            "download_cert_badge": "Get Certificate"
         }
     },
     "collaborators": {
@@ -382,5 +384,30 @@
             "condition_strong": "Only condition:",
             "condition_text": "You must include the copyright notice and the original license text in any copy or substantial modification that you distribute."
         }
+    },
+    "certificates": {
+        "title": "Certificate Verification",
+        "subtitle": "Validate and download your academic certificate.",
+        "input_placeholder": "Enter your ID number",
+        "search_button": "Search Certificate",
+        "searching": "Searching...",
+        "error_empty": "Please enter an ID number.",
+        "error_not_found": "No certificate found associated with this ID number.",
+        "error_fetch": "An error occurred while querying the database. Please try again later.",
+        "success_title": "Certificate Found!",
+        "success_desc": "Your certificate is available for download and professional integration.",
+        "download_button": "Download Certificate",
+        "linkedin_button": "Add to LinkedIn",
+        "cvlac_instructions_title": "Instructions for CvLAC",
+        "cvlac_instructions_desc": "You can include this training in your CvLAC as: Complementary training > Short course, with the following details:",
+        "cvlac_name": "Name",
+        "cvlac_institution": "Institution",
+        "cvlac_intensity": "Intensity",
+        "cvlac_year": "Year",
+        "course_name": "Fundamentals of R for Data Analysis",
+        "course_institution": "Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas",
+        "course_intensity": "5 weeks",
+        "course_year": "2026",
+        "contact_help": "If you have any questions about the certificate or need help with anything related to what you learned in the course, do not hesitate to write to me at:"
     }
 }

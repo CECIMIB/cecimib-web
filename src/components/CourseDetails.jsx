@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Download, ArrowLeft } from 'lucide-react';
+import { Download, ArrowLeft, Award } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import Certificates from './Certificates';
 
 const CourseDetails = () => {
     const { t } = useTranslation();
@@ -17,6 +18,13 @@ const CourseDetails = () => {
         e.preventDefault();
         // Navigate to home and pass the targetId state
         navigate('/', { state: { targetId: 'courses' } });
+    };
+
+    const scrollToCertificates = () => {
+        const el = document.getElementById('certificados');
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
@@ -111,7 +119,7 @@ const CourseDetails = () => {
                                     </tr>
                                     <tr>
                                         <td>6</td>
-                                        <td>{t('course_details.r_fundamentals.w3_s6_topics')}</td>
+                                        <td dangerouslySetInnerHTML={{ __html: t('course_details.r_fundamentals.w3_s6_topics') }} />
                                     </tr>
                                 </tbody>
                             </table>
@@ -123,7 +131,15 @@ const CourseDetails = () => {
                     </div>
 
                 </div>
+
+                <div style={{ marginTop: '4rem' }}>
+                    <Certificates />
+                </div>
             </div>
+
+            <button onClick={scrollToCertificates} className="floating-cert-btn">
+                <Award size={20} /> {t('course_details.r_fundamentals.download_cert_badge')}
+            </button>
 
             <style>{`
                 .course-details {
@@ -250,6 +266,44 @@ const CourseDetails = () => {
                     text-decoration: underline;
                 }
 
+                .floating-cert-btn {
+                    position: fixed;
+                    bottom: 2rem;
+                    right: 2rem;
+                    background-color: var(--color-primary);
+                    color: white;
+                    padding: 0.8rem 1.5rem;
+                    border-radius: 50px;
+                    border: none;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+                    cursor: pointer;
+                    z-index: 1000;
+                    animation: bounce 2s infinite;
+                    transition: transform 0.3s, background-color 0.3s;
+                }
+                
+                .floating-cert-btn:hover {
+                    background-color: var(--color-primary-dark);
+                    animation-play-state: paused;
+                    transform: translateY(-2px);
+                }
+                
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {
+                        transform: translateY(0);
+                    }
+                    40% {
+                        transform: translateY(-15px);
+                    }
+                    60% {
+                        transform: translateY(-7px);
+                    }
+                }
+
                 @media (max-width: 768px) {
                     .header-row {
                         flex-direction: column;
@@ -261,6 +315,13 @@ const CourseDetails = () => {
                     
                     .table-responsive {
                         overflow-x: auto;
+                    }
+                    
+                    .floating-cert-btn {
+                        bottom: 1.5rem;
+                        right: 1.5rem;
+                        padding: 0.6rem 1.2rem;
+                        font-size: 0.9rem;
                     }
                 }
             `}</style>

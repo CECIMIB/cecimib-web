@@ -35,10 +35,6 @@ const Footer = () => {
               <li><button onClick={() => handleNav('about')}>{t('navbar.about')}</button></li>
               <li><button onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</button></li>
               <li><button onClick={() => handleNav('publications')} className="first-link">{t('navbar.publications')}</button></li>
-            </ul>
-          </div>
-          <div className="links-col">
-            <ul className="right-col-list">
               <li><button onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</button></li>
               <li><button onClick={() => handleNav('group')}>{t('footer.research_group')}</button></li>
               <li><button onClick={() => handleNav('courses')}>{t('footer.courses')}</button></li>
