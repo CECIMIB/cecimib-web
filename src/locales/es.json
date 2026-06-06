@@ -247,7 +247,7 @@
       "w2_s3_topics": "- Análisis de correlación<br />- Modelos de regresión lineal",
       "w2_s4_topics": "- Modelos de regresión logística",
       "w3_s5_topics": "- Análisis ROC",
-      "w3_s6_topics": "<ul><li>Visualización de datos avanzados y modelos de publicación</li><li>Mejores prácticas en reproducibilidad</li></ul>",
+      "w3_s6_topics": "- Sesión de contingencia",
       "resources_text": "Todos los materiales del curso, códigos y conjuntos de datos están disponibles en nuestro repositorio público de GitHub:",
       "github_repo": "Repositorio del curso",
       "download_cert_badge": "Obtener Certificado"

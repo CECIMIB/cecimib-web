@@ -246,7 +246,7 @@
             "w2_s3_topics": "- Correlation analyses<br />- Linear regression models",
             "w2_s4_topics": "- Logistic regression models",
             "w3_s5_topics": "- ROC Analysis",
-            "w3_s6_topics": "<ul><li>Advanced data visualization and publication models</li><li>Best practices in reproducibility</li></ul>",
+            "w3_s6_topics": "- Contingency session",
             "resources_text": "All course materials, code, and datasets are available in our public GitHub repository:",
             "github_repo": "Course Repository",
             "download_cert_badge": "Get Certificate"
