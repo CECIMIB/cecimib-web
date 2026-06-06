@@ -99,18 +99,6 @@ const Researchers = () => {
 
   const researchers = [
     {
-      id: 'ivan',
-      name: "Ivan David Lozada-Martinez",
-      email: "ivan@cecimib.com",
-      photo: `${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.png`,
-      links: {
-        linkedin: "https://www.linkedin.com/in/ivan-david-lozada-martinez/?originalSubdomain=co",
-        orcid: "https://orcid.org/0000-0002-1960-7334",
-        scholar: "https://scholar.google.es/citations?user=fA3e4-8AAAAJ&hl=es&oi=ao",
-        researchgate: "https://www.researchgate.net/profile/Ivan-David-Lozada-Martinez"
-      }
-    },
-    {
       id: 'david',
       name: "David A. Hernandez-Paez",
       email: "david@cecimib.com",
@@ -120,6 +108,18 @@ const Researchers = () => {
         orcid: "https://orcid.org/0000-0002-6742-3185",
         scholar: "https://scholar.google.es/citations?user=KviJPbAAAAAJ&hl=es",
         researchgate: "https://www.researchgate.net/profile/David-Hernandez-Paez"
+      }
+    },
+    {
+      id: 'ivan',
+      name: "Ivan David Lozada-Martinez",
+      email: "ivan@cecimib.com",
+      photo: `${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.png`,
+      links: {
+        linkedin: "https://www.linkedin.com/in/ivan-david-lozada-martinez/?originalSubdomain=co",
+        orcid: "https://orcid.org/0000-0002-1960-7334",
+        scholar: "https://scholar.google.es/citations?user=fA3e4-8AAAAJ&hl=es&oi=ao",
+        researchgate: "https://www.researchgate.net/profile/Ivan-David-Lozada-Martinez"
       }
     },
     {
