@@ -1,0 +1,262 @@
+/* Network Map Wrapper */
+.network-map-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  background: transparent;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.network-map-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  cursor: grab;
+  position: relative;
+  z-index: 1;
+}
+
+.network-map-container:active {
+  cursor: grabbing;
+}
+
+/* 3D Nodes (HTML Overlays) */
+.network-node-3d {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%); /* Centers the HTML element on the coordinates */
+  pointer-events: auto; /* To catch clicks */
+  transition: all 0.3s ease;
+}
+
+.node-circle-3d {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  background-color: #005bb5;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 91, 181, 0.6);
+  transition: all 0.3s ease;
+}
+
+.node-pulse-3d {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  background-color: rgba(0, 91, 181, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse-3d 2s infinite;
+}
+
+.network-node-3d:hover .node-circle-3d {
+  background-color: #004494;
+  transform: scale(1.3);
+}
+
+.network-node-3d:hover .node-pulse-3d {
+  animation: none;
+  transform: scale(1.5);
+  background-color: rgba(0, 91, 181, 0.15);
+}
+
+.node-label-3d {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  color: #005bb5;
+  white-space: nowrap;
+  opacity: 0.9;
+  pointer-events: none;
+  text-shadow: 0 0 6px #fff, 0 0 6px #fff, 0 0 6px #fff;
+}
+
+@keyframes pulse-3d {
+  0% { transform: scale(0.5); opacity: 0.8; }
+  50% { transform: scale(1.5); opacity: 0.1; }
+  100% { transform: scale(0.5); opacity: 0.8; }
+}
+
+/* Country Cards Overlay */
+.country-cards-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.country-cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.country-cards-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.close-cards-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.close-cards-btn:hover {
+  background: #f0f0f0;
+  color: #111;
+}
+
+/* Slider */
+.cards-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cards-scroll-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px; /* For scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  width: 100%;
+}
+
+.cards-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cards-scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.slider-btn.left {
+  left: -16px;
+}
+
+.slider-btn.right {
+  right: -16px;
+  color: #333;
+}
+
+.slider-btn:hover {
+  background: #f8f9fa;
+  color: #111;
+}
+
+/* Individual Card */
+.map-researcher-card {
+  min-width: 260px;
+  max-width: 260px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.r-card-name {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.r-card-role {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+}
+
+.r-card-divider {
+  height: 1px;
+  background: #eee;
+  margin: 10px 0;
+}
+
+.r-card-institution {
+  margin: 0 0 16px;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.r-card-orcid {
+  display: inline-block;
+  padding: 8px;
+  background: #005bb5;
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.r-card-orcid:hover {
+  background: #004494;
+  transform: translateY(-1px);
+}

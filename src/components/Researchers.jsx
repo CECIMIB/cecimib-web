@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
+import CollaboratorsMap from './CollaboratorsMap';
 import orcidLogo from '../assets/orcid_logo.svg';
 import researchGateLogo from '../assets/research-gate-logo.svg';
 import linkedinLogo from '../assets/linkedin-icon.svg';
@@ -190,6 +191,9 @@ const Researchers = () => {
           <div className="collaborators-panel-inner" style={{ transform: 'none' }}>
             <h3 className="collab-section-title">{t('collaborators.title')}</h3>
             <p className="collab-section-subtitle">{t('collaborators.subtitle')}</p>
+
+            {/* Interactive World Map */}
+            <CollaboratorsMap />
 
             <div className="collaborators-carousel-container">
               <button className="carousel-btn left" onClick={() => scrollCarousel('left')} aria-label="Anterior">

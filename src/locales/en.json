@@ -316,5 +316,24 @@
             "affiliation": "Universidad de Córdoba",
             "country": "Montería, Colombia"
         }
-    }
+    },
+    "countries": {
+        "colombia": "Colombia",
+        "spain": "Spain",
+        "nicaragua": "Nicaragua",
+        "peru": "Peru",
+        "ecuador": "Ecuador",
+        "sierra_leone": "Sierra Leone",
+        "venezuela": "Venezuela",
+        "usa": "United States"
+    },
+    "roles": {
+        "colaborador": "Collaborator",
+        "colaboradora": "Collaborator",
+        "colaborador_int": "International Collaborator",
+        "colaboradora_int": "International Collaborator",
+        "medico_formacion": "Medical Trainee and Associate Researcher"
+    },
+    "map_investigators_in": "Researchers in",
+    "map_orcid_profile": "ORCiD Profile"
 }
