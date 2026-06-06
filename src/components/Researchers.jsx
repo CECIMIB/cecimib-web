@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
@@ -29,6 +29,15 @@ const Researchers = () => {
   const { t } = useTranslation();
   const carouselRef = useRef(null);
   const location = useLocation();
+  const [metrics, setMetrics] = useState(null);
+  const [showCollaborators, setShowCollaborators] = useState(true);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/metrics.json`)
+      .then(res => res.json())
+      .then(data => setMetrics(data))
+      .catch(err => console.error('Error fetching metrics:', err));
+  }, []);
 
   const scrollCarousel = (direction) => {
     if (carouselRef.current) {
@@ -159,6 +168,23 @@ const Researchers = () => {
                   {t('researchers_details.view_more')} <ArrowRight size={16} />
                 </Link>
 
+                {metrics && metrics[researcher.id] && (
+                  <div className="researcher-metrics-badges">
+                    <div className="metric-badge">
+                      <span className="badge-value">{metrics[researcher.id].works_count}</span>
+                      <span className="badge-label">{t('researchers_details.works')}</span>
+                    </div>
+                    <div className="metric-badge">
+                      <span className="badge-value">{metrics[researcher.id].h_index}</span>
+                      <span className="badge-label">{t('researchers_details.h_index')}</span>
+                    </div>
+                    <div className="metric-badge">
+                      <span className="badge-value">{metrics[researcher.id].cited_by_count}</span>
+                      <span className="badge-label">{t('researchers_details.citations')}</span>
+                    </div>
+                  </div>
+                )}
+
                 <div className="social-links">
                   {researcher.links.linkedin && (
                     <a href={researcher.links.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
@@ -245,6 +271,47 @@ const Researchers = () => {
       </div>
 
       <style>{`
+        .researcher-metrics-badges {
+          display: flex;
+          justify-content: center;
+          gap: 0.8rem;
+          margin-top: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        .metric-badge {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: #f8fafc;
+          padding: 0.5rem 0.6rem;
+          border-radius: 8px;
+          border: 1px solid #e2e8f0;
+          min-width: 65px;
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .metric-badge:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        .metric-badge .badge-value {
+          font-size: 1.15rem;
+          font-weight: 700;
+          color: var(--color-primary);
+          line-height: 1;
+          margin-bottom: 0.25rem;
+        }
+        
+        .metric-badge .badge-label {
+          font-size: 0.6rem;
+          color: var(--color-text-light);
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
         .researchers {
           background-color: var(--color-white);
           padding: 2rem 0;
