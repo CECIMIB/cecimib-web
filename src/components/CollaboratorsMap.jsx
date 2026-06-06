@@ -94,7 +94,7 @@ const CollaboratorsMap = () => {
   const [isGlobeLoaded, setIsGlobeLoaded] = useState(false);
   const [countries, setCountries] = useState({ features: [] });
   const [activeCountry, setActiveCountry] = useState(null);
-  const [dimensions, setDimensions] = useState({ width: 800, height: 800 });
+  const [dimensions, setDimensions] = useState({ width: 800, height: 650 });
   
   // Intersection Observer para Lazy Loading (Optimización de rendimiento)
   useEffect(() => {
@@ -122,7 +122,7 @@ const CollaboratorsMap = () => {
       if (container) {
         setDimensions({
           width: container.clientWidth,
-          height: window.innerWidth < 768 ? 500 : 800
+          height: window.innerWidth < 768 ? 400 : 650
         });
       }
     };
@@ -151,7 +151,7 @@ const CollaboratorsMap = () => {
       globeRef.current.controls().enableZoom = false;
 
       // Set initial POV closer to Colombia but zoomed out enough to not clip the atmosphere
-      globeRef.current.pointOfView({ lat: 10, lng: -60, altitude: 2.5 }, 1000);
+      globeRef.current.pointOfView({ lat: 10, lng: -60, altitude: 2.2 }, 1000);
 
       // Force flat solid color on the globe by manipulating lights
       const applyLighting = () => {
@@ -204,7 +204,7 @@ const CollaboratorsMap = () => {
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = true;
       // Volver a hacer zoom hacia afuera (el original)
-      globeRef.current.pointOfView({ lat: 10, lng: -60, altitude: 2.5 }, 1000);
+      globeRef.current.pointOfView({ lat: 10, lng: -60, altitude: 2.2 }, 1000);
     }
   };
 
