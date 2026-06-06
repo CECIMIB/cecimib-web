@@ -91,6 +91,7 @@ const CollaboratorsMap = () => {
   }));
 
   const [isVisible, setIsVisible] = useState(false);
+  const [isGlobeLoaded, setIsGlobeLoaded] = useState(false);
   const [countries, setCountries] = useState({ features: [] });
   const [activeCountry, setActiveCountry] = useState(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 800 });
@@ -104,7 +105,7 @@ const CollaboratorsMap = () => {
           observer.disconnect(); // Solo necesitamos detectarlo una vez
         }
       },
-      { rootMargin: '200px 0px', threshold: 0.01 } // Cargar un poco antes de que entre a pantalla
+      { rootMargin: '800px 0px', threshold: 0.01 } // Cargar MUCHO antes de que entre a pantalla para evitar tirones
     );
 
     if (wrapperRef.current) {
@@ -202,6 +203,8 @@ const CollaboratorsMap = () => {
     setActiveCountry(null);
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = true;
+      // Volver a hacer zoom hacia afuera (el original)
+      globeRef.current.pointOfView({ lat: 10, lng: -60, altitude: 2.5 }, 1000);
     }
   };
 
@@ -214,10 +217,11 @@ const CollaboratorsMap = () => {
 
   return (
     <div className="network-map-wrapper" ref={wrapperRef} style={{ minHeight: dimensions.height }}>
-      <div id="globe-container" className="network-map-container">
+      <div id="globe-container" className="network-map-container" style={{ opacity: isGlobeLoaded ? 1 : 0, transition: 'opacity 1.5s ease-in' }}>
         {isVisible && typeof window !== 'undefined' && (
           <Globe
             ref={globeRef}
+            onGlobeReady={() => setIsGlobeLoaded(true)}
             width={dimensions.width}
             height={dimensions.height}
             backgroundColor="rgba(0,0,0,0)"
