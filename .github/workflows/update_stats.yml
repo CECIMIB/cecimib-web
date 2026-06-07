@@ -1,0 +1,56 @@
+name: Update Course Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Ejecutar diariamente a la medianoche (UTC)
+  workflow_dispatch: # Permitir ejecución manual
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: pip install requests
+        
+      - name: Run update script
+        run: python scripts/update_graduates.py
+        
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code public/data/course_stats.json || echo "changed=true" >> $GITHUB_OUTPUT
+          
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/course_stats.json
+          git commit -m "chore: update total graduates from Zenodo"
+          git push origin main
+          
+      - name: Setup Node.js
+        if: steps.git-check.outputs.changed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install Node dependencies
+        if: steps.git-check.outputs.changed == 'true'
+        run: npm ci
+        
+      - name: Deploy to GitHub Pages
+        if: steps.git-check.outputs.changed == 'true'
+        run: npm run deploy

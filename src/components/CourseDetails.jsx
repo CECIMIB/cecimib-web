@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Download, ArrowLeft, Award } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Certificates from './Certificates';
+import GraduatesCounter from './GraduatesCounter';
 
 const CourseDetails = () => {
     const { t } = useTranslation();
@@ -132,6 +133,10 @@ const CourseDetails = () => {
 
                 </div>
 
+                <div style={{ marginTop: '4rem' }}>
+                    <GraduatesCounter />
+                </div>
+                
                 <div style={{ marginTop: '4rem' }}>
                     <Certificates />
                 </div>

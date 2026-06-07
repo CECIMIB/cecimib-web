@@ -249,7 +249,10 @@
             "w3_s6_topics": "- Contingency session",
             "resources_text": "All course materials, code, and datasets are available in our public GitHub repository:",
             "github_repo": "Course Repository",
-            "download_cert_badge": "Get Certificate"
+            "download_cert_badge": "Get Certificate",
+            "graduates_title": "Course Impact",
+            "graduates_subtitle": "Health science professionals and students who have strengthened their data analysis skills.",
+            "graduates_label": "Certified Graduates"
         }
     },
     "collaborators": {

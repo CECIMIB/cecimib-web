@@ -250,7 +250,10 @@
       "w3_s6_topics": "- Sesión de contingencia",
       "resources_text": "Todos los materiales del curso, códigos y conjuntos de datos están disponibles en nuestro repositorio público de GitHub:",
       "github_repo": "Repositorio del curso",
-      "download_cert_badge": "Obtener Certificado"
+      "download_cert_badge": "Obtener Certificado",
+      "graduates_title": "Impacto del Curso",
+      "graduates_subtitle": "Profesionales y estudiantes de ciencias de la salud que han fortalecido sus habilidades de análisis de datos.",
+      "graduates_label": "Graduados Certificados"
     }
   },
   "collaborators": {
