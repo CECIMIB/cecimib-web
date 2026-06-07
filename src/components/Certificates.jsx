@@ -23,7 +23,7 @@ const Certificates = () => {
     const filename = `${documentId.trim()}.pdf`;
 
     try {
-      const response = await fetch('https://zenodo.org/api/records/20575110');
+      const response = await fetch('https://zenodo.org/api/records/20575109');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -33,7 +33,7 @@ const Certificates = () => {
 
       if (foundFile) {
         // Build URL
-        const fileUrl = foundFile.links?.self || `https://zenodo.org/records/20575110/files/${filename}?download=1`;
+        const fileUrl = foundFile.links?.self || `https://zenodo.org/records/20575109/files/${filename}?download=1`;
         
         setCertificate({
           url: fileUrl,
