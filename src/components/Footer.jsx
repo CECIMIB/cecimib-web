@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
+import PrivacyModal from './PrivacyModal';
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
   const footerLogoPath = i18n.language === 'en'
     ? `${import.meta.env.BASE_URL}ingles_blanco.svg`
@@ -20,6 +23,7 @@ const Footer = () => {
   };
 
   return (
+    <>
     <footer id="contact" className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
@@ -59,7 +63,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} CECIMIB SAS. {t('footer.rights')}</p>
+          <p>&copy; {new Date().getFullYear()} CECIMIB SAS. {t('footer.rights')} <span className="footer-separator">|</span> <button className="footer-privacy-btn" onClick={() => setIsPrivacyModalOpen(true)}>{t('footer.privacy_policy')}</button></p>
         </div>
       </div>
 
@@ -196,6 +200,28 @@ const Footer = () => {
             margin: 0;
         }
 
+        .footer-separator {
+          margin: 0 0.5rem;
+          opacity: 0.5;
+        }
+
+        .footer-privacy-btn {
+          background: none;
+          border: none;
+          padding: 0;
+          color: inherit;
+          font-size: inherit;
+          cursor: pointer;
+          font-family: inherit;
+          text-decoration: none;
+          transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+
+        .footer-privacy-btn:hover {
+          color: white;
+          text-decoration: underline;
+        }
+
         @media (max-width: 900px) {
            .footer-container {
             grid-template-columns: 1fr;
@@ -267,6 +293,11 @@ const Footer = () => {
         }
       `}</style>
     </footer>
+    <PrivacyModal 
+      isOpen={isPrivacyModalOpen} 
+      onClose={() => setIsPrivacyModalOpen(false)} 
+    />
+    </>
   );
 };
 

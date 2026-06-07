@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import PrivacyModal from './PrivacyModal';
 
 const Certificates = () => {
   const { t } = useTranslation();
@@ -7,6 +8,7 @@ const Certificates = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [certificate, setCertificate] = useState(null);
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -82,6 +84,10 @@ const Certificates = () => {
               {loading ? t('certificates.searching') : t('certificates.search_button')}
             </button>
           </form>
+          
+          <p className="privacy-notice">
+            {t('privacy_policy.notice')}<a href="#privacy-policy" onClick={(e) => { e.preventDefault(); setIsPrivacyModalOpen(true); }} className="privacy-link">{t('privacy_policy.link')}</a>
+          </p>
 
           {error && (
             <div className="cert-error">
@@ -121,6 +127,29 @@ const Certificates = () => {
             </div>
           )}
         </div>
+
+        <PrivacyModal 
+          isOpen={isPrivacyModalOpen} 
+          onClose={() => setIsPrivacyModalOpen(false)} 
+        />
+
+        <style>{`
+          .privacy-notice {
+            font-size: 11px;
+            color: #6c757d;
+            margin-top: 12px;
+            text-align: center;
+          }
+          .privacy-link {
+            color: var(--color-primary, #0d47a1);
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.2s;
+          }
+          .privacy-link:hover {
+            color: var(--color-primary-dark, #0a367a);
+          }
+        `}</style>
     </div>
   );
 };

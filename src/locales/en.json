@@ -126,7 +126,8 @@
         "certificates": "Certificates",
         "legal": "Legal & Regulatory",
         "terms": "Terms of Use",
-        "open_science": "Open Science & Licensing"
+        "open_science": "Open Science & Licensing",
+        "privacy_policy": "Privacy and Data Treatment Policy"
     },
     "research_group": {
         "title": "Research Group",
@@ -412,5 +413,20 @@
         "course_intensity": "5 weeks",
         "course_year": "2026",
         "contact_help": "If you have any questions about the certificate or need help with anything related to what you learned in the course, do not hesitate to write to me at:"
+    },
+    "privacy_policy": {
+        "notice": "By querying your document, you accept our Data Treatment Policy. ",
+        "link": "[View Privacy Notice]",
+        "title": "PRIVACY NOTICE AND AUTHORIZATION FOR PERSONAL DATA TREATMENT (LAW 1581 OF 2012)",
+        "p1": "In compliance with Law 1581 of 2012 and Decree 1377 of 2013, the Center for Scientific Consulting and Meta-Research in Biomedical Sciences (CECIMIB), as Data Controller, informs students, alumni, and users that the personal data provided (Full Name, ID Document, Email, Cohort, and Certification Date) will be securely collected, stored, and processed in our cloud databases.",
+        "purposes_title": "Purposes of Treatment:",
+        "purpose_1": "Manage the historical, administrative, and academic record of the participants of the center's training activities.",
+        "purpose_2": "Allow public verification, automated querying, and downloading of completion certificates (such as the Fundamentals of R for Data Analysis program) by the holder, employers, or academic institutions through our official portals.",
+        "purpose_3": "Send institutional notifications, academic content updates, certification status alerts, and communications related to the center's scientific activities.",
+        "rights_title": "Rights of the Holder:",
+        "rights_text": "As the data holder, you have the right to know, update, rectify, and request the deletion of your personal information at any time, as well as to revoke the authorization granted for its treatment.",
+        "channel_title": "Service Channel:",
+        "channel_text": "To exercise your Habeas Data rights or report any concerns, you can contact us directly at the email: ",
+        "close_btn": "Close"
     }
 }

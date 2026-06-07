@@ -127,7 +127,8 @@
     "certificates": "Certificados",
     "legal": "Legal y Normativa",
     "terms": "Términos de Uso",
-    "open_science": "Ciencia Abierta y Licencias"
+    "open_science": "Ciencia Abierta y Licencias",
+    "privacy_policy": "Política de Privacidad y Tratamiento de Datos"
   },
   "research_group": {
     "title": "Grupo de Investigación",
@@ -413,5 +414,20 @@
     "course_intensity": "5 semanas",
     "course_year": "2026",
     "contact_help": "Si tienes cualquier duda sobre el certificado o necesitas ayuda con algo relacionado con lo aprendido en el curso, no dudes en escribirme a:"
+  },
+  "privacy_policy": {
+    "notice": "Al consultar tu documento, aceptas nuestra Política de Tratamiento de Datos. ",
+    "link": "[Ver Aviso de Privacidad]",
+    "title": "AVISO DE PRIVACIDAD Y AUTORIZACIÓN PARA EL TRATAMIENTO DE DATOS PERSONALES (LEY 1581 DE 2012)",
+    "p1": "En cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013, el Centro de Consultoría Científica y Meta-Investigación en Ciencias Biomédicas (CECIMIB), en su calidad de Responsable del Tratamiento, informa a los estudiantes, egresados y usuarios que los datos personales suministrados (Nombre Completo, Documento de Identidad, Correo Electrónico, Cohorte y Fecha de Certificación) serán recolectados, almacenados y procesados de manera segura en nuestras bases de datos en la nube.",
+    "purposes_title": "Finalidades del Tratamiento:",
+    "purpose_1": "Gestionar el registro histórico, administrativo y académico de los participantes de las actividades formativas del centro.",
+    "purpose_2": "Permitir la verificación pública, consulta automatizada y descarga de certificados de finalización (como el programa Fundamentals of R for Data Analysis) por parte del titular, empleadores o instituciones académicas a través de nuestros portales oficiales.",
+    "purpose_3": "Enviar notificaciones institucionales, actualizaciones de contenido académico, alertas del estado de certificaciones y comunicaciones relacionadas con las actividades científicas del centro.",
+    "rights_title": "Derechos del Titular:",
+    "rights_text": "Como titular de los datos, te asiste el derecho a conocer, actualizar, rectificar y solicitar la supresión de tu información personal en cualquier momento, así como a revocar la autorización otorgada para su tratamiento.",
+    "channel_title": "Canal de Atención:",
+    "channel_text": "Para ejercer tus derechos de Habeas Data o reportar cualquier inquietud, puedes comunicarte directamente al correo electrónico: ",
+    "close_btn": "Cerrar"
   }
 }
