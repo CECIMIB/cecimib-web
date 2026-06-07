@@ -12,7 +12,8 @@ const GraduatesCounter = () => {
     const fetchGraduates = async () => {
       try {
         const baseUrl = import.meta.env.BASE_URL || '/';
-        const response = await fetch(`${baseUrl}data/course_stats.json`);
+        const timestamp = new Date().getTime();
+        const response = await fetch(`${baseUrl}data/course_stats.json?t=${timestamp}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
