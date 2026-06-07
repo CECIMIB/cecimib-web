@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import fabriccioImg from '../assets/fabriccio-blog.jpeg';
-import johanaImg from '../assets/johana-blog.jpeg';
-import andyImg from '../assets/Andy-grado.jpeg';
 import { publicationsData } from '../data/publications';
+import { newsData } from '../data/newsData';
 
 const News = () => {
     const { t, i18n } = useTranslation();
@@ -14,22 +12,7 @@ const News = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const news = [
-        {
-            id: '1-3-2026',
-            image: andyImg,
-        },
-        {
-            id: '1-1-2026',
-            image: fabriccioImg,
-        },
-        {
-            id: '1-2-2026',
-            image: johanaImg,
-        }
-    ];
-
-    const recentNews = news.slice(0, 3);
+    const recentNews = newsData.slice(0, 3);
 
     const allArticles = publicationsData.flatMap(cat => cat.articles);
     const latestArticles = allArticles

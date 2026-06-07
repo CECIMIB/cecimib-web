@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import fabriccioImg from '../assets/fabriccio-blog.jpeg';
-import johanaImg from '../assets/johana-blog.jpeg';
-import andyImg from '../assets/Andy-grado.jpeg';
+import { newsData as news } from '../data/newsData';
 
 const AllNews = () => {
     const { t, i18n } = useTranslation();
@@ -15,20 +13,7 @@ const AllNews = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const news = [
-        {
-            id: '1-3-2026',
-            image: andyImg,
-        },
-        {
-            id: '1-1-2026',
-            image: fabriccioImg,
-        },
-        {
-            id: '1-2-2026',
-            image: johanaImg,
-        }
-    ];
+
 
     const uniqueYears = [...new Set(news.map(b => b.id.split('-').pop()))].sort((a,b)=>b-a);
 
