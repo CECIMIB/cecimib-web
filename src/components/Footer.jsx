@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 import PrivacyModal from './PrivacyModal';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const location = useLocation();
 
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
@@ -26,44 +26,64 @@ const Footer = () => {
     <>
     <footer id="contact" className="footer">
       <div className="container footer-container">
+        
+        {/* Brand Col */}
         <div className="footer-brand">
           <img src={footerLogoPath} alt="CECIMIB" className="footer-logo" />
-          <p>{t('footer.brand_text')}</p>
+          <p className="brand-text">{t('footer.brand_text')}</p>
         </div>
 
-        <div className="footer-links-wrapper">
-          <div className="links-col">
-            <h4 className="links-header">{t('footer.links')}</h4>
-            <ul>
-              <li><button onClick={() => handleNav('services')}>{t('navbar.services')}</button></li>
-              <li><button onClick={() => handleNav('about')}>{t('navbar.about')}</button></li>
-              <li><button onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</button></li>
-              <li><button onClick={() => handleNav('publications')} className="first-link">{t('navbar.publications')}</button></li>
-              <li><button onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</button></li>
-              <li><button onClick={() => handleNav('group')}>{t('footer.research_group')}</button></li>
-              <li><button onClick={() => handleNav('courses')}>{t('footer.courses')}</button></li>
-              <li><button onClick={() => handleNav('news')}>{t('navbar.news')}</button></li>
-            </ul>
-          </div>
-          <div className="links-col">
-            <h4 className="links-header">{t('footer.legal')}</h4>
-            <ul>
-              <li><button onClick={() => handleNav('terminos')}>{t('footer.terms')}</button></li>
-              <li><button onClick={() => handleNav('licencias')}>{t('footer.open_science')}</button></li>
-            </ul>
-          </div>
+        {/* The Center Col */}
+        <div className="links-col">
+          <h4 className="links-header">{t('footer.center')}</h4>
+          <ul>
+            <li><button onClick={() => handleNav('about')}>{t('navbar.about')}</button></li>
+            <li><button onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</button></li>
+            <li><button onClick={() => handleNav('group')}>{t('footer.research_group')}</button></li>
+          </ul>
         </div>
 
+        {/* Resources Col */}
+        <div className="links-col">
+          <h4 className="links-header">{t('footer.resources')}</h4>
+          <ul>
+            <li><button onClick={() => handleNav('services')}>{t('navbar.services')}</button></li>
+            <li><button onClick={() => handleNav('publications')}>{t('navbar.publications')}</button></li>
+            <li><button onClick={() => handleNav('repositories')}>{t('navbar.repositories')}</button></li>
+            <li><button onClick={() => handleNav('courses')}>{t('footer.courses')}</button></li>
+          </ul>
+        </div>
+
+        {/* Legal Col */}
+        <div className="links-col">
+          <h4 className="links-header">{t('footer.legal_title')}</h4>
+          <ul>
+            <li><button onClick={() => handleNav('terminos')}>{t('footer.terms')}</button></li>
+            <li><button onClick={() => handleNav('licencias')}>{t('footer.open_science')}</button></li>
+            <li><button onClick={() => setIsPrivacyModalOpen(true)}>{t('footer.privacy_policy')}</button></li>
+          </ul>
+        </div>
+
+        {/* Contact Col */}
         <div className="footer-contact">
           <h4 className="links-header">{t('footer.contact')}</h4>
-          <p>{t('footer.contact_text')}</p>
-          <a href="mailto:ivan@cecimib.com" className="contact-link">ivan@cecimib.com</a>
+          <p className="contact-desc">{t('footer.contact_text')}</p>
+          <div className="contact-list">
+            <div className="contact-item">
+              <Mail size={16} className="contact-icon" />
+              <div className="contact-item-info">
+                <span className="contact-label">{t('footer.contact_direction')}</span>
+                <a href="mailto:ivan@cecimib.com">ivan@cecimib.com</a>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
 
       <div className="footer-bottom">
-        <div className="container">
-          <p>&copy; {new Date().getFullYear()} CECIMIB SAS. {t('footer.rights')} <span className="footer-separator">|</span> <button className="footer-privacy-btn" onClick={() => setIsPrivacyModalOpen(true)}>{t('footer.privacy_policy')}</button></p>
+        <div className="container bottom-bar">
+          <p>&copy; {new Date().getFullYear()} CECIMIB SAS. {t('footer.rights')}</p>
         </div>
       </div>
 
@@ -71,85 +91,63 @@ const Footer = () => {
         .footer {
           background-color: #111827;
           color: white;
-          padding: 2.5rem 0 0 0;
+          padding: 4rem 0 0 0;
+          font-family: inherit;
         }
 
         .footer-container {
           display: grid;
-          /* Shifted middle column right by increasing first column space */
-          grid-template-columns: 2.5fr 3fr 1.5fr; 
-          gap: 2rem;
-          padding-bottom: 2rem;
+          grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; 
+          gap: 3rem;
+          padding-bottom: 4rem;
           align-items: start;
         }
 
-        .footer-brand p {
-          color: #9ca3af;
-          margin-top: 0.75rem;
-          max-width: 320px; 
-          font-size: 0.9rem;
-          line-height: 1.5;
-          white-space: pre-line; /* Respect line breaks from translation */
+        .footer-brand {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
         }
-        
+
         .footer-logo {
-          height: 35px;
+          height: 38px;
+          object-fit: contain;
+          object-position: left;
         }
 
-        .footer-links-wrapper {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 1rem;
+        .brand-text {
+          color: #9ca3af; /* Muted gray */
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin: 0;
+          max-width: 250px;
+          white-space: pre-line;
         }
 
-        .links-col:first-child {
-           padding-left: 0; 
+        .links-col {
+          display: flex;
+          flex-direction: column;
         }
 
         .links-header {
-          font-size: 1.1rem;
-          margin-bottom: 0.5rem; /* Reduced to 0.5rem to match link spacing */
-          color: white;
-          font-weight: 700;
-          height: 1.5rem; 
-          line-height: 1.5rem;
-          display: flex; 
-          align-items: center;
-        }
-
-        .right-col-list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .right-col-list li:first-child {
-           margin-bottom: 0.5rem; /* Reduced to 0.5rem to match others in the column */
-        }
-
-        .right-col-list li:first-child button {
-           font-weight: 500; 
-           height: 1.5rem; 
-           line-height: 1.5rem;
-           display: flex; /* Ensure alignment behavior matches others */
-           align-items: center;
-           padding: 0; /* Reset any padding */
-           color: #9ca3af; 
-        }
-        
-        .right-col-list li:first-child button:hover {
-            color: white;
+          font-size: 0.75rem; /* text-xs */
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #9ca3af;
+          margin: 0 0 1.25rem 0;
+          font-weight: 600;
         }
 
         .footer ul {
           list-style: none;
           padding: 0;
           margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.85rem;
         }
 
         .footer ul li {
-          margin-bottom: 0.5rem;
-          height: 1.5rem; 
           display: flex;
           align-items: center;
         }
@@ -158,7 +156,7 @@ const Footer = () => {
           background: none;
           border: none;
           padding: 0;
-          color: #9ca3af;
+          color: rgba(255, 255, 255, 0.7);
           font-size: 0.9rem;
           cursor: pointer;
           text-align: left;
@@ -168,127 +166,112 @@ const Footer = () => {
         }
 
         .footer ul li button:hover {
-          color: white;
+          color: #ffffff;
         }
 
-        .footer-contact p {
+        .footer-contact {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+
+        .contact-desc {
+          color: #6b7280;
+          font-size: 0.95rem;
+          margin: 0;
+          line-height: 1.5;
+        }
+
+        .contact-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
+
+        .contact-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.75rem;
+        }
+
+        .contact-icon {
           color: #9ca3af;
-          margin-bottom: 0.5rem;
-          font-size: 0.9rem;
+          margin-top: 0.2rem;
         }
 
-        .contact-link {
-          color: var(--color-primary-light);
-          font-weight: 500;
+        .contact-item-info {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+        }
+
+        .contact-label {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #6b7280;
+        }
+
+        .contact-item-info a {
+          color: rgba(255, 255, 255, 0.7);
           font-size: 0.9rem;
           text-decoration: none;
+          transition: color 0.2s;
         }
-        
-        .contact-link:hover {
-          text-decoration: underline;
+
+        .contact-item-info a:hover {
+          color: #ffffff;
         }
 
         .footer-bottom {
+          border-top: 1px solid #1f2937; /* gray-800 */
           background-color: #0f172a;
-          padding: 1rem 0;
+        }
+
+        .bottom-bar {
+          padding: 1.5rem 0;
           text-align: center;
+        }
+        
+        .bottom-bar p {
+          margin: 0;
           color: #6b7280;
           font-size: 0.8rem;
         }
-        
-        .footer-bottom p {
-            margin: 0;
-        }
 
-        .footer-separator {
-          margin: 0 0.5rem;
-          opacity: 0.5;
-        }
-
-        .footer-privacy-btn {
-          background: none;
-          border: none;
-          padding: 0;
-          color: inherit;
-          font-size: inherit;
-          cursor: pointer;
-          font-family: inherit;
-          text-decoration: none;
-          transition: color 0.2s ease, text-decoration 0.2s ease;
-        }
-
-        .footer-privacy-btn:hover {
-          color: white;
-          text-decoration: underline;
-        }
-
-        @media (max-width: 900px) {
-           .footer-container {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            text-align: center;
+        @media (max-width: 1024px) {
+          .footer-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
           }
-          
-        @media (max-width: 900px) {
-           .footer-container {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            text-align: center;
-          }
-          
-          .footer-links-wrapper {
-             /* Keep 1 column on mobile to save horizontal space with 3 link sections */
-             grid-template-columns: 1fr; 
-             gap: 1.5rem;
-             text-align: left;
-             max-width: 400px;
-             margin: 0 auto; /* Center the grid container */
-          }
-          
-          .links-col {
-             align-items: flex-start; /* Left align items in columns */
-          }
-
-          .links-header {
-              justify-content: flex-start; /* Left align headers */
-              height: auto; 
-              font-size: 1rem; /* Smaller header */
-          }
-          
-          .right-col-list li:first-child button, .footer ul li {
-              justify-content: flex-start; /* Left align links */
-              height: auto; 
-          }
-          
-          .right-col-list li:first-child {
-             margin-bottom: 0.5rem;
-          }
-
-          .footer-brand {
-             text-align: left;
-             display: flex;
-             flex-direction: column;
-             align-items: flex-start;
-          }
-
-          .footer-brand p {
-             margin: 0.75rem 0;
-             font-size: 0.85rem; /* Smaller text */
-          }
-           
-          /* Adjust alignment for the "Contact" section which is now separate */
           .footer-contact {
-              text-align: center;
+            grid-column: span 3;
+            max-width: 400px;
           }
-          .footer-contact h4 {
-              justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+          .footer-container {
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
           }
-          
-          .footer ul li button {
-             width: auto; /* Auto width */
-             text-align: left;
-             padding: 0.15rem 0; /* Compact padding */
-             font-size: 0.85rem; /* Smaller links */
+          .footer-brand {
+            grid-column: span 2;
+          }
+          .footer-contact {
+            grid-column: span 2;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .footer-container {
+            grid-template-columns: 1fr;
+          }
+          .footer-brand, .footer-contact {
+            grid-column: span 1;
+          }
+          .bottom-bar {
+            text-align: left;
           }
         }
       `}</style>
