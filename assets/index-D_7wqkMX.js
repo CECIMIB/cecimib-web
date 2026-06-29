@@ -7075,9 +7075,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     color: var(--color-text);
                     text-decoration: none;
                     transition: color 0.2s;
-                    display: inline-flex;
-                    align-items: baseline;
-                    gap: 0.25rem;
                 }
 
                 .work-link:hover {
@@ -7087,8 +7084,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 .work-link-icon {
                     opacity: 0.5;
                     transition: opacity 0.2s;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 0.35rem;
                     position: relative;
-                    top: 2px;
+                    top: -2px;
+                    width: 14px;
+                    height: 14px;
                 }
 
                 .work-link:hover .work-link-icon {
