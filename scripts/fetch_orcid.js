@@ -103,11 +103,22 @@ function parseWorks(group) {
 
             const journal = summary['journal-title']?.value || '';
 
+            let url = summary.url?.value || '';
+            if (!url && summary['external-ids'] && summary['external-ids']['external-id']) {
+                const doiObj = summary['external-ids']['external-id'].find(e => e['external-id-type'] === 'doi');
+                if (doiObj && doiObj['external-id-url']) {
+                    url = doiObj['external-id-url'].value;
+                } else if (doiObj && doiObj['external-id-value']) {
+                    url = `https://doi.org/${doiObj['external-id-value']}`;
+                }
+            }
+
             parsed.push({
                 title,
                 date,
                 journal,
                 type,
+                url,
                 putCode: summary['put-code']
             });
         }

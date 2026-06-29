@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import orcidLogo from '../assets/orcid_logo.svg';
 import researchGateLogo from '../assets/research-gate-logo.svg';
 import linkedinLogo from '../assets/linkedin-icon.svg';
@@ -169,7 +169,15 @@ const ResearcherDetails = () => {
                                 <ul className="orcid-works-list">
                                     {orcidData[id].works.map((work, index) => (
                                         <li key={work.putCode || index} className="orcid-work-item">
-                                            <div className="work-title">{work.title}</div>
+                                            <div className="work-title">
+                                                {work.url ? (
+                                                    <a href={work.url} target="_blank" rel="noopener noreferrer" className="work-link">
+                                                        {work.title} <ExternalLink size={14} className="work-link-icon" />
+                                                    </a>
+                                                ) : (
+                                                    work.title
+                                                )}
+                                            </div>
                                             <div className="work-meta">
                                                 <span className="work-date">{work.date}</span>
                                                 {work.journal && <span className="work-journal">{work.journal}</span>}
@@ -403,6 +411,30 @@ const ResearcherDetails = () => {
                     color: var(--color-text);
                     margin-bottom: 0.5rem;
                     line-height: 1.5;
+                }
+
+                .work-link {
+                    color: var(--color-text);
+                    text-decoration: none;
+                    transition: color 0.2s;
+                    display: inline-flex;
+                    align-items: baseline;
+                    gap: 0.25rem;
+                }
+
+                .work-link:hover {
+                    color: var(--color-primary);
+                }
+
+                .work-link-icon {
+                    opacity: 0.5;
+                    transition: opacity 0.2s;
+                    position: relative;
+                    top: 2px;
+                }
+
+                .work-link:hover .work-link-icon {
+                    opacity: 1;
                 }
 
                 .work-meta {
