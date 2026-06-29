@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ExternalLink, Search, ChevronLeft, ChevronsLeft, ChevronRight, ChevronsRight } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Search, ChevronLeft, ChevronsLeft, ChevronRight, ChevronsRight, ChevronDown } from 'lucide-react';
 import orcidLogo from '../assets/orcid_logo.svg';
 import researchGateLogo from '../assets/research-gate-logo.svg';
 import linkedinLogo from '../assets/linkedin-icon.svg';
@@ -194,133 +194,149 @@ const ResearcherDetails = () => {
                     <div className="bio-content">
                         <h2>{t('researchers_details.information')}</h2>
                         <div className="bio-text">
-                            {t(`researchers_details.${id}.detailed_bio`).split('\n\n').map((paragraph, idx) => (
-                                <p key={idx}>{paragraph}</p>
-                            ))}
+                            {t(`researchers_details.${id}.detailed_bio`, { defaultValue: researcher.bio })
+                                .split('\n\n')
+                                .map((paragraph, index) => (
+                                    <p key={index}>{paragraph}</p>
+                                ))}
                         </div>
-
+                        
                         {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
-                            <div className="orcid-publications">
-                                <h3 className="orcid-section-title">{t('researchers_details.publications_presentations')}</h3>
-                                
-                                <div className="orcid-controls">
-                                    <div className="search-bar">
-                                        <Search size={16} className="search-icon" />
-                                        <input 
-                                            type="text" 
-                                            placeholder={t('researchers_details.search_placeholder', 'Search publications...')} 
-                                            value={searchQuery}
-                                            onChange={(e) => setSearchQuery(e.target.value)}
-                                        />
-                                    </div>
-                                    <div className="orcid-badges">
-                                        {Object.entries(orcidData[id].counts).map(([type, count]) => {
-                                            if (count === 0) return null;
-                                            const typeKey = type.replace('-', '_');
-                                            const label = t(`researchers_details.${typeKey}`, { defaultValue: type.replace('-', ' ') });
-                                            const isActive = activeFilter === type;
-                                            return (
-                                                <button 
-                                                    key={type} 
-                                                    className={`orcid-badge ${isActive ? 'active' : ''}`}
-                                                    onClick={() => setActiveFilter(isActive ? null : type)}
-                                                >
-                                                    <strong>{count}</strong> {label}
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-
-                                <ul className="orcid-works-list">
-                                    {paginatedWorks.map((work, index) => (
-                                        <li key={work.putCode || index} className="orcid-work-item">
-                                            <div className="work-title">
-                                                {work.url ? (
-                                                    <a href={work.url} target="_blank" rel="noopener noreferrer">
-                                                        {work.title} <ExternalLink size={12} className="inline-icon" />
-                                                    </a>
-                                                ) : (
-                                                    work.title
-                                                )}
-                                            </div>
-                                            <div className="work-meta">
-                                                <span className="work-date">{work.date}</span>
-                                                {work.journal && <span className="work-journal">{work.journal}</span>}
-                                                <span className="work-type">{t(`researchers_details.${work.type.replace('-', '_')}`, { defaultValue: work.type.replace('-', ' ') })}</span>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                {totalPages > 1 && (
-                                    <div className="pagination-container">
-                                        <div className="items-per-page">
-                                            <label>{t('researchers_details.items_per_page', 'Items per page:')}</label>
-                                            <select 
-                                                value={itemsPerPage} 
-                                                onChange={(e) => setItemsPerPage(Number(e.target.value))}
-                                            >
-                                                <option value={5}>5</option>
-                                                <option value={10}>10</option>
-                                                <option value={20}>20</option>
-                                                <option value={50}>50</option>
-                                                <option value={1000}>All</option>
-                                            </select>
-                                        </div>
-
-                                        <div className="pagination-controls">
-                                            <button 
-                                                className="pagination-icon-btn"
-                                                onClick={() => setCurrentPage(1)}
-                                                disabled={currentPage === 1}
-                                            >
-                                                <ChevronsLeft size={18} />
-                                            </button>
-                                            <button 
-                                                className="pagination-icon-btn"
-                                                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                                                disabled={currentPage === 1}
-                                            >
-                                                <ChevronLeft size={18} />
-                                            </button>
-                                            
-                                            <div className="pagination-numbers">
-                                                {getPageNumbers(currentPage, totalPages).map((num, i) => (
-                                                    num === '...' ? (
-                                                        <span key={`ellipsis-${i}`} className="pagination-ellipsis">...</span>
-                                                    ) : (
-                                                        <button
-                                                            key={num}
-                                                            className={`pagination-number ${currentPage === num ? 'active' : ''}`}
-                                                            onClick={() => setCurrentPage(num)}
-                                                        >
-                                                            {num}
-                                                        </button>
-                                                    )
-                                                ))}
-                                            </div>
-
-                                            <button 
-                                                className="pagination-icon-btn"
-                                                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                                                disabled={currentPage === totalPages}
-                                            >
-                                                <ChevronRight size={18} />
-                                            </button>
-                                            <button 
-                                                className="pagination-icon-btn"
-                                                onClick={() => setCurrentPage(totalPages)}
-                                                disabled={currentPage === totalPages}
-                                            >
-                                                <ChevronsRight size={18} />
-                                            </button>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
+                            <a 
+                                href="#publications" 
+                                className="scroll-indicator"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('publications')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <span>{t('researchers_details.scroll_to_publications', 'Scroll to scientific production')}</span>
+                                <ChevronDown size={20} className="bounce-animation" />
+                            </a>
                         )}
                     </div>
+
+                    {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
+                        <div id="publications" className="orcid-publications">
+                            <h3 className="orcid-section-title">{t('researchers_details.publications_presentations')}</h3>
+                            
+                            <div className="orcid-controls">
+                                <div className="search-bar">
+                                    <Search size={16} className="search-icon" />
+                                    <input 
+                                        type="text" 
+                                        placeholder={t('researchers_details.search_placeholder', 'Search publications...')} 
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                    />
+                                </div>
+                                <div className="orcid-badges">
+                                    {Object.entries(orcidData[id].counts).map(([type, count]) => {
+                                        if (count === 0) return null;
+                                        const typeKey = type.replace('-', '_');
+                                        const label = t(`researchers_details.${typeKey}`, { defaultValue: type.replace('-', ' ') });
+                                        const isActive = activeFilter === type;
+                                        return (
+                                            <button 
+                                                key={type} 
+                                                className={`orcid-badge ${isActive ? 'active' : ''}`}
+                                                onClick={() => setActiveFilter(isActive ? null : type)}
+                                            >
+                                                <strong>{count}</strong> {label}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            <ul className="orcid-works-list">
+                                {paginatedWorks.map((work, index) => (
+                                    <li key={work.putCode || index} className="orcid-work-item">
+                                        <div className="work-title">
+                                            {work.url ? (
+                                                <a href={work.url} target="_blank" rel="noopener noreferrer">
+                                                    {work.title} <ExternalLink size={12} className="inline-icon" />
+                                                </a>
+                                            ) : (
+                                                work.title
+                                            )}
+                                        </div>
+                                        <div className="work-meta">
+                                            <span className="work-date">{work.date}</span>
+                                            {work.journal && <span className="work-journal">{work.journal}</span>}
+                                            <span className="work-type">{t(`researchers_details.${work.type.replace('-', '_')}`, { defaultValue: work.type.replace('-', ' ') })}</span>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            {totalPages > 1 && (
+                                <div className="pagination-container">
+                                    <div className="items-per-page">
+                                        <label>{t('researchers_details.items_per_page', 'Items per page:')}</label>
+                                        <select 
+                                            value={itemsPerPage} 
+                                            onChange={(e) => setItemsPerPage(Number(e.target.value))}
+                                        >
+                                            <option value={5}>5</option>
+                                            <option value={10}>10</option>
+                                            <option value={20}>20</option>
+                                            <option value={50}>50</option>
+                                            <option value={1000}>All</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="pagination-controls">
+                                        <button 
+                                            className="pagination-icon-btn"
+                                            onClick={() => setCurrentPage(1)}
+                                            disabled={currentPage === 1}
+                                        >
+                                            <ChevronsLeft size={18} />
+                                        </button>
+                                        <button 
+                                            className="pagination-icon-btn"
+                                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                                            disabled={currentPage === 1}
+                                        >
+                                            <ChevronLeft size={18} />
+                                        </button>
+                                        
+                                        <div className="pagination-numbers">
+                                            {getPageNumbers(currentPage, totalPages).map((num, i) => (
+                                                num === '...' ? (
+                                                    <span key={`ellipsis-${i}`} className="pagination-ellipsis">...</span>
+                                                ) : (
+                                                    <button
+                                                        key={num}
+                                                        className={`pagination-number ${currentPage === num ? 'active' : ''}`}
+                                                        onClick={() => setCurrentPage(num)}
+                                                    >
+                                                        {num}
+                                                    </button>
+                                                )
+                                            ))}
+                                        </div>
+
+                                        <button 
+                                            className="pagination-icon-btn"
+                                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                                            disabled={currentPage === totalPages}
+                                        >
+                                            <ChevronRight size={18} />
+                                        </button>
+                                        <button 
+                                            className="pagination-icon-btn"
+                                            onClick={() => setCurrentPage(totalPages)}
+                                            disabled={currentPage === totalPages}
+                                        >
+                                            <ChevronsRight size={18} />
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -471,7 +487,7 @@ const ResearcherDetails = () => {
 
                 .bio-content {
                     background: white;
-                    padding: 2rem; /* Reduced from 3rem to align with sidebar */
+                    padding: 2rem;
                     border-radius: 1rem;
                     box-shadow: var(--shadow-sm);
                 }
@@ -488,6 +504,41 @@ const ResearcherDetails = () => {
                     color: var(--color-text);
                     font-size: 1.05rem;
                     text-align: justify;
+                }
+
+                .scroll-indicator {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    margin-top: 3rem;
+                    color: var(--color-primary);
+                    text-decoration: none;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    opacity: 0.8;
+                    transition: opacity 0.2s;
+                }
+
+                .scroll-indicator:hover {
+                    opacity: 1;
+                }
+
+                .bounce-animation {
+                    animation: bounce 2s infinite;
+                }
+
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {
+                        transform: translateY(0);
+                    }
+                    40% {
+                        transform: translateY(-8px);
+                    }
+                    60% {
+                        transform: translateY(-4px);
+                    }
                 }
 
                 @media (max-width: 768px) {

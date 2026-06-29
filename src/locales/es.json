@@ -105,6 +105,7 @@
     "items_per_page": "Elementos por página:",
     "previous": "Anterior",
     "next": "Siguiente",
+    "scroll_to_publications": "Bajar a la producción científica",
     "page_info": "Página {{current}} de {{total}}",
     "publications_presentations": "Publicaciones y Presentaciones",
     "journal_article": "Artículo Científico",
