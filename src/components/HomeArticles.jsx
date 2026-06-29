@@ -11,18 +11,15 @@ const HomeArticles = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Get the 9 most recent articles
+  // Get all articles
   const allArticles = publicationsData.flatMap(cat => cat.articles);
   const latestArticles = allArticles
-      .sort((a, b) => parseInt(b.year) - parseInt(a.year))
-      .slice(0, 9);
+      .sort((a, b) => parseInt(b.year) - parseInt(a.year));
 
-  // Group into pages of 3
+  // Group into pages of up to 3
   const pages = [];
   for (let i = 0; i < latestArticles.length; i += 3) {
-      if (latestArticles.slice(i, i + 3).length === 3) { // Ensure full pages for clean UI
-          pages.push(latestArticles.slice(i, i + 3));
-      }
+      pages.push(latestArticles.slice(i, i + 3));
   }
 
   useEffect(() => {
@@ -110,7 +107,7 @@ const HomeArticles = () => {
 
           {/* Right Column (5/12) - Secondary Articles Stack */}
           <div className="secondary-articles-list">
-            {[currentArticles[1], currentArticles[2]].map((article, idx) => (
+            {[currentArticles[1], currentArticles[2]].filter(Boolean).map((article, idx) => (
               <a 
                 key={idx}
                 href={article.link}
