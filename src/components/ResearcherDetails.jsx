@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Search } from 'lucide-react';
 import orcidLogo from '../assets/orcid_logo.svg';
 import researchGateLogo from '../assets/research-gate-logo.svg';
 import linkedinLogo from '../assets/linkedin-icon.svg';
@@ -47,6 +47,8 @@ const ResearcherDetails = () => {
     const { t } = useTranslation();
     const researcher = researchersMap[id];
     const [metrics, setMetrics] = useState(null);
+    const [activeFilter, setActiveFilter] = useState(null);
+    const [searchQuery, setSearchQuery] = useState('');
 
     if (!researcher) {
         return <div className="container section">Researcher not found</div>;
@@ -64,6 +66,17 @@ const ResearcherDetails = () => {
             })
             .catch(err => console.error('Error fetching metrics:', err));
     }, [id]);
+
+    const researcherWorks = orcidData[id]?.works || [];
+    const filteredWorks = researcherWorks.filter(work => {
+        const matchesFilter = activeFilter ? work.type === activeFilter : true;
+        const searchLower = searchQuery.toLowerCase();
+        const matchesSearch = !searchQuery || 
+            (work.title && work.title.toLowerCase().includes(searchLower)) || 
+            (work.journal && work.journal.toLowerCase().includes(searchLower)) ||
+            (work.date && work.date.toLowerCase().includes(searchLower));
+        return matchesFilter && matchesSearch;
+    });
 
     return (
         <section className="section researcher-details">
@@ -161,20 +174,38 @@ const ResearcherDetails = () => {
                         {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
                             <div className="orcid-publications">
                                 <h3 className="orcid-section-title">{t('researchers_details.publications_presentations')}</h3>
-                                <div className="orcid-badges">
-                                    {Object.entries(orcidData[id].counts).map(([type, count]) => {
-                                        if (count === 0) return null;
-                                        const typeKey = type.replace('-', '_');
-                                        const label = t(`researchers_details.${typeKey}`, { defaultValue: type.replace('-', ' ') });
-                                        return (
-                                            <span key={type} className="orcid-badge">
-                                                <strong>{count}</strong> {label}
-                                            </span>
-                                        );
-                                    })}
+                                
+                                <div className="orcid-controls">
+                                    <div className="search-bar">
+                                        <Search size={16} className="search-icon" />
+                                        <input 
+                                            type="text" 
+                                            placeholder={t('researchers_details.search_placeholder', 'Search publications...')} 
+                                            value={searchQuery}
+                                            onChange={(e) => setSearchQuery(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className="orcid-badges">
+                                        {Object.entries(orcidData[id].counts).map(([type, count]) => {
+                                            if (count === 0) return null;
+                                            const typeKey = type.replace('-', '_');
+                                            const label = t(`researchers_details.${typeKey}`, { defaultValue: type.replace('-', ' ') });
+                                            const isActive = activeFilter === type;
+                                            return (
+                                                <button 
+                                                    key={type} 
+                                                    className={`orcid-badge ${isActive ? 'active' : ''}`}
+                                                    onClick={() => setActiveFilter(isActive ? null : type)}
+                                                >
+                                                    <strong>{count}</strong> {label}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
+
                                 <ul className="orcid-works-list">
-                                    {orcidData[id].works.map((work, index) => (
+                                    {filteredWorks.map((work, index) => (
                                         <li key={work.putCode || index} className="orcid-work-item">
                                             <div className="work-title">
                                                 {work.url ? (
@@ -388,11 +419,50 @@ const ResearcherDetails = () => {
                     margin-bottom: 1.5rem;
                 }
 
+                .orcid-controls {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    margin-bottom: 2rem;
+                }
+
+                .search-bar {
+                    position: relative;
+                    width: 100%;
+                    max-width: 400px;
+                }
+
+                .search-icon {
+                    position: absolute;
+                    left: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: var(--color-text-light);
+                    opacity: 0.7;
+                }
+
+                .search-bar input {
+                    width: 100%;
+                    padding: 0.75rem 1rem 0.75rem 2.5rem;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 9999px;
+                    background-color: #f8fafc;
+                    color: var(--color-text);
+                    font-size: 0.875rem;
+                    outline: none;
+                    transition: all 0.2s;
+                }
+
+                .search-bar input:focus {
+                    background-color: #ffffff;
+                    border-color: var(--color-primary);
+                    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.1);
+                }
+
                 .orcid-badges {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 0.75rem;
-                    margin-bottom: 2rem;
                 }
 
                 .orcid-badge {
@@ -402,10 +472,30 @@ const ResearcherDetails = () => {
                     border-radius: 9999px;
                     font-size: 0.875rem;
                     border: 1px solid #e2e8f0;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.35rem;
+                }
+
+                .orcid-badge:hover {
+                    background-color: #e2e8f0;
+                }
+
+                .orcid-badge.active {
+                    background-color: var(--color-primary);
+                    color: white;
+                    border-color: var(--color-primary);
                 }
 
                 .orcid-badge strong {
                     color: var(--color-primary);
+                    transition: color 0.2s;
+                }
+
+                .orcid-badge.active strong {
+                    color: white;
                 }
 
                 .orcid-works-list {

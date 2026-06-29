@@ -101,6 +101,7 @@
     "information": "Información",
     "metrics_title": "Métricas Científicas",
     "metrics_legend": "* Los datos bibliométricos provienen de Google Scholar. Las listas detalladas de publicaciones se extraen dinámicamente de ORCiD.",
+    "search_placeholder": "Buscar publicaciones...",
     "publications_presentations": "Publicaciones y Presentaciones",
     "journal_article": "Artículo Científico",
     "conference_poster": "Póster",
