@@ -140,6 +140,12 @@ const ResearcherDetails = () => {
                                     </div>
                                 </div>
                             )}
+                            
+                            {metrics && (
+                                <div className="metrics-legend">
+                                    {t('researchers_details.metrics_legend')}
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -325,6 +331,16 @@ const ResearcherDetails = () => {
                     font-weight: 500;
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
+                }
+
+                .metrics-legend {
+                    font-size: 0.75rem;
+                    color: var(--color-text-light);
+                    margin-top: 1rem;
+                    line-height: 1.4;
+                    padding: 0 1rem;
+                    text-align: center;
+                    font-style: italic;
                 }
 
                 .bio-content {
