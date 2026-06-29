@@ -129,26 +129,6 @@ const ResearcherDetails = () => {
 
     return (
         <section className="section researcher-details">
-            {/* Minimalist Team Navigator */}
-            <div className="team-navigator">
-                {Object.entries(researchersMap).map(([researcherId, data]) => (
-                    <Link 
-                        key={researcherId} 
-                        to={`/researchers/${researcherId}`}
-                        className={`team-nav-item ${researcherId === id ? 'active' : ''}`}
-                        title={researcherId.charAt(0).toUpperCase() + researcherId.slice(1)}
-                    >
-                        <motion.div 
-                            whileHover={{ scale: 1.1 }} 
-                            whileTap={{ scale: 0.95 }}
-                            className="nav-avatar-wrapper"
-                        >
-                            <img src={data.photo} alt={researcherId} />
-                        </motion.div>
-                    </Link>
-                ))}
-            </div>
-
             <motion.div 
                 key={id} 
                 initial={{ opacity: 0, y: 15 }} 
@@ -156,10 +136,31 @@ const ResearcherDetails = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 className="container"
             >
-                <Link to="/researchers" className="back-button">
-                    <ArrowLeft size={20} />
-                    {t('researchers_details.back_to_team')}
-                </Link>
+                <div className="top-navigation-bar">
+                    <Link to="/researchers" className="back-button">
+                        <ArrowLeft size={20} />
+                        {t('researchers_details.back_to_team')}
+                    </Link>
+
+                    <div className="team-navigator-horizontal">
+                        {Object.entries(researchersMap).map(([researcherId, data]) => (
+                            <Link 
+                                key={researcherId} 
+                                to={`/researcher/${researcherId}`}
+                                className={`team-nav-item ${researcherId === id ? 'active' : ''}`}
+                                title={researcherId.charAt(0).toUpperCase() + researcherId.slice(1)}
+                            >
+                                <motion.div 
+                                    whileHover={{ scale: 1.1 }} 
+                                    whileTap={{ scale: 0.95 }}
+                                    className="nav-avatar-wrapper"
+                                >
+                                    <img src={data.photo} alt={researcherId} />
+                                </motion.div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
 
                 <div className="details-content">
                     {/* Sidebar / Profile Card */}
@@ -397,20 +398,23 @@ const ResearcherDetails = () => {
                     position: relative;
                 }
 
-                .team-navigator {
-                    position: fixed;
-                    top: 50%;
-                    left: 2rem;
-                    transform: translateY(-50%);
+                .top-navigation-bar {
                     display: flex;
-                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                    flex-wrap: wrap;
                     gap: 1rem;
+                }
+
+                .team-navigator-horizontal {
+                    display: flex;
+                    gap: 0.75rem;
                     background: white;
-                    padding: 0.75rem;
+                    padding: 0.5rem;
                     border-radius: 9999px;
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
                     border: 1px solid rgba(226, 232, 240, 0.8);
-                    z-index: 40;
                 }
 
                 .team-nav-item {
@@ -458,8 +462,8 @@ const ResearcherDetails = () => {
                     align-items: center;
                     gap: 0.5rem;
                     color: var(--color-text-light);
+                    text-decoration: none;
                     font-weight: 500;
-                    margin-bottom: 2rem;
                     transition: color 0.2s;
                 }
 
@@ -656,30 +660,14 @@ const ResearcherDetails = () => {
                     }
                 }
 
-                @media (max-width: 1024px) {
-                    .team-navigator {
-                        left: 1rem;
-                    }
-                }
-
                 @media (max-width: 768px) {
-                    .team-navigator {
-                        top: 5rem;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        flex-direction: row;
-                        padding: 0.5rem 1rem;
-                        gap: 0.75rem;
-                        width: max-content;
-                    }
-
-                    .team-nav-item {
-                        width: 40px;
-                        height: 40px;
+                    .top-navigation-bar {
+                        flex-direction: column;
+                        align-items: flex-start;
                     }
 
                     .researcher-details {
-                        padding-top: 10rem; /* Give space for the top navigator */
+                        padding-top: 6rem;
                     }
 
                     .scroll-indicator {
