@@ -109,11 +109,13 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}>
                 <a onClick={() => handleNav('about')}>{t('navbar.about')}</a>
                 <a onClick={() => handleNav('researchers')}>{t('navbar.researchers')}</a>
-                <a onClick={() => handleNav('publications')}>{t('navbar.publications')}</a>
                 <a onClick={() => handleNav('group')}>{t('navbar.group')}</a>
               </div>
             )}
           </li>
+
+          {/* Publications - Standalone */}
+          <TopLevelItem id="publications" label={t('navbar.publications')} />
 
           {/* Repositories - Standalone */}
           <TopLevelItem id="repositories" label={t('navbar.repositories')} />
@@ -121,8 +123,8 @@ const Navbar = () => {
           {/* Courses - Standalone */}
           <TopLevelItem id="courses" label={t('navbar.courses')} />
 
-          {/* Publications - Standalone */}
-          <TopLevelItem id="publications" label={t('navbar.news')} />
+          {/* News - Standalone */}
+          <TopLevelItem id="all-news" label={t('navbar.news')} />
 
           {/* Contact - Standalone */}
           <TopLevelItem id="contact" label={t('navbar.contact')} isBtn={true} />
@@ -162,10 +164,10 @@ const Navbar = () => {
                 )}
               </li>
 
+              <li><a href="#publications" onClick={(e) => { e.preventDefault(); handleNav('publications'); }}>{t('navbar.publications')}</a></li>
               <li><a href="#repositories" onClick={(e) => { e.preventDefault(); handleNav('repositories'); }}>{t('navbar.repositories')}</a></li>
-
               <li><a href="#courses" onClick={(e) => { e.preventDefault(); handleNav('courses'); }}>{t('navbar.courses')}</a></li>
-              <li><a href="#publications" onClick={(e) => { e.preventDefault(); handleNav('publications'); }}>{t('navbar.news')}</a></li>
+              <li><a href="#all-news" onClick={(e) => { e.preventDefault(); handleNav('all-news'); }}>{t('navbar.news')}</a></li>
 
               <li className="mobile-contact-btn">
                 <a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>{t('navbar.contact')}</a>
