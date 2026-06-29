@@ -7,8 +7,7 @@ import researchGateLogo from '../assets/research-gate-logo.svg';
 import linkedinLogo from '../assets/linkedin-icon.svg';
 import scholarLogo from '../assets/Google_Scholar_logo.svg';
 import orcidData from '../data/orcid_publications.json';
-
-
+import { motion, AnimatePresence } from 'framer-motion';
 // To avoid circular dependencies or complex refactors, I'll define the static data mapping here or reuse if possible.
 // Ideally, researchers data should be in a separate data file, but for now I will recreate the lookup map 
 // based on the IDs used in Researchers.jsx.
@@ -130,7 +129,33 @@ const ResearcherDetails = () => {
 
     return (
         <section className="section researcher-details">
-            <div className="container">
+            {/* Minimalist Team Navigator */}
+            <div className="team-navigator">
+                {Object.entries(researchersMap).map(([researcherId, data]) => (
+                    <Link 
+                        key={researcherId} 
+                        to={`/researchers/${researcherId}`}
+                        className={`team-nav-item ${researcherId === id ? 'active' : ''}`}
+                        title={researcherId.charAt(0).toUpperCase() + researcherId.slice(1)}
+                    >
+                        <motion.div 
+                            whileHover={{ scale: 1.1 }} 
+                            whileTap={{ scale: 0.95 }}
+                            className="nav-avatar-wrapper"
+                        >
+                            <img src={data.photo} alt={researcherId} />
+                        </motion.div>
+                    </Link>
+                ))}
+            </div>
+
+            <motion.div 
+                key={id} 
+                initial={{ opacity: 0, y: 15 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="container"
+            >
                 <Link to="/researchers" className="back-button">
                     <ArrowLeft size={20} />
                     {t('researchers_details.back_to_team')}
@@ -346,7 +371,7 @@ const ResearcherDetails = () => {
                     )}
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Floating Scroll Indicator */}
             {showScrollIndicator && orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
@@ -366,8 +391,66 @@ const ResearcherDetails = () => {
             <style>{`
                 .researcher-details {
                     padding-top: 8rem; /* Space for fixed navbar */
-                    min-height: 80vh;
-                    background-color: var(--color-bg);
+                    padding-bottom: 4rem;
+                    min-height: 100vh;
+                    background-color: var(--color-background);
+                    position: relative;
+                }
+
+                .team-navigator {
+                    position: fixed;
+                    top: 50%;
+                    left: 2rem;
+                    transform: translateY(-50%);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    background: white;
+                    padding: 0.75rem;
+                    border-radius: 9999px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                    border: 1px solid rgba(226, 232, 240, 0.8);
+                    z-index: 40;
+                }
+
+                .team-nav-item {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: 2px solid transparent;
+                    padding: 2px;
+                }
+
+                .nav-avatar-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background: var(--color-background-alt);
+                }
+
+                .team-nav-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: grayscale(80%) opacity(0.6);
+                    transition: all 0.3s ease;
+                }
+
+                .team-nav-item:hover img {
+                    filter: grayscale(20%) opacity(0.9);
+                }
+
+                .team-nav-item.active {
+                    border-color: var(--color-primary);
+                }
+
+                .team-nav-item.active img {
+                    filter: grayscale(0%) opacity(1);
                 }
 
                 .back-button {
@@ -573,7 +656,32 @@ const ResearcherDetails = () => {
                     }
                 }
 
+                @media (max-width: 1024px) {
+                    .team-navigator {
+                        left: 1rem;
+                    }
+                }
+
                 @media (max-width: 768px) {
+                    .team-navigator {
+                        top: 5rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        flex-direction: row;
+                        padding: 0.5rem 1rem;
+                        gap: 0.75rem;
+                        width: max-content;
+                    }
+
+                    .team-nav-item {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    .researcher-details {
+                        padding-top: 10rem; /* Give space for the top navigator */
+                    }
+
                     .scroll-indicator {
                         bottom: 1rem;
                         right: 1rem;
