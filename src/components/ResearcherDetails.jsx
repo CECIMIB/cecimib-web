@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ExternalLink, Search } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Search, ChevronLeft, ChevronsLeft, ChevronRight, ChevronsRight } from 'lucide-react';
 import orcidLogo from '../assets/orcid_logo.svg';
 import researchGateLogo from '../assets/research-gate-logo.svg';
 import linkedinLogo from '../assets/linkedin-icon.svg';
@@ -50,9 +50,8 @@ const ResearcherDetails = () => {
     const [activeFilter, setActiveFilter] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
+    const [itemsPerPage, setItemsPerPage] = useState(10);
     
-    const ITEMS_PER_PAGE = 10;
-
     if (!researcher) {
         return <div className="container section">Researcher not found</div>;
     }
@@ -81,16 +80,31 @@ const ResearcherDetails = () => {
         return matchesFilter && matchesSearch;
     });
 
-    // Reset to page 1 when filters change
+    // Reset to page 1 when filters or items per page change
     useEffect(() => {
         setCurrentPage(1);
-    }, [activeFilter, searchQuery]);
+    }, [activeFilter, searchQuery, itemsPerPage]);
 
-    const totalPages = Math.ceil(filteredWorks.length / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(filteredWorks.length / itemsPerPage);
     const paginatedWorks = filteredWorks.slice(
-        (currentPage - 1) * ITEMS_PER_PAGE, 
-        currentPage * ITEMS_PER_PAGE
+        (currentPage - 1) * itemsPerPage, 
+        currentPage * itemsPerPage
     );
+
+    const getPageNumbers = (current, total) => {
+        if (total <= 7) return Array.from({length: total}, (_, i) => i + 1);
+        const pages = [1];
+        if (current > 3) pages.push('...');
+        
+        const start = Math.max(2, current - 1);
+        const end = Math.min(total - 1, current + 1);
+        
+        for (let i = start; i <= end; i++) pages.push(i);
+        
+        if (current < total - 2) pages.push('...');
+        pages.push(total);
+        return pages;
+    };
 
     return (
         <section className="section researcher-details">
@@ -240,24 +254,68 @@ const ResearcherDetails = () => {
                                 </ul>
 
                                 {totalPages > 1 && (
-                                    <div className="pagination-controls">
-                                        <button 
-                                            className="pagination-button"
-                                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                                            disabled={currentPage === 1}
-                                        >
-                                            {t('researchers_details.previous')}
-                                        </button>
-                                        <span className="pagination-info">
-                                            {t('researchers_details.page_info', { current: currentPage, total: totalPages })}
-                                        </span>
-                                        <button 
-                                            className="pagination-button"
-                                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                                            disabled={currentPage === totalPages}
-                                        >
-                                            {t('researchers_details.next')}
-                                        </button>
+                                    <div className="pagination-container">
+                                        <div className="items-per-page">
+                                            <label>{t('researchers_details.items_per_page', 'Items per page:')}</label>
+                                            <select 
+                                                value={itemsPerPage} 
+                                                onChange={(e) => setItemsPerPage(Number(e.target.value))}
+                                            >
+                                                <option value={5}>5</option>
+                                                <option value={10}>10</option>
+                                                <option value={20}>20</option>
+                                                <option value={50}>50</option>
+                                                <option value={1000}>All</option>
+                                            </select>
+                                        </div>
+
+                                        <div className="pagination-controls">
+                                            <button 
+                                                className="pagination-icon-btn"
+                                                onClick={() => setCurrentPage(1)}
+                                                disabled={currentPage === 1}
+                                            >
+                                                <ChevronsLeft size={18} />
+                                            </button>
+                                            <button 
+                                                className="pagination-icon-btn"
+                                                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                                                disabled={currentPage === 1}
+                                            >
+                                                <ChevronLeft size={18} />
+                                            </button>
+                                            
+                                            <div className="pagination-numbers">
+                                                {getPageNumbers(currentPage, totalPages).map((num, i) => (
+                                                    num === '...' ? (
+                                                        <span key={`ellipsis-${i}`} className="pagination-ellipsis">...</span>
+                                                    ) : (
+                                                        <button
+                                                            key={num}
+                                                            className={`pagination-number ${currentPage === num ? 'active' : ''}`}
+                                                            onClick={() => setCurrentPage(num)}
+                                                        >
+                                                            {num}
+                                                        </button>
+                                                    )
+                                                ))}
+                                            </div>
+
+                                            <button 
+                                                className="pagination-icon-btn"
+                                                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                                                disabled={currentPage === totalPages}
+                                            >
+                                                <ChevronRight size={18} />
+                                            </button>
+                                            <button 
+                                                className="pagination-icon-btn"
+                                                onClick={() => setCurrentPage(totalPages)}
+                                                disabled={currentPage === totalPages}
+                                            >
+                                                <ChevronsRight size={18} />
+                                            </button>
+                                        </div>
                                     </div>
                                 )}
                             </div>
@@ -607,9 +665,9 @@ const ResearcherDetails = () => {
                     letter-spacing: 0.02em;
                 }
 
-                .pagination-controls {
+                .pagination-container {
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
                     align-items: center;
                     gap: 1.5rem;
                     margin-top: 2rem;
@@ -617,32 +675,90 @@ const ResearcherDetails = () => {
                     border-top: 1px solid #f1f5f9;
                 }
 
-                .pagination-button {
-                    padding: 0.5rem 1rem;
-                    background-color: #f8fafc;
+                .items-per-page {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 0.875rem;
+                    color: var(--color-text-light);
+                }
+
+                .items-per-page select {
+                    padding: 0.25rem 0.5rem;
                     border: 1px solid #e2e8f0;
-                    border-radius: 6px;
+                    border-radius: 4px;
+                    background-color: white;
+                    color: var(--color-text);
+                    outline: none;
+                    font-size: 0.875rem;
+                    cursor: pointer;
+                }
+
+                .pagination-controls {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+
+                .pagination-numbers {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                }
+
+                .pagination-icon-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 32px;
+                    height: 32px;
+                    background: none;
+                    border: none;
+                    color: var(--color-primary);
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    border-radius: 4px;
+                }
+
+                .pagination-icon-btn:hover:not(:disabled) {
+                    background-color: #f1f5f9;
+                }
+
+                .pagination-icon-btn:disabled {
+                    color: #cbd5e1;
+                    cursor: not-allowed;
+                }
+
+                .pagination-number {
+                    min-width: 32px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: none;
+                    border: none;
                     color: var(--color-text);
                     font-size: 0.875rem;
                     font-weight: 500;
                     cursor: pointer;
+                    border-radius: 4px;
                     transition: all 0.2s;
                 }
 
-                .pagination-button:hover:not(:disabled) {
+                .pagination-number:hover:not(.active) {
                     background-color: #f1f5f9;
-                    border-color: #cbd5e1;
                 }
 
-                .pagination-button:disabled {
-                    opacity: 0.5;
-                    cursor: not-allowed;
+                .pagination-number.active {
+                    color: var(--color-primary);
+                    border-bottom: 2px solid var(--color-primary);
+                    border-radius: 0;
                 }
 
-                .pagination-info {
-                    font-size: 0.875rem;
+                .pagination-ellipsis {
                     color: var(--color-text-light);
-                    font-weight: 500;
+                    padding: 0 0.5rem;
                 }
             `}</style>
         </section>

@@ -101,6 +101,7 @@
         "metrics_title": "Scientific Metrics",
         "metrics_legend": "* Bibliometric data retrieved from Google Scholar. Detailed publication lists are sourced dynamically from ORCiD.",
         "search_placeholder": "Search publications...",
+        "items_per_page": "Items per page:",
         "previous": "Previous",
         "next": "Next",
         "page_info": "Page {{current}} of {{total}}",
