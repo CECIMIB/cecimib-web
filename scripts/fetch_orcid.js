@@ -15,6 +15,7 @@ const ALLOWED_TYPES = [
     'journal-article',
     'conference-poster',
     'conference-paper',
+    'conference-presentation',
     'lecture-speech'
 ];
 
@@ -80,6 +81,7 @@ function parseWorks(group) {
         'journal-article': 0,
         'conference-poster': 0,
         'conference-paper': 0,
+        'conference-presentation': 0,
         'lecture-speech': 0
     };
 

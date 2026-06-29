@@ -4,6 +4,7 @@
       "journal-article": 209,
       "conference-poster": 0,
       "conference-paper": 0,
+      "conference-presentation": 0,
       "lecture-speech": 0
     },
     "works": [
@@ -1477,6 +1478,7 @@
       "journal-article": 18,
       "conference-poster": 33,
       "conference-paper": 0,
+      "conference-presentation": 15,
       "lecture-speech": 0
     },
     "works": [
@@ -1493,6 +1495,13 @@
         "journal": "Publications",
         "type": "journal-article",
         "putCode": 216407213
+      },
+      {
+        "title": "Differential impact of ancestry on the pharmacogenomic profile of arterial hypertension in Colombia",
+        "date": "2026/05",
+        "journal": "",
+        "type": "conference-presentation",
+        "putCode": 216663790
       },
       {
         "title": "Estimating the potential impact of global research on neglected tropical diseases on population-level indicators of health access, sanitation, and research capacity",
@@ -1586,6 +1595,13 @@
         "putCode": 195823879
       },
       {
+        "title": "Panorama socioeconómico global de la investigación en salud mental: análisis longitudinal con meta-regresión",
+        "date": "2025/11",
+        "journal": "XXIV Convención Nacional de la Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia - Pediatría y Cirugía Pediátrica",
+        "type": "conference-presentation",
+        "putCode": 195823888
+      },
+      {
         "title": "Ancestría genética y cáncer colorrectal: Un estudio transversal en poblaciones colombianas",
         "date": "2025/10",
         "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
@@ -1649,6 +1665,13 @@
         "putCode": 195824250
       },
       {
+        "title": "Meta-Research in Biomedical Investigation: Gaps and Opportunities Based on Publication Patterns and Health Development Indicators",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-presentation",
+        "putCode": 195284959
+      },
+      {
         "title": "MicroRNAs and Inflammation: The Molecular Link Between Periodontitis and Colorectal Cancer",
         "date": "2025/10",
         "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
@@ -1684,11 +1707,25 @@
         "putCode": 195285246
       },
       {
+        "title": "How useful is mental-health research for improving mental health? A global longitudinal and meta-regression analysis",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-presentation",
+        "putCode": 195240848
+      },
+      {
         "title": "How useful is neglected-diseases-research for neglected diseases? A longitudinal and meta-regression analysis from 2000 – 2024",
         "date": "2025/10",
         "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
         "type": "conference-poster",
         "putCode": 195284852
+      },
+      {
+        "title": "Impact of Sugar-Sweetened and Energy Beverage Consumption on Gene Regulation Associated with Periodontitis",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-presentation",
+        "putCode": 216661438
       },
       {
         "title": "Potential Impact of Medical-Errors-Research on Population Health, Health System, and Research and Development Global Indicators",
@@ -1705,6 +1742,20 @@
         "putCode": 195241145
       },
       {
+        "title": "Scientific Production in Mental Health: A Meta-Research Analysis of Income-Stratified Trends, Gaps, and Health-Metrics Impact",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-presentation",
+        "putCode": 195240805
+      },
+      {
+        "title": "Socioeconomic and structural determinants of global mental health research: A longitudinal meta-regression analysis",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-presentation",
+        "putCode": 195240964
+      },
+      {
         "title": "Pharmacogenomics in Diabetes: Population-Specific Insights from Colombia",
         "date": "2025/10",
         "journal": "Journal of Personalized Medicine",
@@ -1717,6 +1768,62 @@
         "journal": "QJM: An International Journal of Medicine",
         "type": "journal-article",
         "putCode": 179532708
+      },
+      {
+        "title": "Influence of Ancestry on the Genetic Profile Associated with Breast Cancer in Colombian Populations",
+        "date": "2025/09",
+        "journal": "XI Congreso Internacional de Enfermedades Raras",
+        "type": "conference-presentation",
+        "putCode": 192969501
+      },
+      {
+        "title": "Influence of Ancestry on the Genetic Profile Associated with Obesity in Colombian Populations",
+        "date": "2025/09",
+        "journal": "XI Congreso Internacional de Enfermedades Raras",
+        "type": "conference-presentation",
+        "putCode": 192969573
+      },
+      {
+        "title": "Socioeconomic and structural determinants of global mental health research: A longitudinal meta-regression analysis",
+        "date": "2025/09",
+        "journal": "III Simposio Internacional de Gerencia e Investigación en Salud",
+        "type": "conference-presentation",
+        "putCode": 216663551
+      },
+      {
+        "title": "Ancestría genética y cáncer de mama: Un estudio transversal evaluando su influencia en poblaciones Colombianas",
+        "date": "2025/09",
+        "journal": "I Concurso Científico Virtual Internacional",
+        "type": "conference-presentation",
+        "putCode": 191282426
+      },
+      {
+        "title": "Farmacogenómica en Cáncer de Mama: Perspectivas Poblacionales desde Colombia",
+        "date": "2025/09",
+        "journal": "I Concurso Científico Virtual Internacional",
+        "type": "conference-presentation",
+        "putCode": 191281907
+      },
+      {
+        "title": "Farmacogenómica en Diabetes: Perspectivas Poblacionales desde Colombia",
+        "date": "2025/09",
+        "journal": "I Concurso Científico Virtual Internacional",
+        "type": "conference-presentation",
+        "putCode": 191282384
+      },
+      {
+        "title": "Midiendo el potencial impacto de la investigación global sobre enfermedades tropicales desatendidas",
+        "date": "2025/09",
+        "journal": "I Concurso Científico Virtual Internacional",
+        "type": "conference-presentation",
+        "putCode": 191282354
+      },
+      {
+        "title": "Ancestría genética y obesidad: Un estudio transversal evaluando su influencia en poblaciones Colombianas",
+        "date": "2025/08",
+        "journal": "XVI Congreso Colombiano de Obesidad",
+        "type": "conference-presentation",
+        "putCode": 191281859
       },
       {
         "title": "Six Sigma research in healthcare is associated with global health, research and development indicators: A scientometrics study based on countries by income groups",
@@ -1844,9 +1951,24 @@
       "journal-article": 4,
       "conference-poster": 11,
       "conference-paper": 0,
+      "conference-presentation": 5,
       "lecture-speech": 0
     },
     "works": [
+      {
+        "title": "ARRIBAZÓN INUSUAL DE LA ALGA ROJA CERAMIUM SP. EN PLAYAS URBANAS DE CARTAGENA, COLOMBIA",
+        "date": "2026/05",
+        "journal": "XXI Seminario Nacional de Ciencias y Tecnologías del Mar",
+        "type": "conference-presentation",
+        "putCode": 214234391
+      },
+      {
+        "title": "DINÁMICA ESPACIAL DEL ENSAMBLAJE DE MACROALGAS EN LITORALES ROCOSOS DEL DEPARTAMENTO DE BOLÍVAR, COLOMBIA",
+        "date": "2026/05",
+        "journal": "XXI Seminario Nacional de Ciencias y Tecnologías del Mar",
+        "type": "conference-presentation",
+        "putCode": 214234331
+      },
       {
         "title": "Structural Capacity, Food Security-Related Publications, and Crop Production: A Multilevel Global Analysis Across Income Settings",
         "date": "2026/04",
@@ -1888,6 +2010,13 @@
         "journal": "Frontiers in Pharmacology",
         "type": "journal-article",
         "putCode": 206092076
+      },
+      {
+        "title": "How useful is neglected diseases research for neglected diseases? A global longitudinal and meta-regression analysis from 2000 to 2024",
+        "date": "2025/11",
+        "journal": "III Simposio Internacional de Gerencia e Investigación en Salud",
+        "type": "conference-presentation",
+        "putCode": 200331246
       },
       {
         "title": "Farmacogenómica y ancestría genética en Colombia: Un estudio de todas variantes farmacológicas de PharmGKB",
@@ -1932,6 +2061,13 @@
         "putCode": 193886667
       },
       {
+        "title": "Dinámica estacional y temporal del ensamblaje de macroalgas en sustrato rocoso artificial y natural y su relación con la arribazón de algas en playas turísticas de Cartagena, Caribe colombiano",
+        "date": "2025/08",
+        "journal": "Primer Encuentro Udeceísta de Semilleros de Investigación \"Monológico: La ciencia es un espectáculo\"",
+        "type": "conference-presentation",
+        "putCode": 200331092
+      },
+      {
         "title": "Farmacogenómica y Ancestría Genética en Colombia: Un Análisis de Toda la Base PharmGKB",
         "date": "2025/06",
         "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
@@ -1951,6 +2087,13 @@
         "journal": "II Seminario Asociación Colombiana de Investigadores de Ciencias del Mar (ACIMAR) 2023",
         "type": "conference-poster",
         "putCode": 200331366
+      },
+      {
+        "title": "Composición de Biofouling de la suseción ecológica de un catamarán atracado en la bahía de Cartagena, Bolívar durante el confinamiento",
+        "date": "2023/10",
+        "journal": "II Encuentro de Jóvenes Investigadores en Ciencias del Mar",
+        "type": "conference-presentation",
+        "putCode": 200331402
       }
     ]
   }
