@@ -49,6 +49,9 @@ const ResearcherDetails = () => {
     const [metrics, setMetrics] = useState(null);
     const [activeFilter, setActiveFilter] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    
+    const ITEMS_PER_PAGE = 10;
 
     if (!researcher) {
         return <div className="container section">Researcher not found</div>;
@@ -77,6 +80,17 @@ const ResearcherDetails = () => {
             (work.date && work.date.toLowerCase().includes(searchLower));
         return matchesFilter && matchesSearch;
     });
+
+    // Reset to page 1 when filters change
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [activeFilter, searchQuery]);
+
+    const totalPages = Math.ceil(filteredWorks.length / ITEMS_PER_PAGE);
+    const paginatedWorks = filteredWorks.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE, 
+        currentPage * ITEMS_PER_PAGE
+    );
 
     return (
         <section className="section researcher-details">
@@ -205,12 +219,12 @@ const ResearcherDetails = () => {
                                 </div>
 
                                 <ul className="orcid-works-list">
-                                    {filteredWorks.map((work, index) => (
+                                    {paginatedWorks.map((work, index) => (
                                         <li key={work.putCode || index} className="orcid-work-item">
                                             <div className="work-title">
                                                 {work.url ? (
-                                                    <a href={work.url} target="_blank" rel="noopener noreferrer" className="work-link">
-                                                        {work.title} <ExternalLink size={14} className="work-link-icon" />
+                                                    <a href={work.url} target="_blank" rel="noopener noreferrer">
+                                                        {work.title} <ExternalLink size={12} className="inline-icon" />
                                                     </a>
                                                 ) : (
                                                     work.title
@@ -224,6 +238,28 @@ const ResearcherDetails = () => {
                                         </li>
                                     ))}
                                 </ul>
+
+                                {totalPages > 1 && (
+                                    <div className="pagination-controls">
+                                        <button 
+                                            className="pagination-button"
+                                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                                            disabled={currentPage === 1}
+                                        >
+                                            {t('researchers_details.previous')}
+                                        </button>
+                                        <span className="pagination-info">
+                                            {t('researchers_details.page_info', { current: currentPage, total: totalPages })}
+                                        </span>
+                                        <button 
+                                            className="pagination-button"
+                                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                                            disabled={currentPage === totalPages}
+                                        >
+                                            {t('researchers_details.next')}
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>
@@ -569,6 +605,44 @@ const ResearcherDetails = () => {
                     font-size: 0.75rem;
                     font-weight: 500;
                     letter-spacing: 0.02em;
+                }
+
+                .pagination-controls {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1.5rem;
+                    margin-top: 2rem;
+                    padding-top: 1.5rem;
+                    border-top: 1px solid #f1f5f9;
+                }
+
+                .pagination-button {
+                    padding: 0.5rem 1rem;
+                    background-color: #f8fafc;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 6px;
+                    color: var(--color-text);
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+
+                .pagination-button:hover:not(:disabled) {
+                    background-color: #f1f5f9;
+                    border-color: #cbd5e1;
+                }
+
+                .pagination-button:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+
+                .pagination-info {
+                    font-size: 0.875rem;
+                    color: var(--color-text-light);
+                    font-weight: 500;
                 }
             `}</style>
         </section>
