@@ -165,7 +165,7 @@ const ResearcherDetails = () => {
                                     {Object.entries(orcidData[id].counts).map(([type, count]) => {
                                         if (count === 0) return null;
                                         const typeKey = type.replace('-', '_');
-                                        const label = t(`researchers_details.${typeKey}`, { defaultValue: type.replace('-', ' ') }).toUpperCase();
+                                        const label = t(`researchers_details.${typeKey}`, { defaultValue: type.replace('-', ' ') });
                                         return (
                                             <span key={type} className="orcid-badge">
                                                 <strong>{count}</strong> {label}
@@ -475,8 +475,8 @@ const ResearcherDetails = () => {
                     padding: 0.125rem 0.5rem;
                     border-radius: 4px;
                     font-size: 0.75rem;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
+                    font-weight: 500;
+                    letter-spacing: 0.02em;
                 }
             `}</style>
         </section>
