@@ -287,8 +287,8 @@ const ResearcherDetails = () => {
                                     <li key={work.putCode || index} className="orcid-work-item">
                                         <div className="work-title">
                                             {work.url ? (
-                                                <a href={work.url} target="_blank" rel="noopener noreferrer">
-                                                    {work.title} <ExternalLink size={12} className="inline-icon" />
+                                                <a href={work.url} target="_blank" rel="noopener noreferrer" className="work-link">
+                                                    {work.title} <ExternalLink size={12} className="work-link-icon" />
                                                 </a>
                                             ) : (
                                                 work.title
