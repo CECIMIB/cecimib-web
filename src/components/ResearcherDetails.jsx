@@ -399,16 +399,15 @@ const ResearcherDetails = () => {
                 }
 
                 .top-navigation-bar {
-                    display: grid;
-                    grid-template-columns: 1fr auto 1fr;
+                    display: flex;
+                    justify-content: space-between;
                     align-items: center;
                     margin-bottom: 2rem;
+                    flex-wrap: wrap;
                     gap: 1rem;
                 }
 
                 .team-navigator-horizontal {
-                    grid-column: 2;
-                    justify-self: center;
                     display: flex;
                     gap: 0.75rem;
                     background: white;
@@ -459,8 +458,6 @@ const ResearcherDetails = () => {
                 }
 
                 .back-button {
-                    grid-column: 1;
-                    justify-self: start;
                     display: inline-flex;
                     align-items: center;
                     gap: 0.5rem;
@@ -665,9 +662,8 @@ const ResearcherDetails = () => {
 
                 @media (max-width: 768px) {
                     .top-navigation-bar {
-                        display: flex;
                         flex-direction: column;
-                        align-items: center;
+                        align-items: flex-start;
                     }
 
                     .researcher-details {
