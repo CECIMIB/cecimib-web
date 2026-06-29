@@ -160,11 +160,12 @@ const ResearcherDetails = () => {
 
                         {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
                             <div className="orcid-publications">
-                                <h3 className="orcid-section-title">Publications & Presentations</h3>
+                                <h3 className="orcid-section-title">{t('researchers_details.publications_presentations')}</h3>
                                 <div className="orcid-badges">
                                     {Object.entries(orcidData[id].counts).map(([type, count]) => {
                                         if (count === 0) return null;
-                                        const label = type.replace('-', ' ').toUpperCase();
+                                        const typeKey = type.replace('-', '_');
+                                        const label = t(`researchers_details.${typeKey}`, { defaultValue: type.replace('-', ' ') }).toUpperCase();
                                         return (
                                             <span key={type} className="orcid-badge">
                                                 <strong>{count}</strong> {label}
@@ -187,7 +188,7 @@ const ResearcherDetails = () => {
                                             <div className="work-meta">
                                                 <span className="work-date">{work.date}</span>
                                                 {work.journal && <span className="work-journal">{work.journal}</span>}
-                                                <span className="work-type">{work.type.replace('-', ' ')}</span>
+                                                <span className="work-type">{t(`researchers_details.${work.type.replace('-', '_')}`, { defaultValue: work.type.replace('-', ' ') })}</span>
                                             </div>
                                         </li>
                                     ))}
