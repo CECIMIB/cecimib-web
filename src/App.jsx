@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import HomeNews from './components/HomeNews';
+import HomeArticles from './components/HomeArticles';
 import Services from './components/Services';
 import About from './components/About';
 import Researchers from './components/Researchers';
@@ -57,6 +58,7 @@ const Home = () => {
       <About />
       <Researchers />
       <Publications />
+      <HomeArticles />
       <HomeNews />
       <Repositories />
       <ResearchGroup />

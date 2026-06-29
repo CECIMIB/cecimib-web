@@ -448,5 +448,8 @@
     "channel_title": "Canal de Atención:",
     "channel_text": "Para ejercer tus derechos de Habeas Data o reportar cualquier inquietud, puedes comunicarte directamente al correo electrónico: ",
     "close_btn": "Cerrar"
+  },
+  "home_articles": {
+    "title": "Últimos Artículos Científicos"
   }
 }

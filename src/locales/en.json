@@ -448,5 +448,8 @@
         "channel_title": "Service Channel:",
         "channel_text": "To exercise your Habeas Data rights or report any concerns, you can contact us directly at the email: ",
         "close_btn": "Close"
+    },
+    "home_articles": {
+        "title": "Latest Scientific Articles"
     }
 }
