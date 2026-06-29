@@ -1,21 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { publicationsData } from '../data/publications';
-import { ExternalLink, FileText, Calendar, BookOpen } from 'lucide-react';
+import { ExternalLink, FileText, Calendar, BookOpen, ChevronRight, ChevronLeft } from 'lucide-react';
 
 const HomeArticles = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
-  // Get the 3 most recent articles
+  const [currentPage, setCurrentPage] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  // Get the 9 most recent articles
   const allArticles = publicationsData.flatMap(cat => cat.articles);
   const latestArticles = allArticles
       .sort((a, b) => parseInt(b.year) - parseInt(a.year))
-      .slice(0, 3);
+      .slice(0, 9);
+
+  // Group into pages of 3
+  const pages = [];
+  for (let i = 0; i < latestArticles.length; i += 3) {
+      if (latestArticles.slice(i, i + 3).length === 3) { // Ensure full pages for clean UI
+          pages.push(latestArticles.slice(i, i + 3));
+      }
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+        handleNext();
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [pages.length]);
+
+  const handleNext = () => {
+      setIsAnimating(true);
+      setTimeout(() => {
+          setCurrentPage(prev => (prev + 1) % pages.length);
+          setIsAnimating(false);
+      }, 300);
+  };
+
+  const handleDotClick = (index) => {
+      if (index === currentPage) return;
+      setIsAnimating(true);
+      setTimeout(() => {
+          setCurrentPage(index);
+          setIsAnimating(false);
+      }, 300);
+  };
 
   const categoryLabel = i18n.language === 'es' ? 'Artículo Científico' : 'Scientific Article';
   const sectionTitle = i18n.language === 'es' ? 'Últimos Artículos Científicos' : 'Latest Scientific Articles';
+
+  const currentArticles = pages[currentPage];
+
+  if (!currentArticles) return null;
 
   return (
     <section className="home-articles-section">
@@ -25,30 +64,41 @@ const HomeArticles = () => {
           <div className="underline"></div>
         </div>
 
-        <div className="home-articles-grid">
+        <div className={`home-articles-grid ${isAnimating ? 'fade-out' : 'fade-in'}`}>
           {/* Left Column (7/12) - Main Article */}
           <a 
-            href={latestArticles[0].link} 
+            href={currentArticles[0].link} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="article-card-styled main-article"
           >
+            <BookOpen size={240} className="watermark-icon" />
             <div className="article-card-content">
-              <div className="article-badge">
-                <FileText size={14} />
-                <span>{categoryLabel}</span>
+              <div className="article-badge-container">
+                <div className="article-badge">
+                  <FileText size={14} />
+                  <span>{categoryLabel}</span>
+                </div>
+                {currentArticles[0].type && (
+                  <div className="article-badge type-badge">
+                    <span>{currentArticles[0].type}</span>
+                  </div>
+                )}
               </div>
-              <h3 className="main-title">{latestArticles[0].title}</h3>
-              <p className="article-authors-styled pt-serif-regular">{latestArticles[0].authors}</p>
+              
+              <div className="main-title-container">
+                <h3 className="main-title">{currentArticles[0].title}</h3>
+                <p className="article-authors-styled pt-serif-regular">{currentArticles[0].authors}</p>
+              </div>
               
               <div className="article-meta-footer">
                 <div className="meta-item">
                   <BookOpen size={16} />
-                  <span className="journal-name">{latestArticles[0].journal}</span>
+                  <span className="journal-name">{currentArticles[0].journal}</span>
                 </div>
                 <div className="meta-item">
                   <Calendar size={16} />
-                  <span>{latestArticles[0].year}</span>
+                  <span>{currentArticles[0].year}</span>
                 </div>
               </div>
               
@@ -60,7 +110,7 @@ const HomeArticles = () => {
 
           {/* Right Column (5/12) - Secondary Articles Stack */}
           <div className="secondary-articles-list">
-            {[latestArticles[1], latestArticles[2]].map((article, idx) => (
+            {[currentArticles[1], currentArticles[2]].map((article, idx) => (
               <a 
                 key={idx}
                 href={article.link}
@@ -91,6 +141,17 @@ const HomeArticles = () => {
               </a>
             ))}
           </div>
+        </div>
+
+        <div className="carousel-indicators">
+            {pages.map((_, idx) => (
+                <button
+                    key={idx}
+                    className={`indicator-dot ${idx === currentPage ? 'active' : ''}`}
+                    onClick={() => handleDotClick(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                />
+            ))}
         </div>
         
         <div className="view-all-container">
@@ -126,6 +187,33 @@ const HomeArticles = () => {
           transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
           position: relative;
           overflow: hidden;
+          z-index: 1;
+        }
+
+        .article-card-content {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .watermark-icon {
+          position: absolute;
+          bottom: -40px;
+          right: -40px;
+          color: var(--color-primary);
+          opacity: 0.03;
+          z-index: -1;
+          transform: rotate(-15deg);
+          pointer-events: none;
+        }
+
+        .main-title-container {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-top: 1rem;
+          padding-bottom: 2rem;
         }
 
         .article-card-styled::before {
@@ -161,6 +249,13 @@ const HomeArticles = () => {
           height: 100%;
         }
 
+        .article-badge-container {
+          display: flex;
+          gap: 0.75rem;
+          flex-wrap: wrap;
+          margin-bottom: 1rem;
+        }
+
         .article-badge {
           display: inline-flex;
           align-items: center;
@@ -171,8 +266,12 @@ const HomeArticles = () => {
           border-radius: 9999px;
           font-size: 0.85rem;
           font-weight: 600;
-          margin-bottom: 1.5rem;
           width: fit-content;
+        }
+
+        .type-badge {
+          background-color: #f1f5f9;
+          color: #475569;
         }
 
         .small-badge {
@@ -182,9 +281,9 @@ const HomeArticles = () => {
         }
 
         .main-title {
-          font-size: 1.8rem;
+          font-size: 2.1rem;
           font-weight: 800;
-          line-height: 1.3;
+          line-height: 1.25;
           margin-bottom: 1.5rem;
           color: var(--color-text);
           transition: color 0.3s ease;
@@ -208,8 +307,7 @@ const HomeArticles = () => {
           color: #475569;
           font-size: 1.15rem;
           line-height: 1.6;
-          margin-bottom: 2rem;
-          flex-grow: 1;
+          margin-bottom: 0;
         }
 
         .small-authors {
@@ -283,6 +381,46 @@ const HomeArticles = () => {
         .article-card-styled:hover .small-view-link {
           color: #1e40af; /* A slightly darker shade */
           text-decoration: underline;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .indicator-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .indicator-dot:hover {
+            background-color: #94a3b8;
+        }
+
+        .indicator-dot.active {
+            background-color: var(--color-primary);
+            transform: scale(1.3);
         }
 
         .view-all-container {
