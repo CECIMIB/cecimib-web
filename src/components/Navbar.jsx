@@ -123,8 +123,6 @@ const Navbar = () => {
           {/* Courses - Standalone */}
           <TopLevelItem id="courses" label={t('navbar.courses')} />
 
-          {/* News - Standalone */}
-          <TopLevelItem id="all-news" label={t('navbar.news')} />
 
           {/* Contact - Standalone */}
           <TopLevelItem id="contact" label={t('navbar.contact')} isBtn={true} />
@@ -167,7 +165,6 @@ const Navbar = () => {
               <li><a href="#publications" onClick={(e) => { e.preventDefault(); handleNav('publications'); }}>{t('navbar.publications')}</a></li>
               <li><a href="#repositories" onClick={(e) => { e.preventDefault(); handleNav('repositories'); }}>{t('navbar.repositories')}</a></li>
               <li><a href="#courses" onClick={(e) => { e.preventDefault(); handleNav('courses'); }}>{t('navbar.courses')}</a></li>
-              <li><a href="#all-news" onClick={(e) => { e.preventDefault(); handleNav('all-news'); }}>{t('navbar.news')}</a></li>
 
               <li className="mobile-contact-btn">
                 <a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); handleNav('contact'); }}>{t('navbar.contact')}</a>
