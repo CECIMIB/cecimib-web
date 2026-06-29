@@ -51,6 +51,7 @@ const ResearcherDetails = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(10);
+    const [showScrollIndicator, setShowScrollIndicator] = useState(true);
     
     if (!researcher) {
         return <div className="container section">Researcher not found</div>;
@@ -67,6 +68,27 @@ const ResearcherDetails = () => {
                 }
             })
             .catch(err => console.error('Error fetching metrics:', err));
+    }, [id]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const publicationsEl = document.getElementById('publications');
+            if (publicationsEl) {
+                const rect = publicationsEl.getBoundingClientRect();
+                // Hide indicator if the publications section is in the viewport or above
+                if (rect.top <= window.innerHeight - 100) {
+                    setShowScrollIndicator(false);
+                } else {
+                    setShowScrollIndicator(true);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        // Trigger once to set initial state
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [id]);
 
     const researcherWorks = orcidData[id]?.works || [];
@@ -200,22 +222,10 @@ const ResearcherDetails = () => {
                                     <p key={index}>{paragraph}</p>
                                 ))}
                         </div>
-                        
-                        {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
-                            <a 
-                                href="#publications" 
-                                className="scroll-indicator"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('publications')?.scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <span>{t('researchers_details.scroll_to_publications', 'Scroll to scientific production')}</span>
-                                <ChevronDown size={20} className="bounce-animation" />
-                            </a>
-                        )}
-                        {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
-                            <div id="publications" className="orcid-publications">
+                    </div>
+
+                    {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
+                        <div id="publications" className="orcid-publications">
                             <h3 className="orcid-section-title">{t('researchers_details.publications_presentations')}</h3>
                             
                             <div className="orcid-controls">
@@ -338,6 +348,21 @@ const ResearcherDetails = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Floating Scroll Indicator */}
+            {showScrollIndicator && orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
+                <a 
+                    href="#publications" 
+                    className="scroll-indicator"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById('publications')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                >
+                    <span>{t('researchers_details.scroll_to_publications', 'Scroll to scientific production')}</span>
+                    <ChevronDown size={20} className="bounce-animation" />
+                </a>
+            )}
 
             <style>{`
                 .researcher-details {
@@ -506,47 +531,57 @@ const ResearcherDetails = () => {
                 }
 
                 .scroll-indicator {
+                    position: fixed;
+                    bottom: 2rem;
+                    right: 2rem;
+                    z-index: 50;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     align-items: center;
                     justify-content: center;
-                    gap: 0.5rem;
-                    margin: 3rem auto 1rem auto;
-                    padding: 1rem 2rem;
-                    background-color: #f8fafc;
+                    gap: 0.75rem;
+                    padding: 0.75rem 1.5rem;
+                    background-color: white;
+                    border: 1px solid #e2e8f0;
+                    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
                     border-radius: 9999px;
-                    width: fit-content;
                     color: var(--color-primary);
                     text-decoration: none;
                     font-size: 0.875rem;
-                    font-weight: 500;
-                    opacity: 0.8;
-                    transition: all 0.2s;
+                    font-weight: 600;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 }
 
                 .scroll-indicator:hover {
-                    opacity: 1;
-                    background-color: #f1f5f9;
-                    transform: translateY(-2px);
+                    transform: translateY(-4px);
+                    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+                    color: var(--color-primary-dark);
                 }
 
                 .bounce-animation {
-                    animation: bounce 2s infinite;
+                    animation: bounce-down 2s infinite;
                 }
 
-                @keyframes bounce {
+                @keyframes bounce-down {
                     0%, 20%, 50%, 80%, 100% {
                         transform: translateY(0);
                     }
                     40% {
-                        transform: translateY(-8px);
+                        transform: translateY(6px);
                     }
                     60% {
-                        transform: translateY(-4px);
+                        transform: translateY(3px);
                     }
                 }
 
                 @media (max-width: 768px) {
+                    .scroll-indicator {
+                        bottom: 1rem;
+                        right: 1rem;
+                        padding: 0.5rem 1rem;
+                        font-size: 0.75rem;
+                    }
+                    
                     .details-content {
                         grid-template-columns: 1fr;
                         gap: 2rem;
