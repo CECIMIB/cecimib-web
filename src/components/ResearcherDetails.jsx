@@ -222,7 +222,6 @@ const ResearcherDetails = () => {
                                     <p key={index}>{paragraph}</p>
                                 ))}
                         </div>
-                    </div>
 
                     {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
                         <div id="publications" className="orcid-publications">
