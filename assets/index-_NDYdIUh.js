@@ -403,7 +403,7 @@ Please change the parent <Route path="${P}"> to <Route path="${P==="/"?"*":`${P}
         .article-card-styled {
           background: white;
           border-radius: 1.5rem;
-          padding: 3rem;
+          padding: 2.5rem;
           display: flex;
           flex-direction: column;
           text-decoration: none;
@@ -465,7 +465,7 @@ Please change the parent <Route path="${P}"> to <Route path="${P==="/"?"*":`${P}
         }
 
         .secondary-article {
-          padding: 2rem;
+          padding: 1.75rem;
         }
 
         .secondary-articles-list {
@@ -507,21 +507,29 @@ Please change the parent <Route path="${P}"> to <Route path="${P==="/"?"*":`${P}
         }
 
         .main-title {
-          font-size: 2.1rem;
+          font-size: 1.65rem;
           font-weight: 800;
-          line-height: 1.25;
-          margin-bottom: 1.5rem;
+          line-height: 1.35;
+          margin-bottom: 1.25rem;
           color: var(--color-text);
           transition: color 0.3s ease;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .secondary-title {
-          font-size: 1.3rem;
+          font-size: 1.15rem;
           font-weight: 700;
-          line-height: 1.3;
-          margin-bottom: 1rem;
+          line-height: 1.35;
+          margin-bottom: 0.75rem;
           color: var(--color-text);
           transition: color 0.3s ease;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .article-card-styled:hover .main-title,
@@ -531,14 +539,19 @@ Please change the parent <Route path="${P}"> to <Route path="${P==="/"?"*":`${P}
 
         .article-authors-styled {
           color: #475569;
-          font-size: 1.15rem;
-          line-height: 1.6;
+          font-size: 1.05rem;
+          line-height: 1.5;
           margin-bottom: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .small-authors {
-          font-size: 1rem;
+          font-size: 0.95rem;
           margin-bottom: 1.5rem;
+          -webkit-line-clamp: 2;
         }
 
         .article-meta-footer {
