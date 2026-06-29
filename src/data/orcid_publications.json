@@ -5,7 +5,8 @@
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
-      "lecture-speech": 0
+      "lecture-speech": 0,
+      "book-chapter": 8
     },
     "works": [
       {
@@ -897,6 +898,14 @@
         "putCode": 118057645
       },
       {
+        "title": "Recent Evidence for Decompressive Craniectomy",
+        "date": "2022/08",
+        "journal": "Neurosurgery Research: An Update",
+        "type": "book-chapter",
+        "url": "https://novapublishers.com/shop/neurosurgery-research-an-update/",
+        "putCode": 116781799
+      },
+      {
         "title": "Humildad, ante todo, virtud obligatoria en el estudiante y profesor de medicina",
         "date": "2022/07",
         "journal": "CIMEL: Ciencia e Investigación Médica Estudiantil Latinoamericana",
@@ -919,6 +928,14 @@
         "type": "journal-article",
         "url": "https://revistasaludbosque.unbosque.edu.co/index.php/RSB/article/view/3108",
         "putCode": 116402557
+      },
+      {
+        "title": "Blood-Brain Barrier and Cerebral Edema",
+        "date": "2022/07",
+        "journal": "Advances in Neurosurgery Research",
+        "type": "book-chapter",
+        "url": "https://novapublishers.com/shop/advances-in-neurosurgery-research/",
+        "putCode": 116781861
       },
       {
         "title": "Metastasis of the abdominal wall in a patient with diagnosis of pulmonary adenocarcinoma: An interesting finding",
@@ -1169,6 +1186,38 @@
         "putCode": 106955694
       },
       {
+        "title": "Ergonomics of endoscopic skull base surgery",
+        "date": "2022/01",
+        "journal": "Ergonomics For Healthcare Professionals",
+        "type": "book-chapter",
+        "url": "",
+        "putCode": 106344599
+      },
+      {
+        "title": "Ergonomics, musculoskeletal disorders and patient handling",
+        "date": "2022/01",
+        "journal": "Ergonomics For Healthcare Professionals",
+        "type": "book-chapter",
+        "url": "",
+        "putCode": 106344589
+      },
+      {
+        "title": "High-Reliability Organization in Neurotrauma and Neuroemergency services",
+        "date": "2022/01",
+        "journal": "Ergonomics For Healthcare Professionals",
+        "type": "book-chapter",
+        "url": "https://www.mahipublication.com/index/bookdetails&bid=276",
+        "putCode": 106344573
+      },
+      {
+        "title": "Philosophy and ergonomics of operating positions in microsurgeries",
+        "date": "2022/01",
+        "journal": "Ergonomics For Healthcare Professionals",
+        "type": "book-chapter",
+        "url": "https://www.mahipublication.com/index/bookdetails&bid=276",
+        "putCode": 106344578
+      },
+      {
         "title": "El logro titánico de publicar un artículo científico siendo estudiante de medicina",
         "date": "2021/12",
         "journal": "Acta Neurológica Colombiana",
@@ -1231,6 +1280,22 @@
         "type": "journal-article",
         "url": "https://www.sciencedirect.com/science/article/pii/S2049080121008827",
         "putCode": 101205597
+      },
+      {
+        "title": "Pre-Tracheostomy Investigations",
+        "date": "2021/10",
+        "journal": "Tracheostomy: Indications, Safety and Outcomes",
+        "type": "book-chapter",
+        "url": "https://novapublishers.com/shop/tracheostomy-indications-safety-and-outcomes/",
+        "putCode": 100920617
+      },
+      {
+        "title": "Tracheostomy and Nutrition",
+        "date": "2021/10",
+        "journal": "Tracheostomy: Indications, Safety and Outcomes",
+        "type": "book-chapter",
+        "url": "https://novapublishers.com/shop/tracheostomy-indications-safety-and-outcomes/",
+        "putCode": 100920626
       },
       {
         "title": "Validación De Los Criterios Predictivos De Alto Riesgo Para Coledocolitiasis De La Sociedad Americana De Endoscopia Gastrointestinal, 2010: Experiencia De Un Centro Del Caribe Colombiano",
@@ -1688,7 +1753,8 @@
       "conference-poster": 33,
       "conference-paper": 0,
       "conference-presentation": 15,
-      "lecture-speech": 0
+      "lecture-speech": 0,
+      "book-chapter": 0
     },
     "works": [
       {
@@ -1710,7 +1776,7 @@
       {
         "title": "Differential impact of ancestry on the pharmacogenomic profile of arterial hypertension in Colombia",
         "date": "2026/05",
-        "journal": "",
+        "journal": "XII Congreso Científico de Estudiantes de Medicina: \"Alerta Máxima\"",
         "type": "conference-presentation",
         "url": "https://doi.org/10.13140/rg.2.2.11481.68962",
         "putCode": 216663790
@@ -2227,7 +2293,8 @@
       "conference-poster": 11,
       "conference-paper": 0,
       "conference-presentation": 5,
-      "lecture-speech": 0
+      "lecture-speech": 0,
+      "book-chapter": 0
     },
     "works": [
       {

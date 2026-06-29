@@ -16,7 +16,8 @@ const ALLOWED_TYPES = [
     'conference-poster',
     'conference-paper',
     'conference-presentation',
-    'lecture-speech'
+    'lecture-speech',
+    'book-chapter'
 ];
 
 async function getAccessToken(clientId, clientSecret) {
@@ -82,7 +83,8 @@ function parseWorks(group) {
         'conference-poster': 0,
         'conference-paper': 0,
         'conference-presentation': 0,
-        'lecture-speech': 0
+        'lecture-speech': 0,
+        'book-chapter': 0
     };
 
     group.forEach(workGroup => {
