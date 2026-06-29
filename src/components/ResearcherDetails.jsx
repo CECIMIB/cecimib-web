@@ -6,6 +6,7 @@ import orcidLogo from '../assets/orcid_logo.svg';
 import researchGateLogo from '../assets/research-gate-logo.svg';
 import linkedinLogo from '../assets/linkedin-icon.svg';
 import scholarLogo from '../assets/Google_Scholar_logo.svg';
+import orcidData from '../data/orcid_publications.json';
 
 
 // To avoid circular dependencies or complex refactors, I'll define the static data mapping here or reuse if possible.
@@ -150,6 +151,35 @@ const ResearcherDetails = () => {
                                 <p key={idx}>{paragraph}</p>
                             ))}
                         </div>
+
+                        {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
+                            <div className="orcid-publications">
+                                <h3 className="orcid-section-title">Publications & Presentations</h3>
+                                <div className="orcid-badges">
+                                    {Object.entries(orcidData[id].counts).map(([type, count]) => {
+                                        if (count === 0) return null;
+                                        const label = type.replace('-', ' ').toUpperCase();
+                                        return (
+                                            <span key={type} className="orcid-badge">
+                                                <strong>{count}</strong> {label}
+                                            </span>
+                                        );
+                                    })}
+                                </div>
+                                <ul className="orcid-works-list">
+                                    {orcidData[id].works.map((work, index) => (
+                                        <li key={work.putCode || index} className="orcid-work-item">
+                                            <div className="work-title">{work.title}</div>
+                                            <div className="work-meta">
+                                                <span className="work-date">{work.date}</span>
+                                                {work.journal && <span className="work-journal">{work.journal}</span>}
+                                                <span className="work-type">{work.type.replace('-', ' ')}</span>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -319,6 +349,83 @@ const ResearcherDetails = () => {
                     .profile-sidebar {
                         position: static;
                     }
+                }
+
+                .orcid-publications {
+                    margin-top: 3rem;
+                    border-top: 1px solid #e2e8f0;
+                    padding-top: 2rem;
+                }
+
+                .orcid-section-title {
+                    font-size: 1.5rem;
+                    color: var(--color-primary-dark);
+                    margin-bottom: 1.5rem;
+                }
+
+                .orcid-badges {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.75rem;
+                    margin-bottom: 2rem;
+                }
+
+                .orcid-badge {
+                    background-color: #f1f5f9;
+                    color: var(--color-text);
+                    padding: 0.5rem 1rem;
+                    border-radius: 9999px;
+                    font-size: 0.875rem;
+                    border: 1px solid #e2e8f0;
+                }
+
+                .orcid-badge strong {
+                    color: var(--color-primary);
+                }
+
+                .orcid-works-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .orcid-work-item {
+                    padding: 1.25rem 0;
+                    border-bottom: 1px solid #f1f5f9;
+                }
+
+                .orcid-work-item:last-child {
+                    border-bottom: none;
+                }
+
+                .work-title {
+                    font-weight: 600;
+                    color: var(--color-text);
+                    margin-bottom: 0.5rem;
+                    line-height: 1.5;
+                }
+
+                .work-meta {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    font-size: 0.875rem;
+                    color: var(--color-text-light);
+                    align-items: center;
+                }
+
+                .work-journal {
+                    font-style: italic;
+                }
+
+                .work-type {
+                    background: #e0f2fe;
+                    color: var(--color-primary);
+                    padding: 0.125rem 0.5rem;
+                    border-radius: 4px;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
                 }
             `}</style>
         </section>

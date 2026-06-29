@@ -1,0 +1,1957 @@
+{
+  "ivan": {
+    "counts": {
+      "journal-article": 209,
+      "conference-poster": 0,
+      "conference-paper": 0,
+      "lecture-speech": 0
+    },
+    "works": [
+      {
+        "title": "Measuring scientific coherence between global neglected tropical disease research and population health indicators: a 25-year meta-research study",
+        "date": "2026/06",
+        "journal": "Frontiers in Research Metrics and Analytics",
+        "type": "journal-article",
+        "putCode": 218094621
+      },
+      {
+        "title": "Immunosenescence and human healthspan. Lessons from centenarians",
+        "date": "2026/06",
+        "journal": "Current Opinion in Immunology",
+        "type": "journal-article",
+        "putCode": 211969703
+      },
+      {
+        "title": "Does food security research really improve people's lives? A framework to estimate its potential impact from 2000 to 2025",
+        "date": "2026/05",
+        "journal": "Global Food Security",
+        "type": "journal-article",
+        "putCode": 213580603
+      },
+      {
+        "title": "One Health and rheumatology: Research gaps and opportunities for action",
+        "date": "2026/05",
+        "journal": "Joint Bone Spine",
+        "type": "journal-article",
+        "putCode": 197104416
+      },
+      {
+        "title": "Structural Capacity, Food Security-Related Publications, and Crop Production: A Multilevel Global Analysis Across Income Settings",
+        "date": "2026/04",
+        "journal": "Agriculture",
+        "type": "journal-article",
+        "putCode": 213379369
+      },
+      {
+        "title": "Scientific coherence in climate change research: a meta-research perspective to accelerate scientific progress and climate justice",
+        "date": "2026/04",
+        "journal": "Frontiers in Environmental Science",
+        "type": "journal-article",
+        "putCode": 212756351
+      },
+      {
+        "title": "The Cuídalas program: an AI-supported community-based approach to breast cancer screening in low-resource settings",
+        "date": "2026/04",
+        "journal": "Frontiers in Oncology",
+        "type": "journal-article",
+        "putCode": 211910309
+      },
+      {
+        "title": "Edadismo en Colombia",
+        "date": "2026/04",
+        "journal": "Medicina",
+        "type": "journal-article",
+        "putCode": 211630235
+      },
+      {
+        "title": "Zonas azules: conceptos, mitos y realidades. Una revisión crítica con implicaciones para Colombia",
+        "date": "2026/04",
+        "journal": "Medicina",
+        "type": "journal-article",
+        "putCode": 211630237
+      },
+      {
+        "title": "Clinical validation of artificial intelligence in musculoskeletal imaging: a structured narrative review of outcomes, failure modes, and implementation readiness",
+        "date": "2026/03",
+        "journal": "Medical Education & Clinical Practice",
+        "type": "journal-article",
+        "putCode": 217645181
+      },
+      {
+        "title": "Knowledge, Attitudes, and Stigma Towards People Living with HIV: An Explanatory Sequential Mixed-Methods Study Among 1013 Healthcare Professionals in Spain",
+        "date": "2026/03",
+        "journal": "Healthcare",
+        "type": "journal-article",
+        "putCode": 208369794
+      },
+      {
+        "title": "Exploring the potential impact of medical errors research on population health",
+        "date": "2026/03",
+        "journal": "PLoS One",
+        "type": "journal-article",
+        "putCode": 208264341
+      },
+      {
+        "title": "Discovering Blue Zones in Colombia: Biodemographic Analysis Based on National Data of Areas With the Highest Rate of Centenarians, Semi-Supercentenarians and Supercentenarians",
+        "date": "2026/03",
+        "journal": "Journal of Population Ageing",
+        "type": "journal-article",
+        "putCode": 207692638
+      },
+      {
+        "title": "The Chronic Wound Syndrome: A New Approach to Understanding the Pathophysiology and Management of Chronic Wounds",
+        "date": "2026/02",
+        "journal": "Journal of Wound Management and Research",
+        "type": "journal-article",
+        "putCode": 206875930
+      },
+      {
+        "title": "Health status characteristics and aging determinants of centenarians in Colombia: a real-life expanded cohort profile description",
+        "date": "2026/02",
+        "journal": "BMC Geriatrics",
+        "type": "journal-article",
+        "putCode": 206754499
+      },
+      {
+        "title": "Is There Sufficient Local Evidence to Inform Biofortification Policies Against Micronutrient Deficiencies? A Global Concern for Food Security and Human Health",
+        "date": "2026/02",
+        "journal": "Int. J. Environ. Res. Public Health",
+        "type": "journal-article",
+        "putCode": 206160096
+      },
+      {
+        "title": "Biological age and immunosenescence in Colombian centenarians",
+        "date": "2026/02",
+        "journal": "npj Aging",
+        "type": "journal-article",
+        "putCode": 206591677
+      },
+      {
+        "title": "Conceptual and operational consistency in defining intestinal failure across randomized controlled trials: a systematic review and meta-research analysis",
+        "date": "2026/01",
+        "journal": "BMC Gastroenterology",
+        "type": "journal-article",
+        "putCode": 203086630
+      },
+      {
+        "title": "Pleurotus ostreatus for Environmental Remediation and Sustainable Bioprocesses: An Evidence-Mapped Review of Research Gaps and Opportunities",
+        "date": "2026/01",
+        "journal": "Journal of Fungi",
+        "type": "journal-article",
+        "putCode": 202129056
+      },
+      {
+        "title": "Thousands of articles on neurosurgery, yet few self-assessments of neurosurgical evidence: the need to integrate meta-research for a more reliable clinical practice",
+        "date": "2026",
+        "journal": "Revista da Associação Médica Brasileira",
+        "type": "journal-article",
+        "putCode": 212248312
+      },
+      {
+        "title": "Limited scientific coherence between global mental health research and indicators of science, health, mental health, and society: A longitudinal analysis across world regions",
+        "date": "2025/12",
+        "journal": "Frontiers in Psychology",
+        "type": "journal-article",
+        "putCode": 200739448
+      },
+      {
+        "title": "The Role of Big Data in Developing Innovative Predictive Learning Models for Neglected Tropical Diseases within the New Generation of the Evidence-Based Medicine Pyramid",
+        "date": "2025/12",
+        "journal": "Le Infezioni in Medicina",
+        "type": "journal-article",
+        "putCode": 199411523
+      },
+      {
+        "title": "Meta-Research in Neuroscience: An Urgent Call to Strengthen the Reliability and Translation of Knowledge into Evidence-Based Neurological Practice",
+        "date": "2025/12",
+        "journal": "Journal of Clinical Medicine",
+        "type": "journal-article",
+        "putCode": 198937546
+      },
+      {
+        "title": "Preserved cognitive–functional phenotype in centenarians and its association with modifiable risk factors for dementia: Results from the Colombian centenarians project",
+        "date": "2025/12",
+        "journal": "Alzheimer's & Dementia",
+        "type": "journal-article",
+        "putCode": 199892767
+      },
+      {
+        "title": "Gaps and Opportunities in Global Mental Health Research: Disparities Across Geographic Regions and Income Levels",
+        "date": "2025/11",
+        "journal": "Psychiatry Investigation",
+        "type": "journal-article",
+        "putCode": 196793941
+      },
+      {
+        "title": "Clinical trials on medical errors need to strengthen geographical representation, methodological and reporting quality",
+        "date": "2025/10",
+        "journal": "QJM: An International Journal of Medicine",
+        "type": "journal-article",
+        "putCode": 179530966
+      },
+      {
+        "title": "Association between mental health symptoms and autoimmunity in patients with long COVID",
+        "date": "2025/09",
+        "journal": "BMC Infectious Diseases",
+        "type": "journal-article",
+        "putCode": 193136540
+      },
+      {
+        "title": "Quality of life and well-being in Colombian centenarians",
+        "date": "2025/09",
+        "journal": "Scientific Reports",
+        "type": "journal-article",
+        "putCode": 190950420
+      },
+      {
+        "title": "Six Sigma research in healthcare is associated with global health, research and development indicators: A scientometrics study based on countries by income groups",
+        "date": "2025/08",
+        "journal": "Anales del Sistema Sanitario de Navarra",
+        "type": "journal-article",
+        "putCode": 192235045
+      },
+      {
+        "title": "Noninvasive Breast Cancer Screening Strategies Supported by AI‐Based Technologies in Resource‐Limited Settings: Is It the Best Opportunity to Strengthen Women's Preferences, Values and Acceptability?",
+        "date": "2025/07",
+        "journal": "Health Care Science",
+        "type": "journal-article",
+        "putCode": 188481248
+      },
+      {
+        "title": "Research on medical errors exhibits diverse associations with global indicators of science, development, and health across geographic regions: A scientometrics study",
+        "date": "2025/07",
+        "journal": "Medicine",
+        "type": "journal-article",
+        "putCode": 188412816
+      },
+      {
+        "title": "Availability of Six Sigma trials for quality improvement in healthcare: an emerging challenge",
+        "date": "2025/07",
+        "journal": "International Journal For Quality In Health Care",
+        "type": "journal-article",
+        "putCode": 188434686
+      },
+      {
+        "title": "Six Sigma Applied to Healthcare: A Global Scientometrics Analysis of Health Services Quality Improvement Research",
+        "date": "2025/06",
+        "journal": "Health Services Insights",
+        "type": "journal-article",
+        "putCode": 186962915
+      },
+      {
+        "title": "Self-perceived stigma in people living with HIV in Spain: a mixed-methods study",
+        "date": "2025/06",
+        "journal": "Infezioni in Medicina",
+        "type": "journal-article",
+        "putCode": 186072555
+      },
+      {
+        "title": "Global Trends and Evidence Gaps in Medical Errors Research: A Mixed-Methods Scientometrics Study",
+        "date": "2025/05",
+        "journal": "Journal of Multidisciplinary Healthcare",
+        "type": "journal-article",
+        "putCode": 183371185
+      },
+      {
+        "title": "What Has Been Studied About Attitudes and Social Stigma Towards HIV/AIDS? A Global Bibliometric Study with Correlations on Global Health HIV-Related Indicators",
+        "date": "2025/04",
+        "journal": "Healthcare",
+        "type": "journal-article",
+        "putCode": 182214559
+      },
+      {
+        "title": "The impact of nutritional status on centenarians’ physical, mental, and functional health",
+        "date": "2025/04",
+        "journal": "Clinical Nutrition Open Science",
+        "type": "journal-article",
+        "putCode": 176698695
+      },
+      {
+        "title": "Association between home care and health phenotype of centenarians: Is it a necessary new criterion in home health care?",
+        "date": "2025/03",
+        "journal": "Australasian Journal on Ageing",
+        "type": "journal-article",
+        "putCode": 178946963
+      },
+      {
+        "title": "Why is it important to implement meta-research in universities and institutes with medical research activities?",
+        "date": "2025/02",
+        "journal": "Frontiers in Research Metrics and Analytics",
+        "type": "journal-article",
+        "putCode": 179058543
+      },
+      {
+        "title": "Meta-Research in Biomedical Investigation: Gaps and Opportunities Based on Meta-Research Publications and Global Indicators in Health, Science, and Human Development",
+        "date": "2025/02",
+        "journal": "Publications",
+        "type": "journal-article",
+        "putCode": 177921125
+      },
+      {
+        "title": "Operational Advantages of Novel Strategies Supported by Portability and Artificial Intelligence for Breast Cancer Screening in Low-Resource Rural Areas: Opportunities to Address Health Inequities and Vulnerability",
+        "date": "2025/01",
+        "journal": "Medicina",
+        "type": "journal-article",
+        "putCode": 176998534
+      },
+      {
+        "title": "Predictive modeling of burnout dimensions based on basic socio-economic determinants in health service managers and support personnel in a resource-limited health center",
+        "date": "2025/01",
+        "journal": "Frontiers in Psychiatry",
+        "type": "journal-article",
+        "putCode": 175360915
+      },
+      {
+        "title": "Scientometrics and meta-research in medical research: approaches required to ensure scientific rigor in an era of massive low-quality research",
+        "date": "2025",
+        "journal": "Revista da Associação Médica Brasileira",
+        "type": "journal-article",
+        "putCode": 185198329
+      },
+      {
+        "title": "Surgical Management for Refractory Gastroparesis: First Comparative Case Series between Gastric Bypass and Pyloroplasty in Colombia",
+        "date": "2024/12",
+        "journal": "Indian Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 155584343
+      },
+      {
+        "title": "Methodological and reporting quality of Latin American randomized controlled trials in surgery from 2012 to 2022: a meta-research study",
+        "date": "2024/11",
+        "journal": "International Journal of Surgery Open",
+        "type": "journal-article",
+        "putCode": 171762704
+      },
+      {
+        "title": "Polypharmacy and Therapeutic Inertia in Extreme Longevity: A Potential Clinical Ageism Scenario Secondary to Important Gaps in Clinical Evidence",
+        "date": "2024/09",
+        "journal": "Journal of Preventive Medicine and Public Health",
+        "type": "journal-article",
+        "putCode": 168544503
+      },
+      {
+        "title": "Meta-Research in Geriatric Surgery: Improving the Quality of Surgical Evidence for Older Persons in a Multidimensional-Scale Research Field",
+        "date": "2024/09",
+        "journal": "Journal of Clinical Medicine",
+        "type": "journal-article",
+        "putCode": 167401663
+      },
+      {
+        "title": "Geriatric Surgery: A Novel Field of Person-Centered Surgical Care for the Oldest-Old",
+        "date": "2024/09",
+        "journal": "International Journal of Surgery Open",
+        "type": "journal-article",
+        "putCode": 166989912
+      },
+      {
+        "title": "What are blue zones? An argument in favor of its definition based on the most successful model of biological aging",
+        "date": "2024/08",
+        "journal": "AGING MEDICINE",
+        "type": "journal-article",
+        "putCode": 165385609
+      },
+      {
+        "title": "Global Research on Centenarians: A Historical and Comprehensive Bibliometric Analysis from 1887 to 2023",
+        "date": "2024/06",
+        "journal": "Annals of Geriatric Medicine and Research",
+        "type": "journal-article",
+        "putCode": 157173047
+      },
+      {
+        "title": "Gut microbiota in centenarians: A potential metabolic and aging regulator in the study of extreme longevity",
+        "date": "2024/06",
+        "journal": "AGING MEDICINE",
+        "type": "journal-article",
+        "putCode": 161646099
+      },
+      {
+        "title": "Stigma and fear of getting sick in the care of people living with HIV: an exploratory systematic review",
+        "date": "2024/05",
+        "journal": "Le Infezioni in Medicina",
+        "type": "journal-article",
+        "putCode": 160594704
+      },
+      {
+        "title": "Explantador de Cabrera: un nuevo dispositivo para explantar endoprótesis aórticas después de reparo endovascular de aneurisma de aorta, un estudio experimental ex vivo",
+        "date": "2024/05",
+        "journal": "Revista Colombiana de Cirugía",
+        "type": "journal-article",
+        "putCode": 162349078
+      },
+      {
+        "title": "Bridging frontiers: The role of a Global Breast Research Working Group",
+        "date": "2024/04",
+        "journal": "Journal of Surgical Oncology",
+        "type": "journal-article",
+        "putCode": 158734208
+      },
+      {
+        "title": "Análisis de la sobrecarga de cuidadores de personas longevas no institucionalizadas en Cartagena",
+        "date": "2024/04",
+        "journal": "Revista Medicina",
+        "type": "journal-article",
+        "putCode": 158132778
+      },
+      {
+        "title": "Por una Colombia amigable para las personas mayores: reflexiones sobre la política pública nacional de vejez y envejecimiento",
+        "date": "2024/04",
+        "journal": "Revista Medicina",
+        "type": "journal-article",
+        "putCode": 158132928
+      },
+      {
+        "title": "Proyecto y Alianza Centenarios: Cohorte COOLCEN",
+        "date": "2024/04",
+        "journal": "Revista Medicina",
+        "type": "journal-article",
+        "putCode": 158132986
+      },
+      {
+        "title": "Autoimmunity in centenarians. A paradox",
+        "date": "2024/03",
+        "journal": "Journal of Translational Autoimmunity",
+        "type": "journal-article",
+        "putCode": 154519244
+      },
+      {
+        "title": "Missing centenarians are an international concern",
+        "date": "2024/02",
+        "journal": "Nature Aging",
+        "type": "journal-article",
+        "putCode": 153335795
+      },
+      {
+        "title": "Leiden manifesto and evidence-based research: Are the appropriate standards being used for the correct evaluation of pluralism, gaps and relevance in medical research?",
+        "date": "2024/02",
+        "journal": "Journal of the Royal College of Physicians of Edinburgh",
+        "type": "journal-article",
+        "putCode": 153239632
+      },
+      {
+        "title": "Historical Evolution of Cancer Genomics Research in Latin America: A Comprehensive Visual and Bibliometric Analysis until 2023",
+        "date": "2024/01",
+        "journal": "Frontiers in Genetics",
+        "type": "journal-article",
+        "putCode": 150645437
+      },
+      {
+        "title": "Demographics and clinical characteristics of a new population of Centenarians in Colombia. The COOLCEN cohort",
+        "date": "2024/01",
+        "journal": "Archives of Gerontology and Geriatrics Plus",
+        "type": "journal-article",
+        "putCode": 150223305
+      },
+      {
+        "title": "Knowledge and attitudes of health professionals in Chile towards people living with human immunodeficiency virus: A cross-national survey",
+        "date": "2024/01",
+        "journal": "International Journal of STD & AIDS",
+        "type": "journal-article",
+        "putCode": 142721879
+      },
+      {
+        "title": "Descripción clínico-microbiológica y factores asociados con desenlaces desfavorables en infecciones de pie diabético. Estudio transversal en el Caribe colombiano",
+        "date": "2023/12",
+        "journal": "Salud Uninorte",
+        "type": "journal-article",
+        "putCode": 148428270
+      },
+      {
+        "title": "ACUTE DIVERTICULITIS OF THE APPENDIX: A CASE REPORT",
+        "date": "2023/11",
+        "journal": "Annals of Mediterranean Surgery",
+        "type": "journal-article",
+        "putCode": 173633535
+      },
+      {
+        "title": "PAPILLARY THYROID CARCINOMA IN THYROGLOSSAL DUCT CYSTS: CASE SERIES WITH LONG-TERM FOLLOW-UP AND REVIEW OF THE LITERATURE",
+        "date": "2023/11",
+        "journal": "Annals of Mediterranean Surgery",
+        "type": "journal-article",
+        "putCode": 173633533
+      },
+      {
+        "title": "Participation of Latin authors in TOP dermatology journals during 2021: a brief bibliometric analysis",
+        "date": "2023/10",
+        "journal": "MedUNAB",
+        "type": "journal-article",
+        "putCode": 145505450
+      },
+      {
+        "title": "Research and Publication Trends in Pediatric Surgery in Latin America: A Bibliometric and Visual Analysis from 2012 to 2021",
+        "date": "2023/10",
+        "journal": "Journal of Pediatric Surgery",
+        "type": "journal-article",
+        "putCode": 132902477
+      },
+      {
+        "title": "Relationship between Duffy Genotype/Phenotype and Prevalence of Plasmodium vivax Infection: A Systematic Review",
+        "date": "2023/09",
+        "journal": "Tropical Medicine and Infectious Disease",
+        "type": "journal-article",
+        "putCode": 143311705
+      },
+      {
+        "title": "Evolution of Plasmodium vivax and resistance patterns for infection based on Duffy genotype and phenotype",
+        "date": "2023/09",
+        "journal": "Le Infezioni in Medicina",
+        "type": "journal-article",
+        "putCode": 142199093
+      },
+      {
+        "title": "CEA-delta could be a biomarker of tumor phenotype, clinical stage, and chemotherapeutic response in rectal cancer with OCT4-positive cancer stem cells",
+        "date": "2023/09",
+        "journal": "Frontiers in Oncology",
+        "type": "journal-article",
+        "putCode": 141936856
+      },
+      {
+        "title": "Knowledge, attitudes and experience of physicians working in Chile toward the prescription of pre-exposure prophylaxis (PrEP): A cross-national survey",
+        "date": "2023/08",
+        "journal": "International Journal of STD & AIDS",
+        "type": "journal-article",
+        "putCode": 131931694
+      },
+      {
+        "title": "Condiciones de vida, violencia sexual y sintomatología psiquiátrica de mujeres afrocolombianas víctimas del conflicto armado colombiano: estudio de corte transversal en Cartagena, Colombia",
+        "date": "2023/07",
+        "journal": "Revista Médica de Risaralda",
+        "type": "journal-article",
+        "putCode": 138614843
+      },
+      {
+        "title": "Reporte y mapeo de megacolon en una población colombiana: análisis de 10 años y 937 casos",
+        "date": "2023/07",
+        "journal": "Revista de Salud Pública",
+        "type": "journal-article",
+        "putCode": 169075889
+      },
+      {
+        "title": "Uso de ecografía portátil para realizar E-FAST por residentes de cirugía general en un centro de referencia en trauma: primera experiencia en la región del Caribe Colombiano",
+        "date": "2023/06",
+        "journal": "Revista Colombiana de Cirugía",
+        "type": "journal-article",
+        "putCode": 138394885
+      },
+      {
+        "title": "Social media to overcome technological barriers in surgical training: Four Latin American experiences",
+        "date": "2023/05",
+        "journal": "American Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 135736211
+      },
+      {
+        "title": "Antibiotic therapy by intrathecal or intraventricular approach for postsurgical meningitis or ventriculitis: a systematic review and meta-analysis",
+        "date": "2023/05",
+        "journal": "Egyptian Journal of Neurosurgery",
+        "type": "journal-article",
+        "putCode": 135547208
+      },
+      {
+        "title": "Meta-research studies in surgery: a field that should be encouraged to assess and improve the quality of surgical evidence",
+        "date": "2023/05",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 134430950
+      },
+      {
+        "title": "De una idea a una publicación original en cirugía: Una guía para futuros cirujanos académicos",
+        "date": "2023/04",
+        "journal": "Revista Colombiana de Cirugía",
+        "type": "journal-article",
+        "putCode": 134085027
+      },
+      {
+        "title": "Alagille syndrome: an orphan disease in Colombia and summary of recent advances in treatment and survival – a case report",
+        "date": "2023/04",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 133109808
+      },
+      {
+        "title": "Surgical research in Colombia part 3: Authorship and publications of Colombian medical students in surgery in Colombian medical journals – Cross-sectional study",
+        "date": "2023/04",
+        "journal": "Annals of Medicine &amp; Surgery",
+        "type": "journal-article",
+        "putCode": 133109933
+      },
+      {
+        "title": "Predictors for limb amputation in war vascular trauma: A 20-years retrospective analysis from the Colombian armed conflict",
+        "date": "2023/04",
+        "journal": "The American Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 120358934
+      },
+      {
+        "title": "Surgical outcomes and factors associated with postoperative complications of colorectal cancer in a Colombian Caribbean population: Results from a regional referral hospital",
+        "date": "2023/04",
+        "journal": "Cancer Reports",
+        "type": "journal-article",
+        "putCode": 125056836
+      },
+      {
+        "title": "Diaphragmatic Dynamics and Thickness Parameters Assessed by Ultrasonography Predict Extubation Success in Critically Ill Patients",
+        "date": "2023/03",
+        "journal": "Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine",
+        "type": "journal-article",
+        "putCode": 131713306
+      },
+      {
+        "title": "GRINCIRCAR: una iniciativa para promover la cirugía académica e investigación quirúrgica en el caribe colombiano",
+        "date": "2023/03",
+        "journal": "Revista Colombiana de Cirugía",
+        "type": "journal-article",
+        "putCode": 131564036
+      },
+      {
+        "title": "Perforation of the Duodenum by an Inferior Vena Cava Filter: a Potential Long‑Term Complication in the Medical Device Era",
+        "date": "2023/03",
+        "journal": "Indian Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 131446331
+      },
+      {
+        "title": "Translation, adaptation, and validation of the MeNTS score in colombian population: The MeNTS Col score",
+        "date": "2023/03",
+        "journal": "Sage Open Medicine",
+        "type": "journal-article",
+        "putCode": 131439463
+      },
+      {
+        "title": "Mortality of Critically Ill Cancer Patients Admitted to the Intensive Care Unit: A 1-Year Cross-Sectional Study in Colombia",
+        "date": "2023/03",
+        "journal": "Journal of Critical and Intensive Care",
+        "type": "journal-article",
+        "putCode": 130387650
+      },
+      {
+        "title": "Impact of helminthiasis on gestational anemia in low- and middle-income countries: a systematic review and meta-analysis of more than 19,000 women",
+        "date": "2023/03",
+        "journal": "Infezioni in Medicina",
+        "type": "journal-article",
+        "putCode": 130387570
+      },
+      {
+        "title": "Long-Term Outcomes of Laparoscopic Common Bile Duct Exploration Through Diathermy, Choledochotomy, and Primary Closure: A 6-Year Retrospective Cohort Study",
+        "date": "2023/03",
+        "journal": "Journal of Laparoendoscopic & Advanced Surgical Techniques",
+        "type": "journal-article",
+        "putCode": 125459934
+      },
+      {
+        "title": "Postoperative outcomes using Lichtenstein open hernioplasty versus Nyhus preperitoneal hernioplasty in inguinal hernia: A comparative analysis with 1‐year follow‐up",
+        "date": "2023/03",
+        "journal": "Health Science Reports",
+        "type": "journal-article",
+        "putCode": 130959052
+      },
+      {
+        "title": "The effect of bariatric surgery on metabolic syndrome: A retrospective cohort study in Colombia",
+        "date": "2023/02",
+        "journal": "Health Science Reports",
+        "type": "journal-article",
+        "putCode": 127697060
+      },
+      {
+        "title": "Alteración de la función pulmonar en vendedores informales de gasolina expuestos a sus vapores en Maicao, Colombia",
+        "date": "2023/01",
+        "journal": "Revista Médica Herediana",
+        "type": "journal-article",
+        "putCode": 127234483
+      },
+      {
+        "title": "Breast cancer mortality research in Latin America: A gap needed to be filled",
+        "date": "2023/01",
+        "journal": "The American Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 126511250
+      },
+      {
+        "title": "Single incision laparoscopic appendectomy with surgical-glove port is cost-effective and reliable in complicated acute appendicitis: A casecontrol multicenter study in Colombia",
+        "date": "2023/01",
+        "journal": "Heliyon",
+        "type": "journal-article",
+        "putCode": 126920421
+      },
+      {
+        "title": "Bilateral Congenital Knee Dislocation in Colombia: Case Report and Literature Review",
+        "date": "2022/12",
+        "journal": "Children",
+        "type": "journal-article",
+        "putCode": 125169671
+      },
+      {
+        "title": "Brief bibliometric analysis of the participation of Latin American authors in TOP neurology journals during 2021: how big is the gap?",
+        "date": "2022/12",
+        "journal": "Archivos de Neurociencias",
+        "type": "journal-article",
+        "putCode": 124473815
+      },
+      {
+        "title": "Mapping Dengue in children in a Colombian Caribbean Region: clinical and epidemiological analysis of more than 3500 cases",
+        "date": "2022/12",
+        "journal": "Le Infezioni in Medicina",
+        "type": "journal-article",
+        "putCode": 124070213
+      },
+      {
+        "title": "Increase in C-reactive protein as early predictor of anastomotic leakage in abdominal surgery",
+        "date": "2022/11",
+        "journal": "Cirugía y Cirujanos",
+        "type": "journal-article",
+        "putCode": 123531390
+      },
+      {
+        "title": "Factores socioeconómicos, clínicos y quirúrgicos relacionados al manejo de trauma abdominal penetrante en un hospital de alto nivel de complejidad del caribe colombiano: experiencia de 3 años",
+        "date": "2022/11",
+        "journal": "Revista Médica de Risaralda",
+        "type": "journal-article",
+        "putCode": 122088933
+      },
+      {
+        "title": "Predicting mortality in penetrating cardiac trauma in developing countries through a new classification: Validation of the Bogotá classification",
+        "date": "2022/11",
+        "journal": "Health Science Reports",
+        "type": "journal-article",
+        "putCode": 122811904
+      },
+      {
+        "title": "What was the participation of Latin authors in highest impact journals in gynecology and obstetrics during 2021? A brief bibliometric analysis",
+        "date": "2022/10",
+        "journal": "Minerva Obstetrics and Gynecology",
+        "type": "journal-article",
+        "putCode": 121072649
+      },
+      {
+        "title": "Carta al Editor: Herramienta para la iniciación científica del estudiante de medicina",
+        "date": "2022/10",
+        "journal": "Acta Neurológica Colombiana",
+        "type": "journal-article",
+        "putCode": 120362547
+      },
+      {
+        "title": "Inotropic support in cardiogenic shock: who leads the battle, milrinone or dobutamine?",
+        "date": "2022/10",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 119462132
+      },
+      {
+        "title": "Surgical research in Colombia part 2: Scientific production of Colombian academic surgeons",
+        "date": "2022/10",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 119075080
+      },
+      {
+        "title": "Perception of Physicians Working in Chile Toward Assisted Suicide and Euthanasia: A Nationwide Cross-Sectional Study",
+        "date": "2022/09",
+        "journal": "Journal of Primary Care & Community Health",
+        "type": "journal-article",
+        "putCode": 118917382
+      },
+      {
+        "title": "Huge gastric trichobezoar caused by involuntary nocturnal trichophagia and trichotillomania in a female adolescent",
+        "date": "2022/09",
+        "journal": "International Journal of Surgery Case Reports",
+        "type": "journal-article",
+        "putCode": 118793840
+      },
+      {
+        "title": "Botulinum toxin A in abdominal wall reconstruction for incisional hernia: an interesting line of research in abdominal wall and plastic surgery",
+        "date": "2022/09",
+        "journal": "International Journal of Surgery: Global Health",
+        "type": "journal-article",
+        "putCode": 118757229
+      },
+      {
+        "title": "Laparoscopic Hartmann's reversal has better clinical outcomes compared to open surgery: An international multicenter cohort study involving 502 patients",
+        "date": "2022/09",
+        "journal": "Health Science Reports",
+        "type": "journal-article",
+        "putCode": 118266511
+      },
+      {
+        "title": "What has been researched on monkeypox in Latin America? A brief bibliometric analysis",
+        "date": "2022/09",
+        "journal": "Travel Medicine and Infectious Disease",
+        "type": "journal-article",
+        "putCode": 115581045
+      },
+      {
+        "title": "Quality or quantity? Questions on the growth of global scientific production",
+        "date": "2022/08",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 118057645
+      },
+      {
+        "title": "Humildad, ante todo, virtud obligatoria en el estudiante y profesor de medicina",
+        "date": "2022/07",
+        "journal": "CIMEL: Ciencia e Investigación Médica Estudiantil Latinoamericana",
+        "type": "journal-article",
+        "putCode": 116544567
+      },
+      {
+        "title": "Breast cancer care in Latin America: The ghost burden of a pandemic outbreak",
+        "date": "2022/07",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 116083151
+      },
+      {
+        "title": "Mioepitelioma de la región selar simulando macroadenoma hipofisiario: reporte de primer caso en Colombia",
+        "date": "2022/07",
+        "journal": "Salud Bosque",
+        "type": "journal-article",
+        "putCode": 116402557
+      },
+      {
+        "title": "Metastasis of the abdominal wall in a patient with diagnosis of pulmonary adenocarcinoma: An interesting finding",
+        "date": "2022/07",
+        "journal": "Respiratory Medicine Case Reports",
+        "type": "journal-article",
+        "putCode": 115895100
+      },
+      {
+        "title": "First case report of gastric outlet obstruction due to aortofemoral bypass Dacron graft erosion of the duodenum treated with neo aortoiliac system procedure",
+        "date": "2022/07",
+        "journal": "International Journal of Surgery Case Reports",
+        "type": "journal-article",
+        "putCode": 115694398
+      },
+      {
+        "title": "What was the participation of Latin authors in TOP journals in internal medicine during 2021? A brief bibliometric analysis",
+        "date": "2022/07",
+        "journal": "QJM: An International Journal of Medicine",
+        "type": "journal-article",
+        "putCode": 115598228
+      },
+      {
+        "title": "JACC was the TOP cardiology journal with the highest participation of Latin authors in 2021",
+        "date": "2022/07",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 114256049
+      },
+      {
+        "title": "Uncovertebral synovitis: A rare cause of acute neck pain",
+        "date": "2022/06",
+        "journal": "Journal of the Royal College of Physicians of Edinburgh",
+        "type": "journal-article",
+        "putCode": 114565970
+      },
+      {
+        "title": "Bariatric emergencies recommendations for the general surgeon on duty in low-to middle-income countries: An algorithm proposal – Correspondence",
+        "date": "2022/06",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 113024271
+      },
+      {
+        "title": "Pre-operative factors associated with short- and long-term outcomes in the patient with inguinal hernia: What does the current evidence say?",
+        "date": "2022/06",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 114033458
+      },
+      {
+        "title": "Intraoperative finding of papyraceous twin fetus in pregnant woman without specialized follow-up: A summary of difficulties in accessing prenatal services in low- and middle-income countries",
+        "date": "2022/05",
+        "journal": "International Journal of Surgery Case Reports",
+        "type": "journal-article",
+        "putCode": 113393287
+      },
+      {
+        "title": "Relación entre traqueostomización y supervivencia en pacientes sometidos a ventilación mecánica con sintomatología respiratoria sugestiva de COVID-19 en Cartagena, Colombia",
+        "date": "2022/05",
+        "journal": "Medunab",
+        "type": "journal-article",
+        "putCode": 112916438
+      },
+      {
+        "title": "Chimney/snorkel endovascular aneurysm repair (ChEVAR) of an abdominal aortic aneurysm associated with crossed fused renal ectopia",
+        "date": "2022/05",
+        "journal": "Cirugia Cardiovascular",
+        "type": "journal-article",
+        "putCode": 112663664
+      },
+      {
+        "title": "Neurogenomics and neuroimaging genetics: the advance of predictive clinical models and risk stratification for cerebrovascular diseases",
+        "date": "2022/05",
+        "journal": "Journal of Neurosurgical Sciences",
+        "type": "journal-article",
+        "putCode": 112601287
+      },
+      {
+        "title": "RESULTADOS DE LOS TIPOS DE ENDOPRÓTESIS EN LA REPARACIÓN ENDOVASCULAR DEL ANEURISMA AÓRTICO ABDOMINAL: EXPERIENCIA A LARGO PLAZO DE UN CENTRO COLOMBIANO DE ALTA COMPLEJIDAD, EL PRIMER EJEMPLO LATINOAMERICANO",
+        "date": "2022/05",
+        "journal": "Revista Argentina de Cirugía Cardiovascular",
+        "type": "journal-article",
+        "putCode": 114063159
+      },
+      {
+        "title": "Cursos en línea masivos y abiertos para educación continua: una herramienta que debe ser aprovechada por el estudiante y el profesional de la salud",
+        "date": "2022/05",
+        "journal": "Revista Cubana de Información en Ciencias de la Salud",
+        "type": "journal-article",
+        "putCode": 112535649
+      },
+      {
+        "title": "Laparoscopy has better performance than laparotomy in the treatment of stable penetrating abdominal trauma: A retrospective cross‐sectional study in a trauma referral hospital in Colombia",
+        "date": "2022/05",
+        "journal": "Health Science Reports",
+        "type": "journal-article",
+        "putCode": 113495533
+      },
+      {
+        "title": "Surgical research in Colombia part 1: Scientific and academic productivity of the Colombian research groups in surgery",
+        "date": "2022/04",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 112233081
+      },
+      {
+        "title": "Cystic adventitial disease of popliteal artery, the both sides of the coin: Arterial resection vs cyst excision",
+        "date": "2022/04",
+        "journal": "Clinical Case Reports",
+        "type": "journal-article",
+        "putCode": 111511680
+      },
+      {
+        "title": "Cisternal Irrigation and Clot Removal to Prevent Vasospasm and poor Outcome in aneurysmal Subarachnoid Hemorrhage: Systematic Review and Meta-Analysis",
+        "date": "2022/04",
+        "journal": "International Journal of Surgery Open",
+        "type": "journal-article",
+        "putCode": 111218171
+      },
+      {
+        "title": "Investigar durante el pregrado de medicina: ¿Es necesario modificar el programa curricular en Colombia?",
+        "date": "2022/04",
+        "journal": "Acta Neurológica Colombiana",
+        "type": "journal-article",
+        "putCode": 111171968
+      },
+      {
+        "title": "Participation of latin american surgeons in twitter using the hashtag #SoMe4Surgery and #SoMe4IQLatAm",
+        "date": "2022/03",
+        "journal": "Surgery Open Science",
+        "type": "journal-article",
+        "putCode": 110905053
+      },
+      {
+        "title": "Factores sociodemográficos, psicosociales y calidad de vida de mujeres afrocolombianas víctimas del conflicto armado en Colombia",
+        "date": "2022/03",
+        "journal": "Gaceta Médica de Caracas",
+        "type": "journal-article",
+        "putCode": 110154555
+      },
+      {
+        "title": "Prevalence of sarcopenia in older adults in two retirement homes in Pereira, Colombia",
+        "date": "2022/03",
+        "journal": "Revista de la Facultad de Medicina Humana",
+        "type": "journal-article",
+        "putCode": 109944760
+      },
+      {
+        "title": "Latin American collaboration in international neurotrauma registries: a strategy from the academy",
+        "date": "2022/03",
+        "journal": "Journal of Neurosurgery",
+        "type": "journal-article",
+        "putCode": 109756770
+      },
+      {
+        "title": "Endovascular approach for non-thrombotic pulmonary embolism due to metal coil migration after treatment of pelvic varicose vein",
+        "date": "2022/03",
+        "journal": "Cirugía Cardiovascular",
+        "type": "journal-article",
+        "putCode": 109246760
+      },
+      {
+        "title": "Corrección de hernia de Amyand con malla y apendicetomía: reporte de caso",
+        "date": "2022/03",
+        "journal": "Horizonte Médico (Lima)",
+        "type": "journal-article",
+        "putCode": 111684287
+      },
+      {
+        "title": "Ethnicity, genetic variants, risk factors and cholelithiasis: The need for eco-epidemiological studies and genomic analysis in Latin American surgery",
+        "date": "2022/03",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 109150512
+      },
+      {
+        "title": "Euthanasia and assisted suicide: An in-depth review of relevant historical aspects",
+        "date": "2022/03",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 108053624
+      },
+      {
+        "title": "Post‐COVID 19 neurological syndrome: A new risk factor that modifies the prognosis of patients with dementia",
+        "date": "2022/03",
+        "journal": "Alzheimer's & Dementia",
+        "type": "journal-article",
+        "putCode": 99460138
+      },
+      {
+        "title": "Training the trainers: the fundamental basis for guaranteeing the evolution of academic surgery in third world countries",
+        "date": "2022/02",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 108299506
+      },
+      {
+        "title": "Brain-lung interaction: a vicious cycle in traumatic brain injury",
+        "date": "2022/02",
+        "journal": "Acute and Critical Care",
+        "type": "journal-article",
+        "putCode": 108173212
+      },
+      {
+        "title": "Endometriosis cutánea primaria umbilical: a propósito de un caso",
+        "date": "2022/02",
+        "journal": "Revista Ciencias de la Salud",
+        "type": "journal-article",
+        "putCode": 108147552
+      },
+      {
+        "title": "Undergraduate research in medicine: A summary of the evidence on problems, solutions and outcomes",
+        "date": "2022/01",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 106955694
+      },
+      {
+        "title": "El logro titánico de publicar un artículo científico siendo estudiante de medicina",
+        "date": "2021/12",
+        "journal": "Acta Neurológica Colombiana",
+        "type": "journal-article",
+        "putCode": 104138107
+      },
+      {
+        "title": "Gossypiboma: when it is what we think it cannot be",
+        "date": "2021/12",
+        "journal": "ANZ Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 92437951
+      },
+      {
+        "title": "Molecular and computational research in low- and middle-income countries: Development is close at hand",
+        "date": "2021/12",
+        "journal": "Journal of Taibah University Medical Sciences",
+        "type": "journal-article",
+        "putCode": 107122789
+      },
+      {
+        "title": "Neurogenic pulmonary edema in subarachnoid hemorrhage: relevant clinical concepts",
+        "date": "2021/12",
+        "journal": "Egyptian Journal of Neurosurgery",
+        "type": "journal-article",
+        "putCode": 103155585
+      },
+      {
+        "title": "Low-cost digital tool kit for planning and sizing with 3D printing of abdominal aortic aneurysms for endovascular aortic repair: A Latinoamerican experience",
+        "date": "2021/11",
+        "journal": "Cirugía Cardiovascular",
+        "type": "journal-article",
+        "putCode": 104012419
+      },
+      {
+        "title": "Pulmonary injury as a predictor of cerebral hypoxia in traumatic brain injury: from physiology to physiopathology",
+        "date": "2021/11",
+        "journal": "Journal of Neurosurgical Sciences",
+        "type": "journal-article",
+        "putCode": 103102984
+      },
+      {
+        "title": "Midterm outcomes of the covered endovascular reconstruction of the aortic bifurcation for aortoiliac occlusive disease in a latinoamerican population",
+        "date": "2021/11",
+        "journal": "International Journal of Surgery Case Reports",
+        "type": "journal-article",
+        "putCode": 102561021
+      },
+      {
+        "title": "Practical guide for the use of medical evidence in scientific publication: Recommendations for the medical student",
+        "date": "2021/10",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 101205597
+      },
+      {
+        "title": "Validación De Los Criterios Predictivos De Alto Riesgo Para Coledocolitiasis De La Sociedad Americana De Endoscopia Gastrointestinal, 2010: Experiencia De Un Centro Del Caribe Colombiano",
+        "date": "2021/09",
+        "journal": "Revista de la Facultad de Medicina Humana",
+        "type": "journal-article",
+        "putCode": 100680695
+      },
+      {
+        "title": "Aspirin versus anticoagulation for stroke prophylaxis: a dispute not yet closed",
+        "date": "2021/09",
+        "journal": "Journal of Neurosurgery",
+        "type": "journal-article",
+        "putCode": 100488541
+      },
+      {
+        "title": "First case report of spontaneous perinatal gastric perforation in premature neonate with potter sequence and syndrome",
+        "date": "2021/09",
+        "journal": "International Journal of Surgery Case Reports",
+        "type": "journal-article",
+        "putCode": 98347493
+      },
+      {
+        "title": "Broken beer bottle as a cause of sigmoid perforation: A summary of causes and predictors in the management of traumatic and non-traumatic colorectal perforation",
+        "date": "2021/08",
+        "journal": "International Journal of Surgery Case Reports",
+        "type": "journal-article",
+        "putCode": 98063508
+      },
+      {
+        "title": "A step-by-step guide to creating an academic surgery interest group: Review article",
+        "date": "2021/08",
+        "journal": "Annals of Medicine and Surgery",
+        "type": "journal-article",
+        "putCode": 98110994
+      },
+      {
+        "title": "Evidence-based medicine in neurosurgery: why and how?",
+        "date": "2021/08",
+        "journal": "Journal of Neurosurgical Sciences",
+        "type": "journal-article",
+        "putCode": 97997966
+      },
+      {
+        "title": "Neuroplasticity vs. cognitive prediction models in acute ischaemic stroke: limitations must be remembered",
+        "date": "2021/07",
+        "journal": "Neurologia i Neurochirurgia Polska",
+        "type": "journal-article",
+        "putCode": 97818513
+      },
+      {
+        "title": "Post-COVID 19 Neurological Syndrome: a fresh challenge in neurological management",
+        "date": "2021/07",
+        "journal": "Neurologia i Neurochirurgia Polska",
+        "type": "journal-article",
+        "putCode": 97818283
+      },
+      {
+        "title": "Intrahospital transport and SAH: possible impact on low- and middle-income countries",
+        "date": "2021/07",
+        "journal": "Journal of Neurosurgery",
+        "type": "journal-article",
+        "putCode": 96816715
+      },
+      {
+        "title": "Medical interest groups and work policies as emerging determinants of a successful career: A student perspective",
+        "date": "2021/07",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 96815643
+      },
+      {
+        "title": "Gender equity in academic neurosurgery: the fight must go on",
+        "date": "2021/07",
+        "journal": "Neurosurgical Focus",
+        "type": "journal-article",
+        "putCode": 96417687
+      },
+      {
+        "title": "The need to develop specialized surgical centers: the evidence that surgical diseases cannot wait",
+        "date": "2021/07",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 97837949
+      },
+      {
+        "title": "Utility of medical simulation in neurovascular critical care education",
+        "date": "2021/06",
+        "journal": "Journal of Neurocritical Care",
+        "type": "journal-article",
+        "putCode": 95812621
+      },
+      {
+        "title": "Surgery Interest Groups in Medical Schools: Mentoring Factory",
+        "date": "2021/06",
+        "journal": "Journal of Surgical Research",
+        "type": "journal-article",
+        "putCode": 95728978
+      },
+      {
+        "title": "The end of the bedside clinical round?",
+        "date": "2021/06",
+        "journal": "Journal of the Royal College of Physicians of Edinburgh",
+        "type": "journal-article",
+        "putCode": 95597004
+      },
+      {
+        "title": "Neuroeducation and neurorehabilitation in the neurosurgical patient: programs to be developed in Latin America and the Caribbean",
+        "date": "2021/06",
+        "journal": "Journal of Neurosurgical Sciences",
+        "type": "journal-article",
+        "putCode": 95415790
+      },
+      {
+        "title": "Breaking down barriers to surgical learning in times of COVID-19: an initiative of future surgeons",
+        "date": "2021/05",
+        "journal": "European Surgery",
+        "type": "journal-article",
+        "putCode": 94140343
+      },
+      {
+        "title": "Cryptogenic Stroke: much and nothing at the same time",
+        "date": "2021/04",
+        "journal": "European Journal of Neurology",
+        "type": "journal-article",
+        "putCode": 92869049
+      },
+      {
+        "title": "Argumentum ad ignorantiam en medicina",
+        "date": "2021/04",
+        "journal": "Acta Neurológica Colombiana",
+        "type": "journal-article",
+        "putCode": 92633668
+      },
+      {
+        "title": "Chyloperitoneum as the Initial Manifestation of Gastrointestinal Neoplasia",
+        "date": "2021/04",
+        "journal": "Surgeries",
+        "type": "journal-article",
+        "putCode": 92618002
+      },
+      {
+        "title": "Enfermedad, eutanasia y aborto: una reflexión desde la bioética",
+        "date": "2021/04",
+        "journal": "Revista Médica de Risaralda",
+        "type": "journal-article",
+        "putCode": 92593618
+      },
+      {
+        "title": "Manejo satisfactorio de Síndrome de Mirizzi tipo V con cirugía laparoscópica",
+        "date": "2021/04",
+        "journal": "Revista Médica de Risaralda",
+        "type": "journal-article",
+        "putCode": 92593542
+      },
+      {
+        "title": "Post-COVID 19 Neurological Syndrome: Implications for sequelae’s treatment",
+        "date": "2021/04",
+        "journal": "Journal of Clinical Neuroscience",
+        "type": "journal-article",
+        "putCode": 91951498
+      },
+      {
+        "title": "Need and Impact of the Development of Robotic Neurosurgery in Latin America",
+        "date": "2021/04",
+        "journal": "Neurosurgery",
+        "type": "journal-article",
+        "putCode": 91656368
+      },
+      {
+        "title": "Academic and research interest groups in neurosurgery: a smart strategy in times of COVID-19",
+        "date": "2021/03",
+        "journal": "Journal of Neurosurgery",
+        "type": "journal-article",
+        "putCode": 91366980
+      },
+      {
+        "title": "Youth and cardiovascular health: What risk factors should we take into account to intervene?",
+        "date": "2021/03",
+        "journal": "Ciencia e Innovación en Salud",
+        "type": "journal-article",
+        "putCode": 90726998
+      },
+      {
+        "title": "The desire to publish a scientific article and the difficulties of publishing it in a highquality neurosurgery scientific journal",
+        "date": "2021/03",
+        "journal": "Journal of Neurosurgical Sciences",
+        "type": "journal-article",
+        "putCode": 90630590
+      },
+      {
+        "title": "May-Thurner Syndrome: An Underdiagnosed Entity",
+        "date": "2021/03",
+        "journal": "Journal of Pediatric Hematology/Oncology",
+        "type": "journal-article",
+        "putCode": 90029794
+      },
+      {
+        "title": "Scientific literacy: an essential activity to improve health communication in the general population",
+        "date": "2021/02",
+        "journal": "Revista Cubana de Información en Ciencias de la Salud",
+        "type": "journal-article",
+        "putCode": 89603791
+      },
+      {
+        "title": "Neuroprotection in the patient with COVID-19",
+        "date": "2021/02",
+        "journal": "Revista Cubana de Investigaciones Biomédicas",
+        "type": "journal-article",
+        "putCode": 88723259
+      },
+      {
+        "title": "Use of CT in the evaluation of severe caustic gastritis: Not everything is about the diagnosis",
+        "date": "2021/02",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 88537922
+      },
+      {
+        "title": "Myocardial lesion in patients with COVID-19: Not all is in the lung",
+        "date": "2021/02",
+        "journal": "Journal of Taibah University Medical Sciences ",
+        "type": "journal-article",
+        "putCode": 88391469
+      },
+      {
+        "title": "Creating the conditions for gender equality to end sexual harassment in neurosurgery",
+        "date": "2021/02",
+        "journal": "Journal of Neurosurgery",
+        "type": "journal-article",
+        "putCode": 88257122
+      },
+      {
+        "title": "Myeloperoxidase: another predictor of cerebrovascular disease to consider",
+        "date": "2021/01",
+        "journal": "Journal of Neurosurgical Sciences",
+        "type": "journal-article",
+        "putCode": 87474882
+      },
+      {
+        "title": "Simulation as a tool to educate the patient about neurosurgical pathology",
+        "date": "2021/01",
+        "journal": "Journal of Neurosurgical Sciences",
+        "type": "journal-article",
+        "putCode": 87474856
+      },
+      {
+        "title": "Sexual harassment and racism in surgery: A latent problem",
+        "date": "2021/01",
+        "journal": "International Journal of Surgery",
+        "type": "journal-article",
+        "putCode": 86746622
+      },
+      {
+        "title": "Compassion and Dedication: Two Key Elements for the Neurosurgeon in the Post–COVID-19 Era",
+        "date": "2021/01",
+        "journal": "World Neurosurgery",
+        "type": "journal-article",
+        "putCode": 85895482
+      },
+      {
+        "title": "Frequency of organic pathologies derived from the consumption of psychoactive substances in patients of an Intensive Care Unit in the city of Cartagena",
+        "date": "2020/12",
+        "journal": "Revista Ciencias Biomedicas",
+        "type": "journal-article",
+        "putCode": 85903372
+      },
+      {
+        "title": "Letter to the Editor Regarding - Two Perspectives on the COVID-19 Pandemic Nobody Is Talking About and It's Costing Lives - and Emotional Health in the Midst of the Coronavirus Disease 2019 (COVID-19) Pandemic",
+        "date": "2020/12",
+        "journal": "World Neurosurgery",
+        "type": "journal-article",
+        "putCode": 82554269
+      },
+      {
+        "title": "Clinical-radiological correlation as the first route in the diagnosis of Gorham-Stout syndrome",
+        "date": "2020/12",
+        "journal": "CES Medicina",
+        "type": "journal-article",
+        "putCode": 84951875
+      },
+      {
+        "title": "Correlación clínico-radiológica como primera ruta en el diagnóstico de Síndrome de Gorham-Stout",
+        "date": "2020/12",
+        "journal": "CES Medicina",
+        "type": "journal-article",
+        "putCode": 91724634
+      },
+      {
+        "title": "Reader response: Cause of death in spontaneous intracerebral hemorrhage survivors Multistate longitudinal study",
+        "date": "2020/12",
+        "journal": "Neurology",
+        "type": "journal-article",
+        "putCode": 85389422
+      },
+      {
+        "title": "Colon perforation secondary to self-inflicted impalement: a case report",
+        "date": "2020/12",
+        "journal": "Cirugía y Cirujanos",
+        "type": "journal-article",
+        "putCode": 84700591
+      },
+      {
+        "title": "Letter to the editor. Healthcare workers on the edge of sanity due to COVID-19: rapid review of the results of systematic reviews and meta-analyzes",
+        "date": "2020/12",
+        "journal": "Journal of Clinical Neuroscience",
+        "type": "journal-article",
+        "putCode": 84698548
+      },
+      {
+        "title": "Reasons to study a virtual postgraduate in Medicine, in Colombia.",
+        "date": "2020/12",
+        "journal": "Revista Ciencias Biomédicas",
+        "type": "journal-article",
+        "putCode": 84701296
+      },
+      {
+        "title": "Comments on: Impact of discontinuation of antithrombotic therapy after surgery for chronic subdural hematoma",
+        "date": "2020/11",
+        "journal": "Neurochirurgie",
+        "type": "journal-article",
+        "putCode": 84168987
+      },
+      {
+        "title": "Bouveret ́s syndrome as a cause of bleeding from the digestive tract",
+        "date": "2020/11",
+        "journal": "Ciencia e Innovación en Salud",
+        "type": "journal-article",
+        "putCode": 84168913
+      },
+      {
+        "title": "Pelvic inflammatory disease as differential diagnosis of surgical abdominal pain",
+        "date": "2020/11",
+        "journal": "Ciencia e Innovación en Salud",
+        "type": "journal-article",
+        "putCode": 83153434
+      },
+      {
+        "title": "Medical Education in Times of COVID-19: What's New in Neurosurgery",
+        "date": "2020/11",
+        "journal": "World Neurosurgery",
+        "type": "journal-article",
+        "putCode": 82923568
+      },
+      {
+        "title": "Role of the Neurosurgeon in Times of Coronavirus Disease 2019 (COVID-19): The Importance of Focus in Critical Care",
+        "date": "2020/11",
+        "journal": "World Neurosurgery",
+        "type": "journal-article",
+        "putCode": 82923432
+      },
+      {
+        "title": "Recurrent inguinoscrotal hernia with megaureter: a case report",
+        "date": "2020/07",
+        "journal": "Horizonte Médico (Lima)",
+        "type": "journal-article",
+        "putCode": 85767012
+      },
+      {
+        "title": "Clinical Considerations of Abetalipoproteinemia: literature Review",
+        "date": "2020/04",
+        "journal": "Archivos de Medicina (Manizales)",
+        "type": "journal-article",
+        "putCode": 85767027
+      },
+      {
+        "title": "Acute arterial limb ischemia: ¿How to approach it?",
+        "date": "2020/03",
+        "journal": "Revista Colombiana de Cirugía",
+        "type": "journal-article",
+        "putCode": 85767036
+      },
+      {
+        "title": "Wunderlich syndrome secondary to renal artery aneurysm rupture: Report of a case",
+        "date": "2020",
+        "journal": "Cirugia Cardiovascular",
+        "type": "journal-article",
+        "putCode": 85767044
+      },
+      {
+        "title": "Distal ileum perforation caused by a fish bone: a case report",
+        "date": "2019/12",
+        "journal": "Horizonte Médico (Lima)",
+        "type": "journal-article",
+        "putCode": 67928329
+      },
+      {
+        "title": "Papillary breast carcinoma in men: a rare presentation",
+        "date": "2019/12",
+        "journal": "Ciencia e Innovación en Salud",
+        "type": "journal-article",
+        "putCode": 82556118
+      }
+    ]
+  },
+  "david": {
+    "counts": {
+      "journal-article": 18,
+      "conference-poster": 33,
+      "conference-paper": 0,
+      "lecture-speech": 0
+    },
+    "works": [
+      {
+        "title": "Measuring scientific coherence between global neglected tropical disease research and population health indicators: a 25-year meta-research study",
+        "date": "2026/06",
+        "journal": "Frontiers in Research Metrics and Analytics",
+        "type": "journal-article",
+        "putCode": 218110729
+      },
+      {
+        "title": "Scientific Production in Global Mental Health: A Meta-Research Study of Income-Stratified Trends, Gaps, and Health Metrics Impact",
+        "date": "2026/06",
+        "journal": "Publications",
+        "type": "journal-article",
+        "putCode": 216407213
+      },
+      {
+        "title": "Estimating the potential impact of global research on neglected tropical diseases on population-level indicators of health access, sanitation, and research capacity",
+        "date": "2026/05",
+        "journal": "PLOS Neglected Tropical Diseases",
+        "type": "journal-article",
+        "putCode": 216620421
+      },
+      {
+        "title": "Does food security research really improve people's lives? A framework to estimate its potential impact from 2000 to 2025",
+        "date": "2026/05",
+        "journal": "Global Food Security",
+        "type": "journal-article",
+        "putCode": 216664179
+      },
+      {
+        "title": "Different ancestries may have distinct diabetes risk profiles in Colombia",
+        "date": "2026/04",
+        "journal": "XI Curso Internacional de Endocrinología, Diabetes y Metabolismo - ENDIMET 2026",
+        "type": "conference-poster",
+        "putCode": 216619408
+      },
+      {
+        "title": "Estimating the impact of ancestry on the pharmacogenomic profile of diabetes",
+        "date": "2026/04",
+        "journal": "XI Curso Internacional de Endocrinología, Diabetes y Metabolismo - ENDIMET 2026",
+        "type": "conference-poster",
+        "putCode": 216620383
+      },
+      {
+        "title": "Evaluating the impact of ancestry in Colombian populations on the pharmacogenomic profile of arterial hypertension",
+        "date": "2026/04",
+        "journal": "XI Curso Internacional de Endocrinología, Diabetes y Metabolismo - ENDIMET 2026",
+        "type": "conference-poster",
+        "putCode": 213612635
+      },
+      {
+        "title": "Genetic risk profile of sarcopenia in Colombia, stratified by ancestry",
+        "date": "2026/04",
+        "journal": "XI Curso Internacional de Endocrinología, Diabetes y Metabolismo - ENDIMET 2026",
+        "type": "conference-poster",
+        "putCode": 213612261
+      },
+      {
+        "title": "Exploring the potential impact of medical errors research on population health",
+        "date": "2026/03",
+        "journal": "PLOS One",
+        "type": "journal-article",
+        "putCode": 208271678
+      },
+      {
+        "title": "Association of Dietary Patterns and Physical Activity with Excess Body Weight, Atherogenic Markers and Cardiovascular Risk Factors in Adults from Cartagena, Colombia",
+        "date": "2026/02",
+        "journal": "International Journal of Nutrition Sciences",
+        "type": "journal-article",
+        "putCode": 216664294
+      },
+      {
+        "title": "Limited scientific coherence between global mental health research and indicators of science, health, mental health, and society: a longitudinal analysis across world regions",
+        "date": "2026",
+        "journal": "FRONTIERS IN PSYCHOLOGY",
+        "type": "journal-article",
+        "putCode": 213612035
+      },
+      {
+        "title": "Asociaciones entre investigación en salud mental e indicadores sanitarios globales: análisis longitudinal con meta-regresión",
+        "date": "2025/11",
+        "journal": "XXIV Convención Nacional de la Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia - Pediatría y Cirugía Pediátrica",
+        "type": "conference-poster",
+        "putCode": 195823866
+      },
+      {
+        "title": "Farmacogenómica en diabetes: Lo que sabemos, lo que ignoramos y ¿a quien afecta en Colombia?",
+        "date": "2025/11",
+        "journal": "XXIV Convención Nacional de la Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia - Pediatría y Cirugía Pediátrica",
+        "type": "conference-poster",
+        "putCode": 195823860
+      },
+      {
+        "title": "Farmacogenómica y ancestría genética en Colombia: Un estudio de todas variantes farmacológicas de PharmGKB",
+        "date": "2025/11",
+        "journal": "XXIV Convención Nacional de la Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia - Pediatría y Cirugía Pediátrica",
+        "type": "conference-poster",
+        "putCode": 195823850
+      },
+      {
+        "title": "Meta-investigación sobre la investigación biomédica: brechas y oportunidades desde publicaciones en salud, ciencia y desarrollo",
+        "date": "2025/11",
+        "journal": "XXIV Convención Nacional de la Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia - Pediatría y Cirugía Pediátrica",
+        "type": "conference-poster",
+        "putCode": 195823879
+      },
+      {
+        "title": "Ancestría genética y cáncer colorrectal: Un estudio transversal en poblaciones colombianas",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195344034
+      },
+      {
+        "title": "Ancestría genética y diabetes: Un estudio transversal evaluando su influencia en poblaciones Colombianas",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195343587
+      },
+      {
+        "title": "Asociación entre ancestría genética y obesidad en poblaciones colombianas: Un estudio transversal",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195343900
+      },
+      {
+        "title": "Determinantes ancestrales del perfil genético asociado al asma en Colombia",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195344116
+      },
+      {
+        "title": "Influencia de la Ancestría en el Perfil Genético Asociado al Cáncer de Pulmón en Poblaciones Colombianas",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195343654
+      },
+      {
+        "title": "Influencia de la Ancestría en el Perfil Genético Asociado al Trastorno Depresivo Mayor en Poblaciones Colombianas",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195344078
+      },
+      {
+        "title": "La farmacogenómica de la diabetes puede estar influenciada por la ancestría en Colombia",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195344055
+      },
+      {
+        "title": "Impacto de la Ancestría en la Farmacogenómica del Cáncer Colorrectal: Un Estudio Transversal en Colombia",
+        "date": "2025/10",
+        "journal": "VII Simposio Latinoamericano de Genética Médica y Medicina Genómica",
+        "type": "conference-poster",
+        "putCode": 195343910
+      },
+      {
+        "title": "Evaluating the Influence of Ancestry on the Genetic Risk Profile of Colorectal Cancer in Colombia",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 195824250
+      },
+      {
+        "title": "MicroRNAs and Inflammation: The Molecular Link Between Periodontitis and Colorectal Cancer",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 216660197
+      },
+      {
+        "title": "Pharmacogenomics and Genetic Ancestry in Colombia: A Study on All Variant Drug Annotations of PharmGKB",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 195285136
+      },
+      {
+        "title": "Pharmacogenomics in Breast Cancer: What We Know, What We Overlook, and Who It Affects in Colombia",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 195824272
+      },
+      {
+        "title": "Pharmacogenomics in Colorectal Cancer: Population-Specific Insights from Colombia",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 195824259
+      },
+      {
+        "title": "Pharmacogenomics in Diabetes: What We Know, What We Overlook, and Who It Affects in Colombia",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 195285246
+      },
+      {
+        "title": "How useful is neglected-diseases-research for neglected diseases? A longitudinal and meta-regression analysis from 2000 – 2024",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 195284852
+      },
+      {
+        "title": "Potential Impact of Medical-Errors-Research on Population Health, Health System, and Research and Development Global Indicators",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 194718883
+      },
+      {
+        "title": "Potential Impact of Research on Neglected-Tropical-Diseases on Population-Level-Indicators of Health Access, Sanitation, and Research Capacity",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud ENSI 2025",
+        "type": "conference-poster",
+        "putCode": 195241145
+      },
+      {
+        "title": "Pharmacogenomics in Diabetes: Population-Specific Insights from Colombia",
+        "date": "2025/10",
+        "journal": "Journal of Personalized Medicine",
+        "type": "journal-article",
+        "putCode": 193842956
+      },
+      {
+        "title": "Clinical trials on medical errors need to strengthen geographical representation, methodological and reporting quality",
+        "date": "2025/10",
+        "journal": "QJM: An International Journal of Medicine",
+        "type": "journal-article",
+        "putCode": 179532708
+      },
+      {
+        "title": "Six Sigma research in healthcare is associated with global health, research and development indicators: A scientometrics study based on countries by income groups",
+        "date": "2025/08",
+        "journal": "Anales del Sistema Sanitario de Navarra",
+        "type": "journal-article",
+        "putCode": 192251935
+      },
+      {
+        "title": "Farmacogenómica en Cáncer Colorrectal: Avances, Desafíos y su Impacto en Colombia",
+        "date": "2025/06",
+        "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
+        "type": "conference-poster",
+        "putCode": 191283231
+      },
+      {
+        "title": "Farmacogenómica en Cáncer de Mama: Lo que sabemos, lo que ignoramos y ¿a quién afecta en Colombia?",
+        "date": "2025/06",
+        "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
+        "type": "conference-poster",
+        "putCode": 191282787
+      },
+      {
+        "title": "Farmacogenómica en Hipertensión: Lo que sabemos, lo que ignoramos y ¿a quién afecta en Colombia?",
+        "date": "2025/06",
+        "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
+        "type": "conference-poster",
+        "putCode": 191283438
+      },
+      {
+        "title": "Farmacogenómica y Ancestría Genética en Colombia: Un Análisis de Toda la Base PharmGKB",
+        "date": "2025/06",
+        "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
+        "type": "conference-poster",
+        "putCode": 191283390
+      },
+      {
+        "title": "Implementación de una estrategia de enseñanza-aprendizaje del tamizaje metabólico neonatal en estudiantes de enfermería de la Universidad de Cartagena, Colombia",
+        "date": "2025/06",
+        "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
+        "type": "conference-poster",
+        "putCode": 191283342
+      },
+      {
+        "title": "Influencia de la Ancestría en el Perfil Genético Asociado al Cáncer Colorrectal en Poblaciones Colombianas",
+        "date": "2025/06",
+        "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
+        "type": "conference-poster",
+        "putCode": 191283192
+      },
+      {
+        "title": "Global Trends and Evidence Gaps in Medical Errors Research: A Mixed-Methods Scientometrics Study",
+        "date": "2025/05",
+        "journal": "Journal of Multidisciplinary Healthcare",
+        "type": "journal-article",
+        "putCode": 183371899
+      },
+      {
+        "title": "Calidad dietaria, patrones dietarios y actividad física asociados con exceso de adiposidad corporal, marcadores aterogénicos y riesgo cardiovascular en adultos de Cartagena, Colombia: El estudio CARTAGEN, parte I",
+        "date": "2025/04",
+        "journal": "18° ENDOCONGRESS - Congreso Colombiano de Endocrinología Diabetes y Metabolismo",
+        "type": "conference-poster",
+        "putCode": 191282695
+      },
+      {
+        "title": "Farmacogenómica en diabetes: Lo que sabemos, lo que ignoramos y a quién afecta en Colombia?",
+        "date": "2025/04",
+        "journal": "18° ENDOCONGRESS - Congreso Colombiano de Endocrinología Diabetes y Metabolismo",
+        "type": "conference-poster",
+        "putCode": 191282658
+      },
+      {
+        "title": "Meta-Research in Biomedical Investigation: Gaps and Opportunities Based on Meta-Research Publications and Global Indicators in Health, Science, and Human Development",
+        "date": "2025/02",
+        "journal": "Publications",
+        "type": "journal-article",
+        "putCode": 177919928
+      },
+      {
+        "title": "Research on medical errors exhibits diverse associations with global indicators of science, development, and health across geographic regions: A scientometrics study",
+        "date": "2025",
+        "journal": "MEDICINE",
+        "type": "journal-article",
+        "putCode": 213612036
+      },
+      {
+        "title": "Scientometrics and meta-research in medical research: approaches required to ensure scientific rigor in an era of massive low-quality research",
+        "date": "2025",
+        "journal": "Revista da Associação Médica Brasileira",
+        "type": "journal-article",
+        "putCode": 185197595
+      },
+      {
+        "title": "Six Sigma Applied to Healthcare: A Global Scientometrics Analysis of Health Services Quality Improvement Research",
+        "date": "2025",
+        "journal": "HEALTH SERVICES INSIGHTS",
+        "type": "journal-article",
+        "putCode": 213612040
+      },
+      {
+        "title": "Impacto de la prótesis craneal polimérica con ventana acústica y la imagen de ultrasonido funcional en la atención del trauma craneoencefálico",
+        "date": "2024/10",
+        "journal": "Acta Neurológica Colombiana",
+        "type": "journal-article",
+        "putCode": 168909758
+      },
+      {
+        "title": "Enteric fever in a young man with bowel wall thickening and hepatosplenomegaly",
+        "date": "2024/09",
+        "journal": "Revista de Gastroenterología del Perú",
+        "type": "journal-article",
+        "putCode": 168616692
+      },
+      {
+        "title": "Meta-Research in Geriatric Surgery: Improving the Quality of Surgical Evidence for Older Persons in a Multidimensional-Scale Research Field",
+        "date": "2024/09",
+        "journal": "Journal of Clinical Medicine",
+        "type": "journal-article",
+        "putCode": 167407944
+      }
+    ]
+  },
+  "andy": {
+    "counts": {
+      "journal-article": 4,
+      "conference-poster": 11,
+      "conference-paper": 0,
+      "lecture-speech": 0
+    },
+    "works": [
+      {
+        "title": "Structural Capacity, Food Security-Related Publications, and Crop Production: A Multilevel Global Analysis Across Income Settings",
+        "date": "2026/04",
+        "journal": "Agriculture",
+        "type": "journal-article",
+        "putCode": 213467254
+      },
+      {
+        "title": "Ancestría y diabetes mellitus tipo 1 ¿Cuáles son las implicaciones en Colombia?",
+        "date": "2026/04",
+        "journal": "XI Curso Internacional ENDIMET",
+        "type": "conference-poster",
+        "putCode": 213458853
+      },
+      {
+        "title": "Diversidad ancestral en Colombia: ¿Cómo puede influir sobre el perfil de riesgo genético de la diabetes tipo 2?",
+        "date": "2026/04",
+        "journal": "XI Curso Internacional ENDIMET",
+        "type": "conference-poster",
+        "putCode": 213458809
+      },
+      {
+        "title": "Evaluando el impacto de la ancestría de poblaciones colombianas sobre el perfil de riesgo genético de las enfermedades tiroideas autoinmunes",
+        "date": "2026/04",
+        "journal": "XI Curso Internacional ENDIMET",
+        "type": "conference-poster",
+        "putCode": 213458547
+      },
+      {
+        "title": "Scientific coherence in climate change research: a meta-research perspective to accelerate scientific progress and climate justice",
+        "date": "2026/04",
+        "journal": "Frontiers in Environmental Science",
+        "type": "journal-article",
+        "putCode": 212759146
+      },
+      {
+        "title": "Pharmacogenomics and genetic ancestry: an opportunity to transform clinical practice in Colombia",
+        "date": "2026/02",
+        "journal": "Frontiers in Pharmacology",
+        "type": "journal-article",
+        "putCode": 206092076
+      },
+      {
+        "title": "Farmacogenómica y ancestría genética en Colombia: Un estudio de todas variantes farmacológicas de PharmGKB",
+        "date": "2025/10",
+        "journal": "XXIV Convención Nacional de la Asociación de Sociedades Científicas de Estudiantes de Medicina de Colombia - Pediatría y Cirugía Pediátrica",
+        "type": "conference-poster",
+        "putCode": 200331046
+      },
+      {
+        "title": "Evaluating the Influence of Ancestry on the Genetic Risk Profile of Colorectal Cancer in Colombia",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud (ENSI) 2025",
+        "type": "conference-poster",
+        "putCode": 200330632
+      },
+      {
+        "title": "Pharmacogenomics and Genetic Ancestry in Colombia: A Study on All Variant Drug Annotations of PharmGKB",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud (ENSI) 2025",
+        "type": "conference-poster",
+        "putCode": 200330187
+      },
+      {
+        "title": "Pharmacogenomics in Colorectal Cancer: Population-Specific Insights from Colombia",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud (ENSI) 2025",
+        "type": "conference-poster",
+        "putCode": 200330718
+      },
+      {
+        "title": "Pharmacogenomics in Diabetes: What We Know, What We Overlook, and Who It Affects in Colombia",
+        "date": "2025/10",
+        "journal": "Encuentro de Semilleros de Investigación en Ciencias de la Salud (ENSI) 2025",
+        "type": "conference-poster",
+        "putCode": 200330252
+      },
+      {
+        "title": "Pharmacogenomics and genetic ancestry in Colombia: a study on all variant drug annotations of PharmGKB",
+        "date": "2025/08",
+        "journal": "Frontiers in Pharmacology",
+        "type": "journal-article",
+        "putCode": 193886667
+      },
+      {
+        "title": "Farmacogenómica y Ancestría Genética en Colombia: Un Análisis de Toda la Base PharmGKB",
+        "date": "2025/06",
+        "journal": "XVIII Congreso Colombiano y XII Congreso Internacional de Genética Humana",
+        "type": "conference-poster",
+        "putCode": 200330870
+      },
+      {
+        "title": "Ensamblajes preliminares de macroalgas en el litoral rocoso de Isla Tesoro (Parque Nacional Natural Corales de Rosario y San Bernardo): aportes a la línea base para la conservación",
+        "date": "2025/04",
+        "journal": "V Jornada de Divulgación Científica, Aída Liliana Barbosa López",
+        "type": "conference-poster",
+        "putCode": 200331494
+      },
+      {
+        "title": "Identificación de bivalvos en una sucesión ecológica en un catamarán atracado en la bahía de Cartagena durante el periodo de pandemia",
+        "date": "2023/11",
+        "journal": "II Seminario Asociación Colombiana de Investigadores de Ciencias del Mar (ACIMAR) 2023",
+        "type": "conference-poster",
+        "putCode": 200331366
+      }
+    ]
+  }
+}
