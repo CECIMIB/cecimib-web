@@ -53,7 +53,7 @@ const HomeArticles = () => {
               </div>
               
               <div className="view-external-btn">
-                {t('publications.view_publications', 'View publication')} <ExternalLink size={16} />
+                {i18n.language === 'es' ? 'Ver artículo' : 'View article'} <ExternalLink size={16} />
               </div>
             </div>
           </a>
@@ -83,6 +83,10 @@ const HomeArticles = () => {
                     <Calendar size={14} />
                     <span>{article.year}</span>
                   </div>
+                </div>
+
+                <div className="small-view-link">
+                  {i18n.language === 'es' ? 'Ver artículo' : 'View article'} <ExternalLink size={14} />
                 </div>
               </a>
             ))}
@@ -263,6 +267,22 @@ const HomeArticles = () => {
 
         .article-card-styled:hover .view-external-btn {
           background-color: var(--color-primary-dark);
+        }
+
+        .small-view-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          color: var(--color-primary);
+          font-weight: 600;
+          font-size: 0.95rem;
+          margin-top: 1rem;
+          transition: color 0.2s ease;
+        }
+
+        .article-card-styled:hover .small-view-link {
+          color: #1e40af; /* A slightly darker shade */
+          text-decoration: underline;
         }
 
         .view-all-container {
