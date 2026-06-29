@@ -214,10 +214,8 @@ const ResearcherDetails = () => {
                                 <ChevronDown size={20} className="bounce-animation" />
                             </a>
                         )}
-                    </div>
-
-                    {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
-                        <div id="publications" className="orcid-publications">
+                        {orcidData[id] && orcidData[id].works && orcidData[id].works.length > 0 && (
+                            <div id="publications" className="orcid-publications">
                             <h3 className="orcid-section-title">{t('researchers_details.publications_presentations')}</h3>
                             
                             <div className="orcid-controls">
@@ -337,6 +335,7 @@ const ResearcherDetails = () => {
                             )}
                         </div>
                     )}
+                    </div>
                 </div>
             </div>
 
@@ -512,17 +511,23 @@ const ResearcherDetails = () => {
                     align-items: center;
                     justify-content: center;
                     gap: 0.5rem;
-                    margin-top: 3rem;
+                    margin: 3rem auto 1rem auto;
+                    padding: 1rem 2rem;
+                    background-color: #f8fafc;
+                    border-radius: 9999px;
+                    width: fit-content;
                     color: var(--color-primary);
                     text-decoration: none;
                     font-size: 0.875rem;
                     font-weight: 500;
                     opacity: 0.8;
-                    transition: opacity 0.2s;
+                    transition: all 0.2s;
                 }
 
                 .scroll-indicator:hover {
                     opacity: 1;
+                    background-color: #f1f5f9;
+                    transform: translateY(-2px);
                 }
 
                 .bounce-animation {
