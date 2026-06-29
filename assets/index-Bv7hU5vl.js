@@ -7041,15 +7041,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
                 .orcid-controls {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
                     gap: 1rem;
                     margin-bottom: 2rem;
                 }
 
                 .search-bar {
                     position: relative;
-                    width: 100%;
-                    max-width: 400px;
+                    flex: 1 1 250px;
+                    max-width: 100%;
                 }
 
                 .search-icon {
