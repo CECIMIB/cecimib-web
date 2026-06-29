@@ -94,6 +94,22 @@ export const publicationsData = [
         icon: "Search",
         articles: [
             {
+                title: "Measuring scientific coherence between global neglected tropical disease research and population health indicators: a 25-year meta-research study",
+                authors: "Hernandez-Paez DA, Montoya-Quintero KF, Vidal-Durango JV, Lozada-Martínez ID.",
+                journal: "Front Res Metr Anal. 2026 Jun 18;11",
+                year: "2026",
+                link: "https://doi.org/10.3389/frma.2026.1766718",
+                type: "Meta-Research"
+            },
+            {
+                title: "Estimating scientific coherence using population-level indicators and research production data: a longitudinal analytical proof-of-concept study",
+                authors: "Hernandez-Paez DA, Visconti-Lopez FJJ, Lozada-Martınez ID.",
+                journal: "Front Res Metr Anal. 2026;Volume 11-2026",
+                year: "2026",
+                link: "https://doi.org/10.3389/frma.2026.1817595",
+                type: "Longitudinal Analysis"
+            },
+            {
                 title: "Does food security research really improve people’s lives? A framework to estimate its potential impact from 2000 to 2025",
                 authors: "Hernández-Paez DA, Vergara-Rios JC, Montoya-Quintero KF, Lozada-Martinez ID.",
                 journal: "Glob Food Sec. 2026 May;100925",
