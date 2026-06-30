@@ -2,7 +2,7 @@ name: Update Google Scholar Metrics
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight
+    - cron: '0 0 * * 0' # Runs weekly on Sunday at midnight
   workflow_dispatch: # Allows manual trigger
 
 jobs:
