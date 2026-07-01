@@ -2289,7 +2289,7 @@
   },
   "andy": {
     "counts": {
-      "journal-article": 4,
+      "journal-article": 5,
       "conference-poster": 11,
       "conference-paper": 0,
       "conference-presentation": 5,
@@ -2297,6 +2297,14 @@
       "book-chapter": 0
     },
     "works": [
+      {
+        "title": "From Dissection to Simulation: An Exploratory Scientometric and Methodological Analysis of Anatomy Education Literature",
+        "date": "2026/06",
+        "journal": "Metrics",
+        "type": "journal-article",
+        "url": "https://doi.org/10.3390/metrics3030012",
+        "putCode": 219210046
+      },
       {
         "title": "ARRIBAZÓN INUSUAL DE LA ALGA ROJA CERAMIUM SP. EN PLAYAS URBANAS DE CARTAGENA, COLOMBIA",
         "date": "2026/05",
