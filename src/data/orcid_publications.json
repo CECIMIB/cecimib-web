@@ -1749,14 +1749,22 @@
   },
   "david": {
     "counts": {
-      "journal-article": 18,
+      "journal-article": 19,
       "conference-poster": 33,
       "conference-paper": 0,
       "conference-presentation": 15,
       "lecture-speech": 0,
-      "book-chapter": 0
+      "book-chapter": 1
     },
     "works": [
+      {
+        "title": "Estimating scientific coherence using population-level indicators and research production data: a longitudinal analytical proof-of-concept study",
+        "date": "2026/06",
+        "journal": "Frontiers in Research Metrics and Analytics",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.3389/frma.2026.1817595",
+        "putCode": 219562279
+      },
       {
         "title": "Measuring scientific coherence between global neglected tropical disease research and population health indicators: a 25-year meta-research study",
         "date": "2026/06",
@@ -1844,6 +1852,14 @@
         "type": "journal-article",
         "url": "https://civilica.com/doc/2615297",
         "putCode": 216664294
+      },
+      {
+        "title": "Institutional Use of Meta-Research to Manage Conflict of Interest",
+        "date": "2026",
+        "journal": "Progress in Research Integrity",
+        "type": "book-chapter",
+        "url": "http://dx.doi.org/10.1007/978-3-032-27479-3_7",
+        "putCode": 219562084
       },
       {
         "title": "Limited scientific coherence between global mental health research and indicators of science, health, mental health, and society: a longitudinal analysis across world regions",
