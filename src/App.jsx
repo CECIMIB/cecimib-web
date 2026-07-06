@@ -20,6 +20,7 @@ import AllNews from './components/AllNews';
 import Articles from './components/Articles';
 import TermsOfUse from './components/TermsOfUse';
 import OpenScience from './components/OpenScience';
+import ContactPage from './components/ContactPage';
 import './App.css';
 
 const Home = () => {
@@ -78,7 +79,7 @@ function App() {
           <Route path="/about" element={<Home />} />
           <Route path="/researchers" element={<Home />} />
           <Route path="/repositories" element={<Home />} />
-          <Route path="/contact" element={<Home />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/group" element={<Home />} />
           <Route path="/collaborators" element={<Home />} />
           <Route path="/courses" element={<Home />} />
