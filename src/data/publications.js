@@ -6,6 +6,14 @@ export const publicationsData = [
         icon: "Activity", // Lucid icon name placeholder, will map in component
         articles: [
             {
+                title: "From Dissection to Simulation: An Exploratory Scientometric and Methodological Analysis of Anatomy Education Literature",
+                authors: "Alzate Mejía OA, Acosta-Monterrosa AA, Mauri Juliachs J, Picón-Jaimes YA.",
+                journal: "Metrics. 2026 Jun 30;3(3):12",
+                year: "2026",
+                link: "https://doi.org/10.3390/metrics3030012",
+                type: "Scientometric Analysis"
+            },
+            {
                 title: "Scientific Production in Global Mental Health: A Meta-Research Study of Income-Stratified Trends, Gaps, and Health Metrics Impact",
                 authors: "Hernandez-Paez DA, Acuña-Rodriguez M, Montoya-Quintero KF, Vidal-Durango JV.",
                 journal: "Publications. 2026;14(2).",
