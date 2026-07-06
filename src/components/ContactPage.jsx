@@ -22,12 +22,14 @@ const ContactPage = () => {
       <section className="contact-content">
         <div className="container contact-main-container">
           <div className="contact-profile">
-            <img 
-              src={`${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.png`} 
-              alt="Iván David Lozada Martínez" 
-              className="contact-profile-img"
-            />
-            <h2>Iván David Lozada Martínez</h2>
+            <a href="#/researcher/ivan" className="contact-profile-link">
+              <img 
+                src={`${import.meta.env.BASE_URL}researchers/ivan-lozada-martinez.png`} 
+                alt="Iván David Lozada Martínez" 
+                className="contact-profile-img"
+              />
+              <h2>Iván David Lozada Martínez</h2>
+            </a>
             <p className="contact-role">{t('researchers.ivan.role')}</p>
             <a href="mailto:ivan@cecimib.com" className="contact-email">ivan@cecimib.com</a>
           </div>
@@ -90,6 +92,17 @@ const ContactPage = () => {
           max-width: 600px;
         }
 
+        .contact-profile-link {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        .contact-profile-link:hover {
+          transform: translateY(-5px);
+        }
+
         .contact-profile-img {
           display: block;
           width: 150px;
@@ -99,6 +112,12 @@ const ContactPage = () => {
           margin: 0 auto 1.5rem auto;
           box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
           border: 4px solid white;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-profile-link:hover .contact-profile-img {
+          border-color: var(--color-primary);
+          box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15);
         }
 
         .contact-profile h2 {
@@ -106,6 +125,11 @@ const ContactPage = () => {
           font-weight: 800;
           color: var(--color-text);
           margin-bottom: 0.5rem;
+          transition: color 0.3s ease;
+        }
+
+        .contact-profile-link:hover h2 {
+          color: var(--color-primary);
         }
 
         .contact-role {
