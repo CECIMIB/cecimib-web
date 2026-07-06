@@ -7874,11 +7874,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
 
         .contact-profile-img {
+          display: block;
           width: 150px;
           height: 150px;
           border-radius: 50%;
           object-fit: cover;
-          margin-bottom: 1.5rem;
+          margin: 0 auto 1.5rem auto;
           box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
           border: 4px solid white;
         }
