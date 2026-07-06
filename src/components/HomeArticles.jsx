@@ -37,6 +37,14 @@ const HomeArticles = () => {
       }, 300);
   };
 
+  const handlePrev = () => {
+      setIsAnimating(true);
+      setTimeout(() => {
+          setCurrentPage(prev => (prev - 1 + pages.length) % pages.length);
+          setIsAnimating(false);
+      }, 300);
+  };
+
   const handleDotClick = (index) => {
       if (index === currentPage) return;
       setIsAnimating(true);
@@ -140,15 +148,23 @@ const HomeArticles = () => {
           </div>
         </div>
 
-        <div className="carousel-indicators">
-            {pages.map((_, idx) => (
-                <button
-                    key={idx}
-                    className={`indicator-dot ${idx === currentPage ? 'active' : ''}`}
-                    onClick={() => handleDotClick(idx)}
-                    aria-label={`Go to slide ${idx + 1}`}
-                />
-            ))}
+        <div className="carousel-controls-container">
+            <button className="carousel-arrow" onClick={handlePrev} aria-label="Previous articles">
+                <ChevronLeft size={24} />
+            </button>
+            <div className="carousel-indicators">
+                {pages.map((_, idx) => (
+                    <button
+                        key={idx}
+                        className={`indicator-dot ${idx === currentPage ? 'active' : ''}`}
+                        onClick={() => handleDotClick(idx)}
+                        aria-label={`Go to slide ${idx + 1}`}
+                    />
+                ))}
+            </div>
+            <button className="carousel-arrow" onClick={handleNext} aria-label="Next articles">
+                <ChevronRight size={24} />
+            </button>
         </div>
         
         <div className="view-all-container">
@@ -405,12 +421,37 @@ const HomeArticles = () => {
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
+        .carousel-controls-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .carousel-arrow {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .carousel-arrow:hover {
+            color: var(--color-primary);
+            background-color: #f1f5f9;
+        }
+
         .carousel-indicators {
             display: flex;
             justify-content: center;
             gap: 0.75rem;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
         }
 
         .indicator-dot {
