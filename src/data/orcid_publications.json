@@ -1749,7 +1749,7 @@
   },
   "david": {
     "counts": {
-      "journal-article": 19,
+      "journal-article": 20,
       "conference-poster": 33,
       "conference-paper": 0,
       "conference-presentation": 15,
@@ -1788,22 +1788,6 @@
         "type": "conference-presentation",
         "url": "https://doi.org/10.13140/rg.2.2.11481.68962",
         "putCode": 216663790
-      },
-      {
-        "title": "Estimating the potential impact of global research on neglected tropical diseases on population-level indicators of health access, sanitation, and research capacity",
-        "date": "2026/05",
-        "journal": "PLOS Neglected Tropical Diseases",
-        "type": "journal-article",
-        "url": "http://dx.doi.org/10.1371/journal.pntd.0014343",
-        "putCode": 216620421
-      },
-      {
-        "title": "Does food security research really improve people's lives? A framework to estimate its potential impact from 2000 to 2025",
-        "date": "2026/05",
-        "journal": "Global Food Security",
-        "type": "journal-article",
-        "url": "http://dx.doi.org/10.1016/j.gfs.2026.100925",
-        "putCode": 216664179
       },
       {
         "title": "Different ancestries may have distinct diabetes risk profiles in Colombia",
@@ -1852,6 +1836,30 @@
         "type": "journal-article",
         "url": "https://civilica.com/doc/2615297",
         "putCode": 216664294
+      },
+      {
+        "title": "Association of Dietary Patterns and Physical Activity with Excess Body Weight, Atherogenic Markers and Cardiovascular Risk Factors in Adults from Cartagena, Colombia",
+        "date": "2026",
+        "journal": "International Journal of Nutrition Sciences",
+        "type": "journal-article",
+        "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105038089192&partnerID=MN8TOARS",
+        "putCode": 220666594
+      },
+      {
+        "title": "Does food security research really improve people's lives? A framework to estimate its potential impact from 2000 to 2025",
+        "date": "2026",
+        "journal": "Global Food Security",
+        "type": "journal-article",
+        "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105037530378&partnerID=MN8TOARS",
+        "putCode": 220666592
+      },
+      {
+        "title": "Estimating the potential impact of global research on neglected tropical diseases on population-level indicators of health access, sanitation, and research capacity",
+        "date": "2026",
+        "journal": "Plos Neglected Tropical Diseases",
+        "type": "journal-article",
+        "url": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105040746327&partnerID=MN8TOARS",
+        "putCode": 220666591
       },
       {
         "title": "Institutional Use of Meta-Research to Manage Conflict of Interest",
