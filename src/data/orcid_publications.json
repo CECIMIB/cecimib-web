@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 209,
+      "journal-article": 210,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -9,6 +9,14 @@
       "book-chapter": 8
     },
     "works": [
+      {
+        "title": "Multidimensional factors associated with depressive symptoms in Colombian centenarians",
+        "date": "2026/07",
+        "journal": "The American Journal of Geriatric Psychiatry",
+        "type": "journal-article",
+        "url": "https://doi.org/10.1016/j.jagp.2026.07.009",
+        "putCode": 221594545
+      },
       {
         "title": "Measuring scientific coherence between global neglected tropical disease research and population health indicators: a 25-year meta-research study",
         "date": "2026/06",
