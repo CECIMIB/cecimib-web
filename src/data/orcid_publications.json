@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 212,
+      "journal-article": 213,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -9,6 +9,14 @@
       "book-chapter": 8
     },
     "works": [
+      {
+        "title": "GAP2POP as a complementary hierarchical framework for aligning knowledge gaps, health priorities, evidence generation, and population influence-impact",
+        "date": "2026/09",
+        "journal": "F1000Research",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.12688/f1000research.190215.1",
+        "putCode": 227457179
+      },
       {
         "title": "Traumatic brain injury outcomes across human development index strata in 29 countries",
         "date": "2026/08",
@@ -2369,7 +2377,7 @@
   },
   "andy": {
     "counts": {
-      "journal-article": 5,
+      "journal-article": 6,
       "conference-poster": 11,
       "conference-paper": 0,
       "conference-presentation": 5,
@@ -2377,6 +2385,14 @@
       "book-chapter": 0
     },
     "works": [
+      {
+        "title": "GAP2POP as a complementary hierarchical framework for aligning knowledge gaps, health priorities, evidence generation, and population influence-impact [version 1; peer review: awaiting peer review]",
+        "date": "2026/09",
+        "journal": "",
+        "type": "journal-article",
+        "url": "https://f1000research.com/articles/15-1569/v1",
+        "putCode": 227437517
+      },
       {
         "title": "From Dissection to Simulation: An Exploratory Scientometric and Methodological Analysis of Anatomy Education Literature",
         "date": "2026/06",
