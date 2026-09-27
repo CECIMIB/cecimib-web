@@ -2377,7 +2377,7 @@
   },
   "andy": {
     "counts": {
-      "journal-article": 6,
+      "journal-article": 7,
       "conference-poster": 11,
       "conference-paper": 0,
       "conference-presentation": 5,
@@ -2392,6 +2392,14 @@
         "type": "journal-article",
         "url": "https://f1000research.com/articles/15-1569/v1",
         "putCode": 227437517
+      },
+      {
+        "title": "What are We Measuring in Anatomy Education? An Exploratory Mapping from Anatomical Learning to Clinical Competence",
+        "date": "2026/09",
+        "journal": "Advances in Medical Education and Practice",
+        "type": "journal-article",
+        "url": "https://doi.org/10.2147/AMEP.S632622",
+        "putCode": 227893884
       },
       {
         "title": "From Dissection to Simulation: An Exploratory Scientometric and Methodological Analysis of Anatomy Education Literature",
