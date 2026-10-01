@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 213,
+      "journal-article": 214,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -9,6 +9,14 @@
       "book-chapter": 8
     },
     "works": [
+      {
+        "title": "Clinical phenotype and diagnostic criteria of cardiac cephalalgia: a systematic review and individual patient data meta-analysis",
+        "date": "2026/09",
+        "journal": "The Journal of Headache and Pain",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.1186/s10194-026-02531-8",
+        "putCode": 228360357
+      },
       {
         "title": "GAP2POP as a complementary hierarchical framework for aligning knowledge gaps, health priorities, evidence generation, and population influence-impact",
         "date": "2026/09",
