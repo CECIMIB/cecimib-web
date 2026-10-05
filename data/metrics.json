@@ -1,17 +1,17 @@
 {
   "ivan": {
-    "works_count": 463,
-    "cited_by_count": 2846,
+    "works_count": 465,
+    "cited_by_count": 2860,
     "h_index": 27
   },
   "david": {
     "works_count": 26,
-    "cited_by_count": 215,
+    "cited_by_count": 217,
     "h_index": 7
   },
   "andy": {
-    "works_count": 7,
-    "cited_by_count": 9,
+    "works_count": 8,
+    "cited_by_count": 10,
     "h_index": 2
   }
 }
