@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 214,
+      "journal-article": 215,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -9,6 +9,14 @@
       "book-chapter": 8
     },
     "works": [
+      {
+        "title": "Scientific Return as a Proposed Construct for Institutional Research Assessment",
+        "date": "2026/10",
+        "journal": "Encyclopedia",
+        "type": "journal-article",
+        "url": "https://doi.org/10.3390/encyclopedia6100229",
+        "putCode": 229971300
+      },
       {
         "title": "Clinical phenotype and diagnostic criteria of cardiac cephalalgia: a systematic review and individual patient data meta-analysis",
         "date": "2026/09",
