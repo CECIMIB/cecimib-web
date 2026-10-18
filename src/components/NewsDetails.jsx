@@ -13,6 +13,13 @@ const images = newsData.reduce((acc, item) => {
   return acc;
 }, {});
 
+const secondaryImages = newsData.reduce((acc, item) => {
+  if (item.secondaryImage) {
+    acc[item.id] = item.secondaryImage;
+  }
+  return acc;
+}, {});
+
 const XIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -155,6 +162,25 @@ const NewsDetails = () => {
               <p key={index}>{paragraphText}</p>
             ) : null;
           })}
+
+          {secondaryImages[id] && (
+            <div className="news-body-secondary-image-wrapper">
+              <img 
+                src={secondaryImages[id]} 
+                alt={t(`${newsKey}.secondaryImageCaption`, { defaultValue: "Infografía del artículo" })} 
+                className="news-body-secondary-image"
+                onClick={() => window.open(secondaryImages[id], '_blank')}
+                title={i18n.language === 'es' ? 'Haz clic para ampliar la imagen' : 'Click to view full size'}
+              />
+              <div className="news-image-caption" style={{ textAlign: 'center', marginTop: '0.75rem' }}>
+                {t(`${newsKey}.secondaryImageCaption`, { 
+                  defaultValue: i18n.language === 'es' 
+                    ? "Infografía explicativa del estudio. Archivos CECIMIB." 
+                    : "Explanatory infographic of the study. CECIMIB Archives." 
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Tracking Footer */}
           <div className="news-tracking-info">
