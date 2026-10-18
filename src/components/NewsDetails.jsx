@@ -69,7 +69,7 @@ const NewsDetails = () => {
   const reference = t(`${newsKey}.reference`);
   const keywords = t(`${newsKey}.keywords`, { returnObjects: true });
   
-  const paragraphs = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15', 'p16', 'p17', 'p18', 'p19', 'p20'];
+  const paragraphs = Array.from({ length: 50 }, (_, i) => `p${i + 1}`);
   const currentUrl = window.location.href;
 
   const shareText = encodeURIComponent(title);
@@ -117,7 +117,7 @@ const NewsDetails = () => {
                   src={images[id]} 
                   alt={title} 
                   className="news-floating-image" 
-                  style={['1-6-2026', '2-4-2026', '2-6-2026', '2-7-2026', '2-8-2026'].includes(id) ? { width: '82%', maxWidth: '360px' } : {}}
+                  style={['1-6-2026', '2-4-2026', '2-6-2026', '2-7-2026', '2-8-2026', '2-10-2026'].includes(id) ? { width: '82%', maxWidth: '360px' } : {}}
                 />
               ) : (
                 <div className="news-floating-image placeholder-img"></div>
