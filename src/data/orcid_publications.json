@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 215,
+      "journal-article": 216,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -9,6 +9,14 @@
       "book-chapter": 8
     },
     "works": [
+      {
+        "title": "The rise in prevalence of autoantibodies neutralizing type I interferons reaches a plateau in centenarians",
+        "date": "2027/01",
+        "journal": "Journal of Human Immunity",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.70962/jhi.20260143",
+        "putCode": 231429398
+      },
       {
         "title": "Scientific Return as a Proposed Construct for Institutional Research Assessment",
         "date": "2026/10",
