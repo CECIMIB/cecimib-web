@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 216,
+      "journal-article": 217,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -24,6 +24,14 @@
         "type": "journal-article",
         "url": "https://doi.org/10.1016/j.jagp.2026.07.009",
         "putCode": 221594545
+      },
+      {
+        "title": "Scientific preparedness for the future of mycology: mapping knowledge gaps to guide priority setting and emerging research opportunities",
+        "date": "2026/11",
+        "journal": "Frontiers in Microbiology",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.3389/fmicb.2026.1964320",
+        "putCode": 232110149
       },
       {
         "title": "Scientific Return as a Proposed Construct for Institutional Research Assessment",
