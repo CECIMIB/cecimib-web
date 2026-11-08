@@ -1,7 +1,7 @@
 {
   "ivan": {
     "works_count": 469,
-    "cited_by_count": 2917,
+    "cited_by_count": 2922,
     "h_index": 27
   },
   "david": {
@@ -11,7 +11,7 @@
   },
   "andy": {
     "works_count": 8,
-    "cited_by_count": 10,
+    "cited_by_count": 11,
     "h_index": 2
   }
 }
