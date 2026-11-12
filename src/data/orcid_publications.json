@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 217,
+      "journal-article": 218,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -24,6 +24,14 @@
         "type": "journal-article",
         "url": "https://doi.org/10.1016/j.jagp.2026.07.009",
         "putCode": 221594545
+      },
+      {
+        "title": "A meta-science framework to strengthen implementation science in LMICs: linking research agendas, health priorities, and policy action",
+        "date": "2026/11",
+        "journal": "Frontiers in Research Metrics and Analytics",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.3389/frma.2026.1809959",
+        "putCode": 233138974
       },
       {
         "title": "Scientific preparedness for the future of mycology: mapping knowledge gaps to guide priority setting and emerging research opportunities",
