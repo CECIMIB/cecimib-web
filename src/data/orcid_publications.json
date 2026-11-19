@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 218,
+      "journal-article": 219,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -24,6 +24,14 @@
         "type": "journal-article",
         "url": "https://doi.org/10.1016/j.jagp.2026.07.009",
         "putCode": 221594545
+      },
+      {
+        "title": "Scientific response to food security in public health: a global longitudinal secondary-data study of governance and population-level indicators",
+        "date": "2026/11",
+        "journal": "BMC Public Health",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.1186/s12889-026-30428-3",
+        "putCode": 233865708
       },
       {
         "title": "A meta-science framework to strengthen implementation science in LMICs: linking research agendas, health priorities, and policy action",
