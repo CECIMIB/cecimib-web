@@ -1,7 +1,7 @@
 {
   "ivan": {
     "counts": {
-      "journal-article": 219,
+      "journal-article": 220,
       "conference-poster": 0,
       "conference-paper": 0,
       "conference-presentation": 0,
@@ -24,6 +24,14 @@
         "type": "journal-article",
         "url": "https://doi.org/10.1016/j.jagp.2026.07.009",
         "putCode": 221594545
+      },
+      {
+        "title": "SCImago IRIS indicators show multidimensional institutional patterns associated with national research system characteristics",
+        "date": "2026/11",
+        "journal": "Scientific Reports",
+        "type": "journal-article",
+        "url": "http://dx.doi.org/10.1038/s41598-026-80534-w",
+        "putCode": 234613288
       },
       {
         "title": "Scientific response to food security in public health: a global longitudinal secondary-data study of governance and population-level indicators",
